@@ -6,6 +6,12 @@ on:
     paths:
       - 'config/mainnet/**'
   workflow_dispatch:
+    inputs:
+      production:
+        description: 'Upload to production folder'
+        required: false
+        type: boolean
+        default: 'false'
 
 jobs:
   upload-mainnet-config:
@@ -40,7 +46,18 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: target/release/mystiko_static_config upload config/mainnet/config.json $(git rev-parse --short HEAD) --latest
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            IS_PRODUCTION="${{ github.event.inputs.production }}"
+          else
+            IS_PRODUCTION="false"
+          fi
+          if [[ "$IS_PRODUCTION" == "true" ]]; then
+            PRODUCTION_FLAG="--production"
+          else
+            PRODUCTION_FLAG=""
+          fi
+          target/release/mystiko_static_config upload config/mainnet/config.json $(git rev-parse --short HEAD) --latest $PRODUCTION_FLAG
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master
         if: failure()

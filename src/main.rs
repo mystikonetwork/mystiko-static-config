@@ -35,6 +35,8 @@ struct UploadArgs {
     latest: bool,
     #[arg(short, long)]
     overwrite: bool,
+    #[arg(short, long)]
+    production: bool,
 }
 
 #[derive(Parser)]
@@ -83,7 +85,8 @@ async fn upload_config(args: &UploadArgs) -> Result<()> {
     let acl = Some(String::from("public-read"));
     let config_content: Vec<u8> = config_str.into();
     let config_key = format!(
-        "config/{}/{}/config.json",
+        "config/{}/{}/{}/config.json",
+        if args.production { "production" } else { "staging" },
         if args.testnet { "testnet" } else { "mainnet" },
         args.git_revision
     );
@@ -108,7 +111,8 @@ async fn upload_config(args: &UploadArgs) -> Result<()> {
         log::info!("Uploaded config to s3://{}/{}", &args.bucket, config_key);
         if args.latest {
             let latest_config_key = format!(
-                "config/{}/latest.json",
+                "config/{}/{}/latest.json",
+                if args.production { "production" } else { "staging" },
                 if args.testnet { "testnet" } else { "mainnet" }
             );
             let latest_request = PutObjectRequest {
