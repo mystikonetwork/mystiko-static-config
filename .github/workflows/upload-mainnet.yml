@@ -1,4 +1,4 @@
-name: Upload mainnet Config
+name: Upload Mainnet Config
 
 on:
   push:
