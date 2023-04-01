@@ -86,7 +86,11 @@ async fn upload_config(args: &UploadArgs) -> Result<()> {
     let config_content: Vec<u8> = config_str.into();
     let config_key = format!(
         "config/{}/{}/{}/config.json",
-        if args.production { "production" } else { "staging" },
+        if args.production {
+            "production"
+        } else {
+            "staging"
+        },
         if args.testnet { "testnet" } else { "mainnet" },
         args.git_revision
     );
@@ -112,7 +116,11 @@ async fn upload_config(args: &UploadArgs) -> Result<()> {
         if args.latest {
             let latest_config_key = format!(
                 "config/{}/{}/latest.json",
-                if args.production { "production" } else { "staging" },
+                if args.production {
+                    "production"
+                } else {
+                    "staging"
+                },
                 if args.testnet { "testnet" } else { "mainnet" }
             );
             let latest_request = PutObjectRequest {
