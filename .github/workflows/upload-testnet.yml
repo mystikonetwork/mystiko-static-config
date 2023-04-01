@@ -1,13 +1,14 @@
-name: Build
+name: Upload Testnet Config
 
 on:
   push:
     branches: ['master']
-  pull_request:
-    branches: ['*']
+    paths:
+      - 'config/testnet/**'
+  workflow_dispatch:
 
 jobs:
-  build:
+  upload-testnet-config:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,7 +24,6 @@ jobs:
           toolchain: nightly-2023-02-22
           override: true
           profile: minimal
-          components: rustfmt, clippy
       - name: Cache
         uses: actions/cache@v3
         with:
@@ -35,30 +35,17 @@ jobs:
             target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: Build
-        run: RUSTFLAGS="-D warnings" cargo build
-      - name: Check format
-        run: cargo fmt --all -- --check
-      - name: Run clippy
-        timeout-minutes: 60
-        run: cargo clippy --all-targets -j 4 -- -D warnings
-      - name: Check mainnet config
-        run: target/debug/mystiko_static_config validate config/mainnet/config.json
-      - name: Check testnet config
-        run: target/debug/mystiko_static_config validate config/testnet/config.json
-      - run: git diff --quiet || (echo "some generated files are not included in repo" && exit 1)
+        run: cargo build --release
+      - name: Upload
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: target/release/mystiko_static_config upload config/testnet/config.json $(git rev-parse --short HEAD) --latest --testnet
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master
         if: failure()
         with:
           message: ❗ Build failed for [${{ github.repository }}](https://github.com/${{ github.repository }}/actions) because of ${{ github.actor }}
-          format: markdown
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      - name: Telegram Success Notification
-        uses: appleboy/telegram-action@master
-        if: success()
-        with:
-          message: Build succeeded for [${{ github.repository }}](https://github.com/${{ github.repository }}/actions)
           format: markdown
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
