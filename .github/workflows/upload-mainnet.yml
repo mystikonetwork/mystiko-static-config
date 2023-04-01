@@ -1,0 +1,52 @@
+name: Upload mainnet Config
+
+on:
+  push:
+    branches: ['master']
+    paths:
+      - 'config/mainnet/**'
+  workflow_dispatch:
+
+jobs:
+  upload-mainnet-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: |
+            ${{ secrets.SSH_PRIVATE_KEY_1 }}
+            ${{ secrets.SSH_PRIVATE_KEY_2 }}
+      - name: Toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly-2023-02-22
+          override: true
+          profile: minimal
+          components: rustfmt, clippy
+      - name: Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+      - name: Build
+        run: RUSTFLAGS="-D warnings" cargo build --release
+      - name: Upload
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: target/release/mystiko_static_config upload config/mainnet/config.json $(git rev-parse --short HEAD) --latest
+      - name: Telegram Failure Notification
+        uses: appleboy/telegram-action@master
+        if: failure()
+        with:
+          message: ❗ Build failed for [${{ github.repository }}](https://github.com/${{ github.repository }}/actions) because of ${{ github.actor }}
+          format: markdown
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
