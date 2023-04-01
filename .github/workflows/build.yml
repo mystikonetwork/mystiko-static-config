@@ -41,6 +41,10 @@ jobs:
       - name: Run clippy
         timeout-minutes: 60
         run: cargo clippy --all-targets -j 4 -- -D warnings
+      - name: Check mainnet config
+        run: target/debug/mystiko_static_config validate config/mainnet/config.json
+      - name: Check testnet config
+        run: target/debug/mystiko_static_config validate config/testnet/config.json
       - run: git diff --quiet || (echo "some generated files are not included in repo" && exit 1)
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master

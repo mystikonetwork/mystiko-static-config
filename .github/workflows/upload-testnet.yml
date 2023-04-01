@@ -24,7 +24,6 @@ jobs:
           toolchain: nightly-2023-02-22
           override: true
           profile: minimal
-          components: rustfmt, clippy
       - name: Cache
         uses: actions/cache@v3
         with:
@@ -36,7 +35,7 @@ jobs:
             target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: Build
-        run: RUSTFLAGS="-D warnings" cargo build --release
+        run: cargo build --release
       - name: Upload
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
