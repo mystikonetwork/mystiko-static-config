@@ -1022,14 +1022,17 @@
       "explorerUrl": "https://testnet.bscscan.com",
       "providers": [
         {
-          "url": "wss://ws-nd-302-890-317.p2pify.com/430c98aabb1fe49ec6517602e1e40f01"
+          "url": "https://endpoints.omniatech.io/v1/bsc/testnet/public"
         },
         {
-          "url": "https://nd-302-890-317.p2pify.com/430c98aabb1fe49ec6517602e1e40f01"
+          "url": "https://data-seed-prebsc-2-s3.binance.org:8545"
+        },
+        {
+          "url": "https://thrumming-prettiest-gadget.bsc-testnet.discover.quiknode.pro/47169c08ce80f3b333bcf1fa806100c44c02a5fe"
         }
       ],
       "signerEndpoint": "https://data-seed-prebsc-2-s2.binance.org:8545",
-      "eventFilterSize": 100000,
+      "eventFilterSize": 10000,
       "depositContracts": [
         {
           "version": 5,
@@ -2505,12 +2508,13 @@
       ],
       "chainId": 4002,
       "explorerUrl": "https://testnet.ftmscan.com",
+      "eventFilterSize": 2000,
       "providers": [
         {
-          "url": "wss://ws-nd-214-128-719.p2pify.com/601ca0e7925b0eabdc7bbd7e220604af"
+          "url": "https://rpc.ankr.com/fantom_testnet"
         },
         {
-          "url": "https://nd-214-128-719.p2pify.com/601ca0e7925b0eabdc7bbd7e220604af"
+          "url": "https://endpoints.omniatech.io/v1/fantom/testnet/public"
         },
         {
           "url": "https://rpc.testnet.fantom.network"
