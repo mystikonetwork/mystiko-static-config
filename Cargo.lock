@@ -969,6 +969,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "mystiko_relayer_config"
+version = "0.1.0"
+source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=3f25038#3f25038d4eafc1e2e7d04174586b825e862fd4e8"
+dependencies = [
+ "anyhow",
+ "mystiko_validator",
+ "rust_decimal",
+ "serde",
+ "serde_json",
+ "tokio",
+ "typed-builder",
+ "validator",
+]
+
+[[package]]
 name = "mystiko_static_config"
 version = "0.1.0"
 dependencies = [
@@ -977,6 +992,7 @@ dependencies = [
  "env_logger",
  "log",
  "mystiko_config",
+ "mystiko_relayer_config",
  "rusoto_core",
  "rusoto_s3",
  "serde_json",
@@ -992,6 +1008,16 @@ dependencies = [
  "num-bigint",
  "num-traits",
  "rust_decimal",
+]
+
+[[package]]
+name = "mystiko_validator"
+version = "0.1.0"
+source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=3f25038#3f25038d4eafc1e2e7d04174586b825e862fd4e8"
+dependencies = [
+ "lazy_static",
+ "regex",
+ "validator",
 ]
 
 [[package]]

@@ -1,10 +1,10 @@
-name: Upload Testnet Config
+name: Upload Relayer Testnet Config
 
 on:
   push:
     branches: ['master']
     paths:
-      - 'config/testnet/**'
+      - 'config/relayer/testnet/**'
   workflow_dispatch:
     inputs:
       production:
@@ -57,7 +57,7 @@ jobs:
           else
             PRODUCTION_FLAG=""
           fi
-          target/release/mystiko_static_config upload config/testnet/config.json $(git rev-parse --short HEAD) --latest --testnet $PRODUCTION_FLAG
+          target/release/mystiko_static_config upload relayer config/relayer/testnet/config.json $(git rev-parse --short HEAD) --latest --testnet $PRODUCTION_FLAG
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master
         if: failure()

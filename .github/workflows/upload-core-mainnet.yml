@@ -1,10 +1,10 @@
-name: Upload Mainnet Config
+name: Upload Core Mainnet Config
 
 on:
   push:
     branches: ['master']
     paths:
-      - 'config/mainnet/**'
+      - 'config/core/mainnet/**'
   workflow_dispatch:
     inputs:
       production:
@@ -57,7 +57,7 @@ jobs:
           else
             PRODUCTION_FLAG=""
           fi
-          target/release/mystiko_static_config upload config/mainnet/config.json $(git rev-parse --short HEAD) --latest $PRODUCTION_FLAG
+          target/release/mystiko_static_config upload core config/core/mainnet/config.json $(git rev-parse --short HEAD) --latest $PRODUCTION_FLAG
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master
         if: failure()

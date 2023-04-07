@@ -1,0 +1,68 @@
+name: Upload Relayer Mainnet Config
+
+on:
+  push:
+    branches: ['master']
+    paths:
+      - 'config/relayer/mainnet/**'
+  workflow_dispatch:
+    inputs:
+      production:
+        description: 'Upload to production folder'
+        required: false
+        type: boolean
+        default: 'false'
+
+jobs:
+  upload-mainnet-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: |
+            ${{ secrets.SSH_PRIVATE_KEY_1 }}
+            ${{ secrets.SSH_PRIVATE_KEY_2 }}
+      - name: Toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly-2023-02-22
+          override: true
+          profile: minimal
+      - name: Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+      - name: Build
+        run: cargo build --release
+      - name: Upload
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            IS_PRODUCTION="${{ github.event.inputs.production }}"
+          else
+            IS_PRODUCTION="false"
+          fi
+          if [[ "$IS_PRODUCTION" == "true" ]]; then
+            PRODUCTION_FLAG="--production"
+          else
+            PRODUCTION_FLAG=""
+          fi
+          target/release/mystiko_static_config upload relayer config/relayer/mainnet/config.json $(git rev-parse --short HEAD) --latest $PRODUCTION_FLAG
+      - name: Telegram Failure Notification
+        uses: appleboy/telegram-action@master
+        if: failure()
+        with:
+          message: ❗ Build failed for [${{ github.repository }}](https://github.com/${{ github.repository }}/actions) because of ${{ github.actor }}
+          format: markdown
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}

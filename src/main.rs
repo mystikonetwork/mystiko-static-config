@@ -9,8 +9,9 @@ extern crate serde_json;
 extern crate tokio;
 
 use anyhow::Result;
-use clap::{Args, Parser, Subcommand};
+use clap::{arg, Args, Parser, Subcommand, ValueEnum};
 use mystiko_config::wrapper::mystiko::MystikoConfig;
+use mystiko_relayer_config::wrapper::relayer::RelayerConfig;
 use rusoto_core::Region;
 use rusoto_s3::{HeadObjectRequest, PutObjectRequest, S3Client, S3};
 use std::path::PathBuf;
@@ -21,8 +22,16 @@ const DEFAULT_BUCKET: &str = "static.mystiko.network";
 const DEFAULT_REGION: &str = "us-east-1";
 const GIT_REVISION_MARKER: &str = "\"__GIT_REVISION__\"";
 
+#[derive(ValueEnum, Clone)]
+enum ConfigType {
+    Core,
+    Relayer,
+}
+
 #[derive(Args)]
 struct UploadArgs {
+    #[arg(value_enum)]
+    config_type: ConfigType,
     path: String,
     git_revision: String,
     #[arg(short, long, default_value_t = String::from(DEFAULT_BUCKET))]
@@ -48,7 +57,10 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
-    Validate { path: String },
+    Validate {
+        path: String,
+        config_type: ConfigType,
+    },
     Upload(UploadArgs),
 }
 
@@ -65,27 +77,42 @@ async fn read_config_string(path: &str, git_revision: Option<String>) -> Result<
     Ok(serde_json::to_string(&value)?)
 }
 
-async fn validate_config_string(config_string: &str) -> Result<()> {
-    MystikoConfig::from_json_str(config_string)?;
+async fn validate_config_string(config_string: &str, config_type: &ConfigType) -> Result<()> {
+    match config_type {
+        ConfigType::Core => {
+            MystikoConfig::from_json_str(config_string)?;
+        }
+        ConfigType::Relayer => {
+            RelayerConfig::from_json_str(config_string)?;
+        }
+    }
     log::info!("Config is valid");
     Ok(())
 }
 
-async fn validate_config(path: &str) -> Result<()> {
+async fn validate_config(path: &str, config_type: &ConfigType) -> Result<()> {
     let config_str = read_config_string(path, None).await?;
-    validate_config_string(&config_str).await
+    validate_config_string(&config_str, config_type).await
 }
 
 async fn upload_config(args: &UploadArgs) -> Result<()> {
     let config_str = read_config_string(&args.path, Some(args.git_revision.clone())).await?;
-    validate_config_string(&config_str).await?;
+    validate_config_string(&config_str, &args.config_type).await?;
     let region = Region::from_str(&args.region)?;
     let s3_client = S3Client::new(region);
     let content_type = Some(String::from("application/json"));
     let acl = Some(String::from("public-read"));
     let config_content: Vec<u8> = config_str.into();
     let config_key = format!(
-        "config/{}/{}/{}/config.json",
+        "config/{}/{}/{}/{}/config.json",
+        match args.config_type {
+            ConfigType::Core => {
+                "core"
+            }
+            ConfigType::Relayer => {
+                "relayer"
+            }
+        },
         if args.production {
             "production"
         } else {
@@ -115,7 +142,15 @@ async fn upload_config(args: &UploadArgs) -> Result<()> {
         log::info!("Uploaded config to s3://{}/{}", &args.bucket, config_key);
         if args.latest {
             let latest_config_key = format!(
-                "config/{}/{}/latest.json",
+                "config/{}/{}/{}/latest.json",
+                match args.config_type {
+                    ConfigType::Core => {
+                        "core"
+                    }
+                    ConfigType::Relayer => {
+                        "relayer"
+                    }
+                },
                 if args.production {
                     "production"
                 } else {
@@ -151,7 +186,7 @@ async fn main() -> Result<()> {
         .init();
     let cli = Cli::parse();
     match &cli.command {
-        Commands::Validate { path } => validate_config(path).await?,
+        Commands::Validate { path, config_type } => validate_config(path, config_type).await?,
         Commands::Upload(args) => upload_config(args).await?,
     };
     Ok(())
