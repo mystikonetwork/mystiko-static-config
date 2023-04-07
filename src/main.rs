@@ -58,8 +58,8 @@ struct Cli {
 #[derive(Subcommand)]
 enum Commands {
     Validate {
-        path: String,
         config_type: ConfigType,
+        path: String,
     },
     Upload(UploadArgs),
 }
@@ -186,7 +186,7 @@ async fn main() -> Result<()> {
         .init();
     let cli = Cli::parse();
     match &cli.command {
-        Commands::Validate { path, config_type } => validate_config(path, config_type).await?,
+        Commands::Validate { config_type, path } => validate_config(path, config_type).await?,
         Commands::Upload(args) => upload_config(args).await?,
     };
     Ok(())
