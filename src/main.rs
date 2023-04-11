@@ -30,10 +30,10 @@ enum ConfigType {
 
 #[derive(Args)]
 struct UploadArgs {
-    #[arg(value_enum)]
-    config_type: ConfigType,
     path: String,
     git_revision: String,
+    #[arg(long = "type", value_enum, default_value_t = ConfigType::Core)]
+    config_type: ConfigType,
     #[arg(short, long, default_value_t = String::from(DEFAULT_BUCKET))]
     bucket: String,
     #[arg(short, long, default_value_t = String::from(DEFAULT_REGION))]
@@ -58,8 +58,9 @@ struct Cli {
 #[derive(Subcommand)]
 enum Commands {
     Validate {
-        config_type: ConfigType,
         path: String,
+        #[arg(long = "type", value_enum, default_value_t = ConfigType::Core)]
+        config_type: ConfigType,
     },
     Upload(UploadArgs),
 }
@@ -186,7 +187,7 @@ async fn main() -> Result<()> {
         .init();
     let cli = Cli::parse();
     match &cli.command {
-        Commands::Validate { config_type, path } => validate_config(path, config_type).await?,
+        Commands::Validate { path, config_type } => validate_config(path, config_type).await?,
         Commands::Upload(args) => upload_config(args).await?,
     };
     Ok(())
