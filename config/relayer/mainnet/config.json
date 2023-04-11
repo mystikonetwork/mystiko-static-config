@@ -1,5 +1,6 @@
 {
   "version": "0.0.1",
+  "gitRevision": "__GIT_REVISION__",
   "chains": [
     {
       "name": "Ethereum Mainnet",
