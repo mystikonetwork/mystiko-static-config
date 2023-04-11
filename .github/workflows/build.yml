@@ -42,13 +42,13 @@ jobs:
         timeout-minutes: 60
         run: cargo clippy --all-targets -j 4 -- -D warnings
       - name: Check core mainnet config
-        run: target/debug/mystiko_static_config validate core config/core/mainnet/config.json
+        run: target/debug/mystiko_static_config validate config/core/mainnet/config.json
       - name: Check core testnet config
-        run: target/debug/mystiko_static_config validate core config/core/testnet/config.json
+        run: target/debug/mystiko_static_config validate config/core/testnet/config.json
       - name: Check relayer mainnet config
-        run: target/debug/mystiko_static_config validate relayer config/relayer/mainnet/config.json
+        run: target/debug/mystiko_static_config validate config/relayer/mainnet/config.json --type relayer
       - name: Check relayer testnet config
-        run: target/debug/mystiko_static_config validate relayer config/relayer/testnet/config.json
+        run: target/debug/mystiko_static_config validate config/relayer/testnet/config.json --type relayer
       - run: git diff --quiet || (echo "some generated files are not included in repo" && exit 1)
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master

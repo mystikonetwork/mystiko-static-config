@@ -57,7 +57,7 @@ jobs:
           else
             PRODUCTION_FLAG=""
           fi
-          target/release/mystiko_static_config upload relayer config/relayer/testnet/config.json $(git rev-parse --short HEAD) --latest --testnet $PRODUCTION_FLAG
+          target/release/mystiko_static_config upload config/relayer/testnet/config.json $(git rev-parse --short HEAD) --latest --testnet $PRODUCTION_FLAG --type relayer
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master
         if: failure()
