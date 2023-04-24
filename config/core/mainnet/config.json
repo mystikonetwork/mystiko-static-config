@@ -126,17 +126,17 @@
       "chainId": 56,
       "explorerUrl": "https://bscscan.com",
       "providers": [
+         {
+          "url": "https://bsc-mainnet.blastapi.io/71f46dcd-d99e-468f-b6df-e99a18397576"
+        },
+        {
+          "url": "https://bsc.blockpi.network/v1/rpc/ad480fb8dbff1742911e49057b5f94125eb90e97"
+        },
         {
           "url": "wss://ws-nd-445-067-049.p2pify.com/491ec0808455bb8414ba3b4f323c731f"
         },
         {
           "url": "https://nd-445-067-049.p2pify.com/491ec0808455bb8414ba3b4f323c731f"
-        },
-        {
-          "url": "https://bsc-mainnet.blastapi.io/71f46dcd-d99e-468f-b6df-e99a18397576"
-        },
-        {
-          "url": "https://bsc.blockpi.network/v1/rpc/ad480fb8dbff1742911e49057b5f94125eb90e97"
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
