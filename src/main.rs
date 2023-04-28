@@ -163,6 +163,7 @@ async fn upload_config(args: &UploadArgs) -> Result<()> {
                 bucket: args.bucket.clone(),
                 key: latest_config_key.clone(),
                 body: Some(config_content.into()),
+                cache_control: Some(String::from("no-store")),
                 content_type,
                 acl,
                 ..PutObjectRequest::default()
