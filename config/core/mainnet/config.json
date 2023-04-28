@@ -14,6 +14,7 @@
       ],
       "chainId": 1,
       "explorerUrl": "https://etherscan.io",
+      "explorerApiUrl": "https://api.etherscan.io",
       "providers": [
         {
           "url": "wss://mainnet.infura.io/ws/v3/9aa3d95b3bc440fa88ea12eaa4456161"
@@ -125,6 +126,7 @@
       ],
       "chainId": 56,
       "explorerUrl": "https://bscscan.com",
+      "explorerApiUrl": "https://api.bscscan.com",
       "providers": [
          {
           "url": "https://bsc-mainnet.blastapi.io/71f46dcd-d99e-468f-b6df-e99a18397576"

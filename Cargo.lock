@@ -980,10 +980,11 @@ dependencies = [
 [[package]]
 name = "mystiko_config"
 version = "0.1.0"
-source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=dec0d4b#dec0d4bfb1d5c964e2dd77e51a67257a54b23f64"
+source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=11204cc#11204ccbdd5ae872edad4d60340a55cecd11cf9f"
 dependencies = [
  "anyhow",
  "lazy_static",
+ "mystiko_types",
  "mystiko_utils",
  "mystiko_validator",
  "num-bigint",
@@ -1000,7 +1001,7 @@ dependencies = [
 [[package]]
 name = "mystiko_relayer_config"
 version = "0.1.0"
-source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=dec0d4b#dec0d4bfb1d5c964e2dd77e51a67257a54b23f64"
+source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=11204cc#11204ccbdd5ae872edad4d60340a55cecd11cf9f"
 dependencies = [
  "anyhow",
  "mystiko_validator",
@@ -1030,11 +1031,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "mystiko_types"
+version = "0.1.0"
+source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=11204cc#11204ccbdd5ae872edad4d60340a55cecd11cf9f"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "mystiko_utils"
 version = "0.1.0"
-source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=dec0d4b#dec0d4bfb1d5c964e2dd77e51a67257a54b23f64"
+source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=11204cc#11204ccbdd5ae872edad4d60340a55cecd11cf9f"
 dependencies = [
  "anyhow",
+ "hex",
  "num-bigint",
  "num-traits",
  "rust_decimal",
@@ -1043,7 +1053,7 @@ dependencies = [
 [[package]]
 name = "mystiko_validator"
 version = "0.1.0"
-source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=dec0d4b#dec0d4bfb1d5c964e2dd77e51a67257a54b23f64"
+source = "git+ssh://git@github.com/mystikonetwork/mystiko-rust.git?rev=11204cc#11204ccbdd5ae872edad4d60340a55cecd11cf9f"
 dependencies = [
  "lazy_static",
  "regex",
