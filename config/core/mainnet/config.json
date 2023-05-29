@@ -142,6 +142,7 @@
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
+      "indexerFilterSize": 100000,
       "depositContracts": [
         {
           "version": 1,
@@ -668,7 +669,8 @@
     }
   ],
   "indexer": {
-    "url": "https://indexer.mystiko.network"
+    "url": "https://indexer.mystiko.network",
+    "timeoutMs": 120000
   },
   "countryBlacklist": ["AF","DZ","BD","BO","CO","KP","EC","EG","IR","IQ","MA","NP","PK","CN","QA","SA","TN","TR","AE","US","VN"]
 }
