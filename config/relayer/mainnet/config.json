@@ -6,8 +6,9 @@
       "name": "Ethereum Mainnet",
       "chainId": 1,
       "assetSymbol": "ETH",
+      "assetDecimals": 18,
       "relayerContractAddress": "0xfeecaab7006A7f81acD36128c011395ab1D5FCe0",
-      "contracts": [
+      "assets": [
         {
           "assetSymbol": "ETH",
           "relayerFeeOfTenThousandth": 100
@@ -44,22 +45,31 @@
       "name": "BNB mainnet",
       "chainId": 56,
       "assetSymbol": "BNB",
+      "assetDecimals": 18,
       "relayerContractAddress": "0xfeecaab7006A7f81acD36128c011395ab1D5FCe0",
-      "contracts": [
+      "assets": [
         {
+          "assetType": "main",
           "assetSymbol": "BNB",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 100
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "USDT",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 100
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "USDC",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 100
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "BUSD",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 100
         }
       ],
@@ -86,26 +96,37 @@
       "name": "Polygon mainnet",
       "chainId": 137,
       "assetSymbol": "MATIC",
+      "assetDecimals": 18,
       "relayerContractAddress": "0x3bd8962c6976054bBa73B6c19232570704c8b69D",
-      "contracts": [
+      "assets": [
         {
+          "assetType": "main",
           "assetSymbol": "MATIC",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 100
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "USDT",
+          "assetDecimals": 6,
           "relayerFeeOfTenThousandth": 100
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "USDC",
+          "assetDecimals": 6,
           "relayerFeeOfTenThousandth": 100
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "BUSD",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 100
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "WETH",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 100
         }
       ],
