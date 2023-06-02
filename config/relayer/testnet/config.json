@@ -8,7 +8,7 @@
       "assetSymbol": "ETH",
       "assetDecimals": 18,
       "relayerContractAddress": "0x45B22A8CefDfF00989882CAE48Ad06D57938Efcc",
-      "assets": [
+      "contracts": [
         {
           "assetType": "main",
           "assetSymbol": "ETH",

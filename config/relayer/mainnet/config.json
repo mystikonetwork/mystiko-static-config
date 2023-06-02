@@ -8,17 +8,23 @@
       "assetSymbol": "ETH",
       "assetDecimals": 18,
       "relayerContractAddress": "0xfeecaab7006A7f81acD36128c011395ab1D5FCe0",
-      "assets": [
+      "contracts": [
         {
+          "assetType": "main",
           "assetSymbol": "ETH",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 100
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "USDT",
+          "assetDecimals": 6,
           "relayerFeeOfTenThousandth": 100
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "USDC",
+          "assetDecimals": 6,
           "relayerFeeOfTenThousandth": 100
         }
       ],
@@ -47,7 +53,7 @@
       "assetSymbol": "BNB",
       "assetDecimals": 18,
       "relayerContractAddress": "0xfeecaab7006A7f81acD36128c011395ab1D5FCe0",
-      "assets": [
+      "contracts": [
         {
           "assetType": "main",
           "assetSymbol": "BNB",
@@ -98,7 +104,7 @@
       "assetSymbol": "MATIC",
       "assetDecimals": 18,
       "relayerContractAddress": "0x3bd8962c6976054bBa73B6c19232570704c8b69D",
-      "assets": [
+      "contracts": [
         {
           "assetType": "main",
           "assetSymbol": "MATIC",
