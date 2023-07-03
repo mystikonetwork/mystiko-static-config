@@ -6,18 +6,25 @@
       "name": "Ethereum Goerli",
       "chainId": 5,
       "assetSymbol": "ETH",
+      "assetDecimals": 18,
       "relayerContractAddress": "0x45B22A8CefDfF00989882CAE48Ad06D57938Efcc",
       "contracts": [
         {
+          "assetType": "main",
           "assetSymbol": "ETH",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 25
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "MTT",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 25
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "mUSD",
+          "assetDecimals": 6,
           "relayerFeeOfTenThousandth": 25
         }
       ],
@@ -44,18 +51,25 @@
       "name": "BSC Testnet",
       "chainId": 97,
       "assetSymbol": "BNB",
+      "assetDecimals": 18,
       "relayerContractAddress": "0xfC21Aa6a04f09565bC6eeDC182063Fd4E466670A",
       "contracts": [
         {
+          "assetType": "erc20",
           "assetSymbol": "MTT",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 25
         },
         {
+          "assetType": "erc20",
           "assetSymbol": "mUSD",
+          "assetDecimals": 6,
           "relayerFeeOfTenThousandth": 25
         },
         {
+          "assetType": "main",
           "assetSymbol": "BNB",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 25
         }
       ],
