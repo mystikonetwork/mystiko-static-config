@@ -278,6 +278,7 @@
       "chainId": 137,
       "explorerUrl": "https://polygonscan.com",
       "explorerApiUrl": "https://api.polygonscan.com",
+      "indexerFilterSize": 100000,
       "providers": [
         {
           "url": "https://polygon-mainnet.g.alchemy.com/v2/MTiziebRglgFZFSiLIwHWDTN5J25Oyoo"
