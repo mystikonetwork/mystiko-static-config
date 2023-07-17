@@ -15,8 +15,8 @@ jobs:
       - uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: |
-            ${{ secrets.MYSTIKO_RUST_SSH_PRIVATE_KEY }}
-            ${{ secrets.MYSTIKO_CIRCUITS_PRIVATE_SSH_KEY }}
+            ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_RUST }}
+            ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_CIRCUITS }}
       - name: Toolchain
         uses: actions-rs/toolchain@v1
         with:
