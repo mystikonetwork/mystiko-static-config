@@ -25,11 +25,9 @@ jobs:
             ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_RUST }}
             ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_CIRCUITS }}
       - name: Toolchain
-        uses: actions-rs/toolchain@v1
+        uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: nightly-2023-02-22
-          override: true
-          profile: minimal
+          toolchain: stable
       - name: Cache
         uses: actions/cache@v3
         with:
