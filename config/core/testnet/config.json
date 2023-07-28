@@ -1007,7 +1007,8 @@
           ],
           "assetAddress": "0x4A6FEBc711f9ddddDa4C01a7552164DDB67520b0"
         }
-      ]
+      ],
+      "packerGranularities": [6000, 24000, 96000, 384000, 1536000]
     },
     {
       "name": "BSC Testnet",
@@ -1500,7 +1501,8 @@
           ],
           "assetAddress": "0xc714b6884d66a7D2618c820D86f58A01b789f613"
         }
-      ]
+      ],
+      "packerGranularities": [30000, 120000, 480000, 1920000, 7680000]
     },
     {
       "name": "Polygon Mumbai",
@@ -1961,7 +1963,8 @@
           ],
           "assetAddress": "0x2191B259307dDE156074B70aca701B1143c33256"
         }
-      ]
+      ],
+      "packerGranularities": [32000, 128000, 512000, 2048000, 8192000]
     },
     {
       "name": "Avalanche Fuji",
@@ -2498,7 +2501,8 @@
           ],
           "assetAddress": "0x1AA34153F5166ccb8d385856c7e8cE9F15686585"
         }
-      ]
+      ],
+      "packerGranularities": [30000, 120000, 480000, 1920000, 7680000]
     },
     {
       "name": "Fantom Testnet",
@@ -2957,7 +2961,8 @@
           ],
           "assetAddress": "0xc311813c3Ba27fcBa3393952416D0d04F6234557"
         }
-      ]
+      ],
+      "packerGranularities": [50000, 200000, 800000, 3200000, 12800000]
     },
     {
       "name": "Moonbase Alpha",
@@ -3251,7 +3256,8 @@
           ],
           "assetAddress": "0xB5eF88613adcC7a77dC10DeD858972E3b4f3063d"
         }
-      ]
+      ],
+      "packerGranularities": [5000, 20000, 80000, 320000, 1280000]
     }
   ],
   "bridges": [
@@ -3495,5 +3501,10 @@
   ],
   "indexer": {
     "url": "https://indexer.auditablezk.mystiko.network"
+  },
+  "packer": {
+    "url": "https://static.mystiko.network/packer/v1",
+    "version": 1,
+    "clientTimeoutMs": 60000
   }
 }

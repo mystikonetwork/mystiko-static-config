@@ -24,6 +24,7 @@ jobs:
           ssh-private-key: |
             ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_RUST }}
             ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_CIRCUITS }}
+            ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_PROTOS }}
       - name: Toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
