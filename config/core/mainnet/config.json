@@ -112,7 +112,8 @@
           ],
           "assetAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
         }
-      ]
+      ],
+      "packerGranularities": [2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 1024000, 2048000, 4096000]
     },
     {
       "name": "BNB Chain",
@@ -263,7 +264,8 @@
           ],
           "assetAddress": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56"
         }
-      ]
+      ],
+      "packerGranularities": [7500, 15000, 30000, 60000, 120000, 240000, 480000, 960000, 1920000, 3840000, 7680000, 15360000]
     },
     {
       "name": "Polygon",
@@ -452,7 +454,8 @@
           ],
           "assetAddress": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619"
         }
-      ]
+      ],
+      "packerGranularities": [10000, 20000, 40000, 80000, 160000, 320000, 640000, 1280000, 2560000, 5120000, 10240000, 20480000]
     }
   ],
   "bridges": [],
@@ -672,6 +675,11 @@
   "indexer": {
     "url": "https://indexer.mystiko.network",
     "timeoutMs": 120000
+  },
+  "packer": {
+    "url": "https://static.mystiko.network/packer/v1",
+    "version": 1,
+    "clientTimeoutMs": 30000
   },
   "countryBlacklist": ["AF","DZ","BD","BO","CO","KP","EC","EG","IR","IQ","MA","NP","PK","CN","QA","SA","TN","TR","AE","US","VN"]
 }
