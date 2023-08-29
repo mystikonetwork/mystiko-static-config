@@ -3258,6 +3258,91 @@
         }
       ],
       "packerGranularities": [5000, 20000, 80000, 320000, 1280000]
+    },
+    {
+      "name": "Base Goerli",
+      "assetSymbol": "ETH",
+      "assetDecimals": 18,
+      "recommendedAmounts": [
+        "100000000000000000",
+        "1000000000000000000",
+        "10000000000000000000",
+        "100000000000000000000"
+      ],
+      "chainId": 84531,
+      "explorerUrl": "https://goerli.basescan.org",
+      "explorerApiUrl": "https://api-goerli.basescan.org",
+      "providers": [
+        {
+          "url": "https://rpc.ankr.com/base_goerli"
+        },
+        {
+          "url": "https://base-goerli.blockpi.network/v1/rpc/public"
+        },
+        {
+          "url": "https://base-goerli.drpc.org"
+        }
+      ],
+      "signerEndpoint": "https://goerli.base.org",
+      "eventFilterSize": 1024,
+      "depositContracts": [
+        {
+          "version": 5,
+          "name": "MystikoV2LoopMain",
+          "address": "0x7702CD4Cc4dC777fBfdaE2C1B8bfAe123796110d",
+          "startBlock": 9046435,
+          "bridgeType": "loop",
+          "poolAddress": "0xa3bF511A38E6804a6ad680AA3B16CF5823ab5f81",
+          "minAmount": "100000000000000000",
+          "maxAmount": "1000000000000000000000"
+        },
+        {
+          "version": 5,
+          "name": "MystikoV2LoopERC20",
+          "address": "0xB8dAE66AaC519bD05e37fe49BEDD3Ff2095e275A",
+          "startBlock": 9046468,
+          "bridgeType": "loop",
+          "poolAddress": "0xd2DC932e781b99Cc6313b66f2888cEa5CA6cD85F",
+          "minAmount": "100000",
+          "maxAmount": "1000000000"
+        }
+      ],
+      "poolContracts": [
+        {
+          "version": 5,
+          "name": "CommitmentPool",
+          "poolName": "delta-20230215",
+          "bridgeType": "loop",
+          "address": "0xa3bF511A38E6804a6ad680AA3B16CF5823ab5f81",
+          "startBlock": 9046430,
+          "minRollupFee": "10000000000000000"
+        },
+        {
+          "version": 5,
+          "name": "CommitmentPool",
+          "poolName": "delta-20230215",
+          "bridgeType": "loop",
+          "address": "0xd2DC932e781b99Cc6313b66f2888cEa5CA6cD85F",
+          "startBlock": 9046463,
+          "assetAddress": "0xA008e806e53872DC8C2e60D1Ba8302ccfFA795fB",
+          "minRollupFee": "10000"
+        }
+      ],
+      "assets": [
+        {
+          "assetType": "erc20",
+          "assetSymbol": "mUSD",
+          "assetDecimals": 6,
+          "recommendedAmounts": [
+            "1000000",
+            "10000000",
+            "100000000",
+            "1000000000"
+          ],
+          "assetAddress": "0xA008e806e53872DC8C2e60D1Ba8302ccfFA795fB"
+        }
+      ],
+      "packerGranularities": [32000, 128000, 512000, 2048000, 8192000]
     }
   ],
   "bridges": [
