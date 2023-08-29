@@ -3342,7 +3342,7 @@
           "assetAddress": "0xA008e806e53872DC8C2e60D1Ba8302ccfFA795fB"
         }
       ],
-      "packerGranularities": [40000, 160000, 640000, 2560000, 10000000]
+      "packerGranularities": [40000, 160000, 640000, 2560000, 10240000]
     }
   ],
   "bridges": [
