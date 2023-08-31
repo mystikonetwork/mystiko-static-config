@@ -514,7 +514,7 @@
     },
     {
       "chainId": 8453,
-      "name": "Base Mainnet",
+      "name": "Base",
       "assetSymbol": "ETH",
       "assetDecimals": 18,
       "recommendedAmounts": [
