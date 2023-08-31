@@ -3,6 +3,7 @@
   "gitRevision": "__GIT_REVISION__",
   "chains": [
     {
+      "chainId": 1,
       "name": "Ethereum",
       "assetSymbol": "ETH",
       "assetDecimals": 18,
@@ -12,15 +13,26 @@
         "10000000000000000000",
         "100000000000000000000"
       ],
-      "chainId": 1,
       "explorerUrl": "https://etherscan.io",
       "explorerApiUrl": "https://api.etherscan.io",
+      "eventFilterSize": 200000,
+      "indexerFilterSize": 500000,
+      "providerType": "quorum",
       "providers": [
         {
-          "url": "wss://mainnet.infura.io/ws/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+          "url": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
         },
         {
-          "url": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+          "url": "https://eth-mainnet.g.alchemy.com/v2/demo"
+        },
+        {
+          "url": "https://eth.api.onfinality.io/public"
+        },
+        {
+          "url": "https://api.zan.top/node/v1/eth/mainnet/public"
+        },
+        {
+          "url": "https://mainnet.gateway.tenderly.co"
         }
       ],
       "signerEndpoint": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
@@ -113,9 +125,23 @@
           "assetAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
         }
       ],
-      "packerGranularities": [2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 1024000, 2048000, 4096000]
+      "packerGranularities": [
+        2000,
+        4000,
+        8000,
+        16000,
+        32000,
+        64000,
+        128000,
+        256000,
+        512000,
+        1024000,
+        2048000,
+        4096000
+      ]
     },
     {
+      "chainId": 56,
       "name": "BNB Chain",
       "assetSymbol": "BNB",
       "assetDecimals": 18,
@@ -125,25 +151,29 @@
         "100000000000000000000",
         "1000000000000000000000"
       ],
-      "chainId": 56,
       "explorerUrl": "https://bscscan.com",
       "explorerApiUrl": "https://api.bscscan.com",
+      "eventFilterSize": 1024,
+      "indexerFilterSize": 50000,
+      "providerType": "quorum",
       "providers": [
         {
-          "url": "https://bsc-mainnet.blastapi.io/71f46dcd-d99e-468f-b6df-e99a18397576"
+          "url": "https://nd-445-067-049.p2pify.com/491ec0808455bb8414ba3b4f323c731f"
+        },
+        {
+          "url": "https://bnb.api.onfinality.io/public"
+        },
+        {
+          "url": "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3"
         },
         {
           "url": "https://bsc.blockpi.network/v1/rpc/ad480fb8dbff1742911e49057b5f94125eb90e97"
         },
         {
-          "url": "wss://ws-nd-445-067-049.p2pify.com/491ec0808455bb8414ba3b4f323c731f"
-        },
-        {
-          "url": "https://nd-445-067-049.p2pify.com/491ec0808455bb8414ba3b4f323c731f"
+          "url": "https://rpc.ankr.com/bsc"
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
-      "indexerFilterSize": 50000,
       "depositContracts": [
         {
           "version": 5,
@@ -265,9 +295,23 @@
           "assetAddress": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56"
         }
       ],
-      "packerGranularities": [7500, 15000, 30000, 60000, 120000, 240000, 480000, 960000, 1920000, 3840000, 7680000, 15360000]
+      "packerGranularities": [
+        7500,
+        15000,
+        30000,
+        60000,
+        120000,
+        240000,
+        480000,
+        960000,
+        1920000,
+        3840000,
+        7680000,
+        15360000
+      ]
     },
     {
+      "chainId": 137,
       "name": "Polygon",
       "assetSymbol": "MATIC",
       "assetDecimals": 18,
@@ -277,28 +321,26 @@
         "10000000000000000000000",
         "100000000000000000000000"
       ],
-      "chainId": 137,
       "explorerUrl": "https://polygonscan.com",
       "explorerApiUrl": "https://api.polygonscan.com",
+      "eventFilterSize": 200000,
       "indexerFilterSize": 50000,
+      "providerType": "quorum",
       "providers": [
         {
           "url": "https://polygon-mainnet.g.alchemy.com/v2/MTiziebRglgFZFSiLIwHWDTN5J25Oyoo"
         },
         {
-          "url": "wss://polygon-mainnet.g.alchemy.com/v2/MTiziebRglgFZFSiLIwHWDTN5J25Oyoo"
+          "url": "https://gateway.tenderly.co/public/polygon"
         },
         {
-          "url": "https://polygon-mainnet.blastapi.io/57d491a6-37e6-4246-8f21-ab58cca5799b"
+          "url": "https://polygon.drpc.org"
         },
         {
-          "url": "wss://polygon-mainnet.blastapi.io/57d491a6-37e6-4246-8f21-ab58cca5799b"
+          "url": "https://polygon.api.onfinality.io/public"
         },
         {
-          "url": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de"
-        },
-        {
-          "url": "wss://polygon.blockpi.network/v1/ws/676fdc0dca8df28d61455e69ea7ece93355cf8de"
+          "url": "https://polygon-mainnet.g.alchemy.com/v2/demo"
         }
       ],
       "signerEndpoint": "https://polygon-rpc.com",
@@ -455,7 +497,125 @@
           "assetAddress": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619"
         }
       ],
-      "packerGranularities": [10000, 20000, 40000, 80000, 160000, 320000, 640000, 1280000, 2560000, 5120000, 10240000, 20480000]
+      "packerGranularities": [
+        10000,
+        20000,
+        40000,
+        80000,
+        160000,
+        320000,
+        640000,
+        1280000,
+        2560000,
+        5120000,
+        10240000,
+        20480000
+      ]
+    },
+    {
+      "chainId": 8453,
+      "name": "Base Mainnet",
+      "assetSymbol": "ETH",
+      "assetDecimals": 18,
+      "recommendedAmounts": [
+        "100000000000000000",
+        "1000000000000000000",
+        "10000000000000000000",
+        "100000000000000000000"
+      ],
+      "explorerUrl": "https://basescan.org",
+      "explorerApiUrl": "https://api.basescan.org",
+      "eventFilterSize": 200000,
+      "indexerFilterSize": 500000,
+      "providerType": "quorum",
+      "providers": [
+        {
+          "url": "https://rpc.notadegen.com/base"
+        },
+        {
+          "url": "https://base-mainnet.diamondswap.org/rpc"
+        },
+        {
+          "url": "https://base.gateway.tenderly.co"
+        },
+        {
+          "url": "https://gateway.tenderly.co/public/base"
+        },
+        {
+          "url": "https://base.meowrpc.com"
+        }
+      ],
+      "signerEndpoint": "https://mainnet.base.org",
+      "depositContracts": [
+        {
+          "version": 1,
+          "name": "MystikoV2LoopMain",
+          "address": "0x62121886c954d7e23077f52217b51c26ad26bE9e",
+          "startBlock": 3336566,
+          "bridgeType": "loop",
+          "poolAddress": "0x7F88F2A3Cf18E96844E14CaE59EC97B908734C01",
+          "minAmount": "100000000000000000",
+          "maxAmount": "1000000000000000000000"
+        },
+        {
+          "version": 1,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x4333Ab5682Cd4589330BD9CFcedd5E054A0e9d8D",
+          "startBlock": 3336594,
+          "bridgeType": "loop",
+          "poolAddress": "0x01BC19b166986431F3f2A348497C4634defb4C29",
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000"
+        }
+      ],
+      "poolContracts": [
+        {
+          "version": 1,
+          "name": "CommitmentPool",
+          "poolName": "alpha-20230223",
+          "bridgeType": "loop",
+          "address": "0x7F88F2A3Cf18E96844E14CaE59EC97B908734C01",
+          "startBlock": 3336563,
+          "minRollupFee": "200000000000000"
+        },
+        {
+          "version": 1,
+          "name": "CommitmentPool",
+          "poolName": "alpha-20230223",
+          "bridgeType": "loop",
+          "address": "0x01BC19b166986431F3f2A348497C4634defb4C29",
+          "startBlock": 3336590,
+          "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+          "minRollupFee": "300000"
+        }
+      ],
+      "assets": [
+        {
+          "assetType": "erc20",
+          "assetSymbol": "USDbC",
+          "assetDecimals": 6,
+          "recommendedAmounts": [
+            "100000000",
+            "1000000000",
+            "10000000000",
+            "100000000000"
+          ],
+          "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA"
+        }
+      ],
+      "packerGranularities": [
+        40000,
+        160000,
+        640000,
+        2560000,
+        10240000,
+        40960000,
+        163840000,
+        2621440000,
+        10485760000,
+        41943040000,
+        167772160000
+      ]
     }
   ],
   "bridges": [],
@@ -681,5 +841,27 @@
     "version": 1,
     "clientTimeoutMs": 30000
   },
-  "countryBlacklist": ["AF","DZ","BD","BO","CO","KP","EC","EG","IR","IQ","MA","NP","PK","CN","QA","SA","TN","TR","AE","US","VN"]
+  "countryBlacklist": [
+    "AF",
+    "DZ",
+    "BD",
+    "BO",
+    "CO",
+    "KP",
+    "EC",
+    "EG",
+    "IR",
+    "IQ",
+    "MA",
+    "NP",
+    "PK",
+    "CN",
+    "QA",
+    "SA",
+    "TN",
+    "TR",
+    "AE",
+    "US",
+    "VN"
+  ]
 }

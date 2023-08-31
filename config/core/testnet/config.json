@@ -3,6 +3,7 @@
   "gitRevision": "__GIT_REVISION__",
   "chains": [
     {
+      "chainId": 5,
       "name": "Ethereum Goerli",
       "assetSymbol": "ETH",
       "assetDecimals": 18,
@@ -12,21 +13,19 @@
         "10000000000000000000",
         "100000000000000000000"
       ],
-      "chainId": 5,
       "explorerUrl": "https://goerli.etherscan.io",
       "explorerApiUrl": "https://api-goerli.etherscan.io",
+      "eventFilterSize": 200000,
+      "indexerFilterSize": 500000,
       "providers": [
-        {
-          "url": "wss://goerli.infura.io/ws/v3/9aa3d95b3bc440fa88ea12eaa4456161"
-        },
         {
           "url": "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
         },
         {
-          "url": "wss://eth-goerli.alchemyapi.io/v2/X0WmNwQWIjARyvQ2io1aZk0F3IjJ2qcM"
+          "url": "https://eth-goerli.alchemyapi.io/v2/X0WmNwQWIjARyvQ2io1aZk0F3IjJ2qcM"
         },
         {
-          "url": "https://eth-goerli.alchemyapi.io/v2/X0WmNwQWIjARyvQ2io1aZk0F3IjJ2qcM"
+          "url": "https://eth-goerli.api.onfinality.io/public"
         }
       ],
       "signerEndpoint": "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
@@ -1008,9 +1007,16 @@
           "assetAddress": "0x4A6FEBc711f9ddddDa4C01a7552164DDB67520b0"
         }
       ],
-      "packerGranularities": [6000, 24000, 96000, 384000, 1536000]
+      "packerGranularities": [
+        6000,
+        24000,
+        96000,
+        384000,
+        1536000
+      ]
     },
     {
+      "chainId": 97,
       "name": "BSC Testnet",
       "assetSymbol": "BNB",
       "assetDecimals": 18,
@@ -1020,22 +1026,16 @@
         "10000000000000000000",
         "100000000000000000000"
       ],
-      "chainId": 97,
       "explorerUrl": "https://testnet.bscscan.com",
       "explorerApiUrl": "https://api-testnet.bscscan.com",
+      "eventFilterSize": 1024,
+      "indexerFilterSize": 500000,
       "providers": [
-        {
-          "url": "https://endpoints.omniatech.io/v1/bsc/testnet/public"
-        },
-        {
-          "url": "https://data-seed-prebsc-2-s3.binance.org:8545"
-        },
         {
           "url": "https://thrumming-prettiest-gadget.bsc-testnet.discover.quiknode.pro/47169c08ce80f3b333bcf1fa806100c44c02a5fe"
         }
       ],
       "signerEndpoint": "https://data-seed-prebsc-2-s2.binance.org:8545",
-      "eventFilterSize": 10000,
       "depositContracts": [
         {
           "version": 5,
@@ -1190,8 +1190,7 @@
           "peerContractAddress": "0x7838Ec82d3a53B5434174eA0ae5fE79fAaC154DA",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000",
-          "minBridgeFee": "20000000000000000",
-          "minExecutorFee": "0"
+          "minBridgeFee": "20000000000000000"
         },
         {
           "version": 5,
@@ -1204,8 +1203,7 @@
           "peerContractAddress": "0x6Dc6c53845e720e39255136dF51151db1D4F6fbA",
           "minAmount": "100000",
           "maxAmount": "1000000000",
-          "minBridgeFee": "20000000000000000",
-          "minExecutorFee": "0"
+          "minBridgeFee": "20000000000000000"
         }
       ],
       "poolContracts": [
@@ -1502,9 +1500,16 @@
           "assetAddress": "0xc714b6884d66a7D2618c820D86f58A01b789f613"
         }
       ],
-      "packerGranularities": [30000, 120000, 480000, 1920000, 7680000]
+      "packerGranularities": [
+        30000,
+        120000,
+        480000,
+        1920000,
+        7680000
+      ]
     },
     {
+      "chainId": 80001,
       "name": "Polygon Mumbai",
       "assetSymbol": "MATIC",
       "assetDecimals": 18,
@@ -1514,21 +1519,19 @@
         "10000000000000000000",
         "100000000000000000000"
       ],
-      "chainId": 80001,
       "explorerUrl": "https://mumbai.polygonscan.com",
       "explorerApiUrl": "https://api-testnet.polygonscan.com",
+      "eventFilterSize": 200000,
+      "indexerFilterSize": 500000,
       "providers": [
-        {
-          "url": "wss://polygon-mumbai.g.alchemy.com/v2/JhuCQTtuNFg365zQ0WLKtrAf9AbfreOS"
-        },
         {
           "url": "https://polygon-mumbai.g.alchemy.com/v2/JhuCQTtuNFg365zQ0WLKtrAf9AbfreOS"
         },
         {
-          "url": "https://matic-mumbai.chainstacklabs.com"
+          "url": "https://api.zan.top/node/v1/polygon/mumbai/public"
         },
         {
-          "url": "https://polygon-mumbai.blockpi.network/v1/rpc/public"
+          "url": "https://polygon-mumbai.gateway.tenderly.co"
         }
       ],
       "signerEndpoint": "https://rpc-mumbai.maticvigil.com",
@@ -1686,8 +1689,7 @@
           "peerContractAddress": "0xe719F92434c8fdb638E52B11b58E2473C3C0019c",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000",
-          "minBridgeFee": "200000000000000000",
-          "minExecutorFee": "0"
+          "minBridgeFee": "200000000000000000"
         }
       ],
       "poolContracts": [
@@ -1964,9 +1966,16 @@
           "assetAddress": "0x2191B259307dDE156074B70aca701B1143c33256"
         }
       ],
-      "packerGranularities": [32000, 128000, 512000, 2048000, 8192000]
+      "packerGranularities": [
+        32000,
+        128000,
+        512000,
+        2048000,
+        8192000
+      ]
     },
     {
+      "chainId": 43113,
       "name": "Avalanche Fuji",
       "assetSymbol": "AVAX",
       "assetDecimals": 18,
@@ -1976,15 +1985,16 @@
         "10000000000000000000",
         "100000000000000000000"
       ],
-      "chainId": 43113,
       "explorerUrl": "https://testnet.snowtrace.io",
       "explorerApiUrl": "https://api-testnet.snowtrace.io",
+      "eventFilterSize": 1024,
+      "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "wss://ws-nd-238-781-681.p2pify.com/796ca43c7ddc3121534c97e104d7a369/ext/bc/C/ws"
+          "url": "https://api.avax-test.network/ext/bc/C/rpc"
         },
         {
-          "url": "https://nd-238-781-681.p2pify.com/796ca43c7ddc3121534c97e104d7a369/ext/bc/C/rpc"
+          "url": "https://rpc.ankr.com/avalanche_fuji"
         }
       ],
       "signerEndpoint": "https://api.avax-test.network/ext/bc/C/rpc",
@@ -2142,8 +2152,7 @@
           "peerContractAddress": "0x7838Ec82d3a53B5434174eA0ae5fE79fAaC154DA",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000",
-          "minBridgeFee": "300000000000000000",
-          "minExecutorFee": "0"
+          "minBridgeFee": "300000000000000000"
         },
         {
           "version": 5,
@@ -2156,8 +2165,7 @@
           "peerContractAddress": "0x6Dc6c53845e720e39255136dF51151db1D4F6fbA",
           "minAmount": "100000",
           "maxAmount": "1000000000",
-          "minBridgeFee": "300000000000000000",
-          "minExecutorFee": "0"
+          "minBridgeFee": "300000000000000000"
         },
         {
           "version": 5,
@@ -2170,8 +2178,7 @@
           "peerContractAddress": "0x7838Ec82d3a53B5434174eA0ae5fE79fAaC154DA",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000",
-          "minBridgeFee": "30000000000000000",
-          "minExecutorFee": "0"
+          "minBridgeFee": "30000000000000000"
         },
         {
           "version": 5,
@@ -2184,8 +2191,7 @@
           "peerContractAddress": "0x7838Ec82d3a53B5434174eA0ae5fE79fAaC154DA",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000",
-          "minBridgeFee": "30000000000000000",
-          "minExecutorFee": "0"
+          "minBridgeFee": "30000000000000000"
         }
       ],
       "poolContracts": [
@@ -2502,9 +2508,16 @@
           "assetAddress": "0x1AA34153F5166ccb8d385856c7e8cE9F15686585"
         }
       ],
-      "packerGranularities": [30000, 120000, 480000, 1920000, 7680000]
+      "packerGranularities": [
+        30000,
+        120000,
+        480000,
+        1920000,
+        7680000
+      ]
     },
     {
+      "chainId": 4002,
       "name": "Fantom Testnet",
       "assetSymbol": "FTM",
       "assetDecimals": 18,
@@ -2514,19 +2527,19 @@
         "10000000000000000000",
         "100000000000000000000"
       ],
-      "chainId": 4002,
       "explorerUrl": "https://testnet.ftmscan.com",
       "explorerApiUrl": "https://api-testnet.ftmscan.com",
-      "eventFilterSize": 2000,
+      "eventFilterSize": 1024,
+      "indexerFilterSize": 500000,
       "providers": [
-        {
-          "url": "https://rpc.ankr.com/fantom_testnet"
-        },
         {
           "url": "https://endpoints.omniatech.io/v1/fantom/testnet/public"
         },
         {
           "url": "https://rpc.testnet.fantom.network"
+        },
+        {
+          "url": "https://rpc.ankr.com/fantom_testnet"
         }
       ],
       "signerEndpoint": "https://rpc.testnet.fantom.network",
@@ -2684,8 +2697,7 @@
           "peerContractAddress": "0x43F9BD341A39B41e3FEF21600e2c64A6eefF4801",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000",
-          "minBridgeFee": "1000000000000000000",
-          "minExecutorFee": "0"
+          "minBridgeFee": "1000000000000000000"
         }
       ],
       "poolContracts": [
@@ -2962,9 +2974,16 @@
           "assetAddress": "0xc311813c3Ba27fcBa3393952416D0d04F6234557"
         }
       ],
-      "packerGranularities": [50000, 200000, 800000, 3200000, 12800000]
+      "packerGranularities": [
+        50000,
+        200000,
+        800000,
+        3200000,
+        12800000
+      ]
     },
     {
+      "chainId": 1287,
       "name": "Moonbase Alpha",
       "assetSymbol": "DEV",
       "assetDecimals": 18,
@@ -2974,25 +2993,22 @@
         "10000000000000000000",
         "100000000000000000000"
       ],
-      "chainId": 1287,
       "explorerUrl": "https://moonbase.moonscan.io",
       "explorerApiUrl": "https://api-moonbase.moonscan.io",
+      "eventFilterSize": 2000,
+      "indexerFilterSize": 500000,
       "providers": [
-        {
-          "url": "wss://moonbeam-alpha.api.onfinality.io/rpc?apikey=493402f8-6d11-4a9b-a6f7-3428181f5910"
-        },
         {
           "url": "https://moonbeam-alpha.api.onfinality.io/rpc?apikey=493402f8-6d11-4a9b-a6f7-3428181f5910"
         },
         {
-          "url": "wss://wss.api.moonbase.moonbeam.network"
+          "url": "https://rpc.api.moonbase.moonbeam.network"
         },
         {
-          "url": "https://rpc.api.moonbase.moonbeam.network"
+          "url": "https://moonbeam-alpha.api.onfinality.io/public"
         }
       ],
       "signerEndpoint": "https://moonbeam-alpha.api.onfinality.io/public",
-      "eventFilterSize": 2000,
       "depositContracts": [
         {
           "version": 5,
@@ -3257,9 +3273,16 @@
           "assetAddress": "0xB5eF88613adcC7a77dC10DeD858972E3b4f3063d"
         }
       ],
-      "packerGranularities": [5000, 20000, 80000, 320000, 1280000]
+      "packerGranularities": [
+        5000,
+        20000,
+        80000,
+        320000,
+        1280000
+      ]
     },
     {
+      "chainId": 84531,
       "name": "Base Goerli",
       "assetSymbol": "ETH",
       "assetDecimals": 18,
@@ -3269,9 +3292,10 @@
         "10000000000000000000",
         "100000000000000000000"
       ],
-      "chainId": 84531,
       "explorerUrl": "https://goerli.basescan.org",
       "explorerApiUrl": "https://api-goerli.basescan.org",
+      "eventFilterSize": 1024,
+      "indexerFilterSize": 500000,
       "providers": [
         {
           "url": "https://rpc.ankr.com/base_goerli"
@@ -3280,11 +3304,10 @@
           "url": "https://base-goerli.blockpi.network/v1/rpc/public"
         },
         {
-          "url": "https://base-goerli.drpc.org"
+          "url": "https://goerli.base.org"
         }
       ],
       "signerEndpoint": "https://goerli.base.org",
-      "eventFilterSize": 1024,
       "depositContracts": [
         {
           "version": 5,
@@ -3342,33 +3365,39 @@
           "assetAddress": "0xA008e806e53872DC8C2e60D1Ba8302ccfFA795fB"
         }
       ],
-      "packerGranularities": [40000, 160000, 640000, 2560000, 10240000]
+      "packerGranularities": [
+        40000,
+        160000,
+        640000,
+        2560000,
+        10240000
+      ]
     }
   ],
   "bridges": [
     {
-      "name": "Poly Bridge",
       "type": "poly",
+      "name": "Poly Bridge",
       "explorerUrl": "https://explorer.poly.network",
       "explorerPrefix": "/testnet/tx/%tx%",
       "apiUrl": "https://explorer.poly.network",
       "apiPrefix": "/testnet/api/v1/getcrosstx?txhash=%tx%"
     },
     {
-      "name": "Mystiko Testnet Bridge",
-      "type": "tbridge"
+      "type": "tbridge",
+      "name": "Mystiko Testnet Bridge"
     },
     {
-      "name": "Celer Network",
-      "type": "celer"
+      "type": "celer",
+      "name": "Celer Network"
     },
     {
-      "name": "Layer Zero",
-      "type": "layerZero"
+      "type": "layerZero",
+      "name": "Layer Zero"
     },
     {
-      "name": "Axelar Network",
-      "type": "axelar"
+      "type": "axelar",
+      "name": "Axelar Network"
     }
   ],
   "circuits": [
