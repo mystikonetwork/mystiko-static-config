@@ -525,7 +525,7 @@
       ],
       "explorerUrl": "https://basescan.org",
       "explorerApiUrl": "https://api.basescan.org",
-      "eventFilterSize": 200000,
+      "eventFilterSize": 10000,
       "indexerFilterSize": 500000,
       "providerType": "quorum",
       "providers": [
@@ -539,10 +539,10 @@
           "url": "https://base.gateway.tenderly.co"
         },
         {
-          "url": "https://gateway.tenderly.co/public/base"
+          "url": "https://base.meowrpc.com"
         },
         {
-          "url": "https://base.meowrpc.com"
+          "url": "https://1rpc.io/base"
         }
       ],
       "signerEndpoint": "https://mainnet.base.org",
