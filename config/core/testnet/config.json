@@ -1028,9 +1028,12 @@
       ],
       "explorerUrl": "https://testnet.bscscan.com",
       "explorerApiUrl": "https://api-testnet.bscscan.com",
-      "eventFilterSize": 1024,
+      "eventFilterSize": 500,
       "indexerFilterSize": 500000,
       "providers": [
+        {
+          "url": "https://thrumming-prettiest-gadget.bsc-testnet.discover.quiknode.pro/47169c08ce80f3b333bcf1fa806100c44c02a5fe"
+        },
         {
           "url": "https://bsc-testnet.blastapi.io/443f931f-a291-450f-956b-62a57fa8f758"
         }
