@@ -17,7 +17,6 @@
       "explorerApiUrl": "https://api.etherscan.io",
       "eventFilterSize": 200000,
       "indexerFilterSize": 500000,
-      "providerType": "quorum",
       "providers": [
         {
           "url": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
@@ -155,7 +154,6 @@
       "explorerApiUrl": "https://api.bscscan.com",
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
-      "providerType": "quorum",
       "providers": [
         {
           "url": "https://nd-445-067-049.p2pify.com/491ec0808455bb8414ba3b4f323c731f"
@@ -325,7 +323,6 @@
       "explorerApiUrl": "https://api.polygonscan.com",
       "eventFilterSize": 200000,
       "indexerFilterSize": 50000,
-      "providerType": "quorum",
       "providers": [
         {
           "url": "https://polygon-mainnet.g.alchemy.com/v2/MTiziebRglgFZFSiLIwHWDTN5J25Oyoo"
@@ -527,7 +524,6 @@
       "explorerApiUrl": "https://api.basescan.org",
       "eventFilterSize": 10000,
       "indexerFilterSize": 500000,
-      "providerType": "quorum",
       "providers": [
         {
           "url": "https://rpc.notadegen.com/base"
