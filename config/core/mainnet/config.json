@@ -15,7 +15,7 @@
       ],
       "explorerUrl": "https://etherscan.io",
       "explorerApiUrl": "https://api.etherscan.io",
-      "eventFilterSize": 200000,
+      "eventFilterSize": 50000,
       "indexerFilterSize": 500000,
       "providers": [
         {
@@ -25,13 +25,13 @@
           "url": "https://eth-mainnet.g.alchemy.com/v2/demo"
         },
         {
-          "url": "https://eth.api.onfinality.io/public"
-        },
-        {
-          "url": "https://api.zan.top/node/v1/eth/mainnet/public"
-        },
-        {
           "url": "https://mainnet.gateway.tenderly.co"
+        },
+        {
+          "url": "https://eth.drpc.org"
+        },
+        {
+          "url": "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7"
         }
       ],
       "signerEndpoint": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
@@ -159,9 +159,6 @@
           "url": "https://nd-445-067-049.p2pify.com/491ec0808455bb8414ba3b4f323c731f"
         },
         {
-          "url": "https://bnb.api.onfinality.io/public"
-        },
-        {
           "url": "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3"
         },
         {
@@ -169,6 +166,9 @@
         },
         {
           "url": "https://rpc.ankr.com/bsc"
+        },
+        {
+          "url": "https://1rpc.io/bnb"
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
@@ -321,7 +321,7 @@
       ],
       "explorerUrl": "https://polygonscan.com",
       "explorerApiUrl": "https://api.polygonscan.com",
-      "eventFilterSize": 200000,
+      "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
       "providers": [
         {
@@ -334,10 +334,10 @@
           "url": "https://polygon.drpc.org"
         },
         {
-          "url": "https://polygon.api.onfinality.io/public"
+          "url": "https://rpc.ankr.com/polygon"
         },
         {
-          "url": "https://polygon-mainnet.g.alchemy.com/v2/demo"
+          "url": "https://1rpc.io/matic"
         }
       ],
       "signerEndpoint": "https://polygon-rpc.com",
