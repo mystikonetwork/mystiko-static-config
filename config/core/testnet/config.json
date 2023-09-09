@@ -2001,6 +2001,9 @@
         },
         {
           "url": "https://rpc.ankr.com/avalanche_fuji"
+        },
+        {
+          "url": "https://avalanche-fuji.blockpi.network/v1/rpc/public"
         }
       ],
       "signerEndpoint": "https://api.avax-test.network/ext/bc/C/rpc",
