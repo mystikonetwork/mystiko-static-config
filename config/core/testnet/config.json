@@ -15,6 +15,7 @@
       ],
       "explorerUrl": "https://goerli.etherscan.io",
       "explorerApiUrl": "https://api-goerli.etherscan.io",
+      "eventDelayBlocks": 10,
       "eventFilterSize": 200000,
       "indexerFilterSize": 500000,
       "providers": [
@@ -1028,6 +1029,7 @@
       ],
       "explorerUrl": "https://testnet.bscscan.com",
       "explorerApiUrl": "https://api-testnet.bscscan.com",
+      "eventDelayBlocks": 40,
       "eventFilterSize": 500,
       "indexerFilterSize": 500000,
       "providers": [
@@ -1527,6 +1529,7 @@
       ],
       "explorerUrl": "https://mumbai.polygonscan.com",
       "explorerApiUrl": "https://api-testnet.polygonscan.com",
+      "eventDelayBlocks": 50,
       "eventFilterSize": 200000,
       "indexerFilterSize": 500000,
       "providers": [
@@ -1993,6 +1996,7 @@
       ],
       "explorerUrl": "https://testnet.snowtrace.io",
       "explorerApiUrl": "https://api-testnet.snowtrace.io",
+      "eventDelayBlocks": 60,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
       "providers": [
@@ -2538,6 +2542,7 @@
       ],
       "explorerUrl": "https://testnet.ftmscan.com",
       "explorerApiUrl": "https://api-testnet.ftmscan.com",
+      "eventDelayBlocks": 50,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
       "providers": [
@@ -3004,6 +3009,7 @@
       ],
       "explorerUrl": "https://moonbase.moonscan.io",
       "explorerApiUrl": "https://api-moonbase.moonscan.io",
+      "eventDelayBlocks": 10,
       "eventFilterSize": 2000,
       "indexerFilterSize": 500000,
       "providers": [
@@ -3303,6 +3309,7 @@
       ],
       "explorerUrl": "https://goerli.basescan.org",
       "explorerApiUrl": "https://api-goerli.basescan.org",
+      "eventDelayBlocks": 60,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
       "providers": [
