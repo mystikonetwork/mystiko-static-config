@@ -10,7 +10,7 @@ extern crate tokio;
 
 use anyhow::Result;
 use clap::{arg, Args, Parser, Subcommand, ValueEnum};
-use mystiko_config::wrapper::mystiko::MystikoConfig;
+use mystiko_config::MystikoConfig;
 use mystiko_relayer_config::wrapper::relayer::RelayerConfig;
 use rusoto_core::Region;
 use rusoto_s3::{HeadObjectRequest, PutObjectRequest, S3Client, S3};

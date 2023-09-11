@@ -13,6 +13,7 @@
         "10000000000000000000",
         "100000000000000000000"
       ],
+      "eventDelayBlocks": 20,
       "explorerUrl": "https://etherscan.io",
       "explorerApiUrl": "https://api.etherscan.io",
       "eventFilterSize": 50000,
@@ -152,6 +153,7 @@
       ],
       "explorerUrl": "https://bscscan.com",
       "explorerApiUrl": "https://api.bscscan.com",
+      "eventDelayBlocks": 80,
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
       "providers": [
@@ -321,6 +323,7 @@
       ],
       "explorerUrl": "https://polygonscan.com",
       "explorerApiUrl": "https://api.polygonscan.com",
+      "eventDelayBlocks": 100,
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
       "providers": [
@@ -522,6 +525,7 @@
       ],
       "explorerUrl": "https://basescan.org",
       "explorerApiUrl": "https://api.basescan.org",
+      "eventDelayBlocks": 120,
       "eventFilterSize": 10000,
       "indexerFilterSize": 500000,
       "providers": [
