@@ -841,6 +841,10 @@
     "version": 1,
     "clientTimeoutMs": 30000
   },
+  "sequencer": {
+    "host": "sequencer.auditablezk.mystiko.network",
+    "isSsl": true
+  },
   "countryBlacklist": [
     "AF",
     "DZ",
