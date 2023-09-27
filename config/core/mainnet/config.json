@@ -23,10 +23,10 @@
           "url": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
         },
         {
-          "url": "https://eth-mainnet.g.alchemy.com/v2/demo"
+          "url": "https://eth.llamarpc.com"
         },
         {
-          "url": "https://mainnet.gateway.tenderly.co"
+          "url": "https://rpc.flashbots.net"
         },
         {
           "url": "https://eth.drpc.org"
@@ -158,9 +158,6 @@
       "indexerFilterSize": 50000,
       "providers": [
         {
-          "url": "https://nd-445-067-049.p2pify.com/491ec0808455bb8414ba3b4f323c731f"
-        },
-        {
           "url": "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3"
         },
         {
@@ -171,6 +168,9 @@
         },
         {
           "url": "https://1rpc.io/bnb"
+        },
+        {
+          "url": "https://bscrpc.com"
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
@@ -328,19 +328,19 @@
       "indexerFilterSize": 50000,
       "providers": [
         {
-          "url": "https://polygon-mainnet.g.alchemy.com/v2/MTiziebRglgFZFSiLIwHWDTN5J25Oyoo"
-        },
-        {
-          "url": "https://gateway.tenderly.co/public/polygon"
-        },
-        {
-          "url": "https://polygon.drpc.org"
-        },
-        {
           "url": "https://rpc.ankr.com/polygon"
         },
         {
           "url": "https://1rpc.io/matic"
+        },
+        {
+          "url": "https://polygon-rpc.com"
+        },
+        {
+          "url": "https://polygon.llamarpc.com"
+        },
+        {
+          "url": "https://polygon-mainnet.g.alchemy.com/v2/MTiziebRglgFZFSiLIwHWDTN5J25Oyoo"
         }
       ],
       "signerEndpoint": "https://polygon-rpc.com",
@@ -526,23 +526,23 @@
       "explorerUrl": "https://basescan.org",
       "explorerApiUrl": "https://api.basescan.org",
       "eventDelayBlocks": 120,
-      "eventFilterSize": 10000,
+      "eventFilterSize": 2000,
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://rpc.notadegen.com/base"
+          "url": "https://base.meowrpc.com"
         },
         {
           "url": "https://base-mainnet.diamondswap.org/rpc"
         },
         {
-          "url": "https://base.gateway.tenderly.co"
-        },
-        {
-          "url": "https://base.meowrpc.com"
+          "url": "https://rpc.notadegen.com/base"
         },
         {
           "url": "https://1rpc.io/base"
+        },
+        {
+          "url": "https://mainnet.base.org"
         }
       ],
       "signerEndpoint": "https://mainnet.base.org",
