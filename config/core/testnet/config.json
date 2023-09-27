@@ -3624,6 +3624,10 @@
     "url": "https://indexer.auditablezk.mystiko.network",
     "timeoutMs": 120000
   },
+  "sequencer": {
+    "host": "sequencer.mystiko.network",
+    "isSsl": true
+  },
   "packer": {
     "url": "https://static.mystiko.network/packer/v1",
     "version": 1,
