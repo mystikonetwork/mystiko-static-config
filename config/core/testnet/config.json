@@ -16,7 +16,7 @@
       "explorerUrl": "https://goerli.etherscan.io",
       "explorerApiUrl": "https://api-goerli.etherscan.io",
       "eventDelayBlocks": 10,
-      "eventFilterSize": 200000,
+      "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
       "providers": [
         {
@@ -26,7 +26,7 @@
           "url": "https://eth-goerli.alchemyapi.io/v2/X0WmNwQWIjARyvQ2io1aZk0F3IjJ2qcM"
         },
         {
-          "url": "https://eth-goerli.api.onfinality.io/public"
+          "url": "https://rpc.ankr.com/eth_goerli"
         }
       ],
       "signerEndpoint": "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
@@ -1527,17 +1527,14 @@
       "explorerUrl": "https://mumbai.polygonscan.com",
       "explorerApiUrl": "https://api-testnet.polygonscan.com",
       "eventDelayBlocks": 50,
-      "eventFilterSize": 200000,
+      "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
       "providers": [
         {
           "url": "https://polygon-mumbai.g.alchemy.com/v2/JhuCQTtuNFg365zQ0WLKtrAf9AbfreOS"
         },
         {
-          "url": "https://api.zan.top/node/v1/polygon/mumbai/public"
-        },
-        {
-          "url": "https://polygon-mumbai.gateway.tenderly.co"
+          "url": "https://rpc.ankr.com/polygon_mumbai"
         }
       ],
       "signerEndpoint": "https://rpc-mumbai.maticvigil.com",
@@ -2002,9 +1999,6 @@
         },
         {
           "url": "https://rpc.ankr.com/avalanche_fuji"
-        },
-        {
-          "url": "https://avalanche-fuji.blockpi.network/v1/rpc/public"
         }
       ],
       "signerEndpoint": "https://api.avax-test.network/ext/bc/C/rpc",
@@ -3314,7 +3308,7 @@
           "url": "https://rpc.ankr.com/base_goerli"
         },
         {
-          "url": "https://base-goerli.blockpi.network/v1/rpc/public"
+          "url": "https://base-goerli.drpc.org"
         },
         {
           "url": "https://goerli.base.org"
