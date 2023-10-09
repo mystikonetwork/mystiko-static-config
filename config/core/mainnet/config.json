@@ -842,7 +842,7 @@
     "clientTimeoutMs": 30000
   },
   "sequencer": {
-    "host": "sequencer.auditablezk.mystiko.network",
+    "host": "sequencer.mystiko.network",
     "isSsl": true
   },
   "countryBlacklist": [
