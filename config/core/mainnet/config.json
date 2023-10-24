@@ -36,6 +36,7 @@
         }
       ],
       "signerEndpoint": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      "transactionType": "eip1559",
       "depositContracts": [
         {
           "version": 6,
@@ -206,6 +207,7 @@
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
+      "transactionType": "legacy",
       "depositContracts": [
         {
           "version": 6,
@@ -419,6 +421,7 @@
         }
       ],
       "signerEndpoint": "https://polygon-rpc.com",
+      "transactionType": "eip1559",
       "depositContracts": [
         {
           "version": 6,
@@ -675,6 +678,7 @@
         }
       ],
       "signerEndpoint": "https://mainnet.base.org",
+      "transactionType": "eip1559",
       "depositContracts": [
         {
           "version": 6,
