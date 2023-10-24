@@ -3224,7 +3224,7 @@
         }
       ],
       "signerEndpoint": "https://rpc.testnet.fantom.network",
-      "transactionType": "eip1559",
+      "transactionType": "legacy",
       "depositContracts": [
         {
           "version": 6,
