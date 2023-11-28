@@ -35,6 +35,7 @@
           "url": "https://eth-mainnet.nodereal.io/v1/1659dfb40aa24bbb8153a677b98064d7"
         }
       ],
+      "providerQuorumPercentage": 75,
       "signerEndpoint": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
       "transactionType": "eip1559",
       "depositContracts": [
@@ -200,6 +201,7 @@
           "url": "https://1rpc.io/bnb"
         }
       ],
+      "providerQuorumPercentage": 75,
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
       "transactionType": "legacy",
       "depositContracts": [
@@ -414,6 +416,7 @@
           "url": "https://polygon-mainnet.g.alchemy.com/v2/MTiziebRglgFZFSiLIwHWDTN5J25Oyoo"
         }
       ],
+      "providerQuorumPercentage": 75,
       "signerEndpoint": "https://polygon-rpc.com",
       "transactionType": "eip1559",
       "depositContracts": [
@@ -671,6 +674,7 @@
           "url": "https://mainnet.base.org"
         }
       ],
+      "providerQuorumPercentage": 75,
       "signerEndpoint": "https://mainnet.base.org",
       "transactionType": "eip1559",
       "depositContracts": [
