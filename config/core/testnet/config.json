@@ -1244,14 +1244,17 @@
       "explorerUrl": "https://testnet.bscscan.com",
       "explorerApiUrl": "https://api-testnet.bscscan.com",
       "eventDelayBlocks": 40,
-      "eventFilterSize": 500,
+      "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://thrumming-prettiest-gadget.bsc-testnet.discover.quiknode.pro/47169c08ce80f3b333bcf1fa806100c44c02a5fe"
+          "url": "https://data-seed-prebsc-2-s3.bnbchain.org:8545"
         },
         {
-          "url": "https://bsc-testnet.blastapi.io/443f931f-a291-450f-956b-62a57fa8f758"
+          "url": "https://data-seed-prebsc-1-s3.bnbchain.org:8545"
+        },
+        {
+          "url": "https://bsc-testnet.blockpi.network/v1/rpc/public"
         }
       ],
       "signerEndpoint": "https://data-seed-prebsc-2-s2.binance.org:8545",

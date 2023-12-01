@@ -200,10 +200,10 @@
           "url": "https://1rpc.io/bnb"
         },
         {
-          "url": "https://bsc.blockpi.network/v1/rpc/public"
+          "url": "https://bscrpc.com"
         },
         {
-          "url": "https://bsc.rpc.blxrbdn.com"
+          "url": "https://bsc.blockpi.network/v1/rpc/ad480fb8dbff1742911e49057b5f94125eb90e97"
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
