@@ -3826,13 +3826,13 @@
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://moonbeam-alpha.api.onfinality.io/rpc?apikey=493402f8-6d11-4a9b-a6f7-3428181f5910"
-        },
-        {
-          "url": "https://rpc.api.moonbase.moonbeam.network"
-        },
-        {
           "url": "https://moonbeam-alpha.api.onfinality.io/public"
+        },
+        {
+          "url": "https://rpc.testnet.moonbeam.network"
+        },
+        {
+          "url": "https://moonbase.unitedbloc.com:1000"
         }
       ],
       "signerEndpoint": "https://moonbeam-alpha.api.onfinality.io/public",
