@@ -770,6 +770,144 @@
         5120000,
         10240000
       ]
+    },
+    {
+      "chainId": 43114,
+      "name": "Avalanche",
+      "assetSymbol": "AVAX",
+      "assetDecimals": 18,
+      "recommendedAmounts": [
+        "10000000000000000000",
+        "100000000000000000000",
+        "1000000000000000000000",
+        "10000000000000000000000"
+      ],
+      "explorerUrl": "https://snowtrace.io",
+      "explorerApiUrl": "https://api.routescan.io/v2/network/mainnet/evm/43114/etherscan",
+      "eventDelayBlocks": 100,
+      "eventFilterSize": 2000,
+      "indexerFilterSize": 50000,
+      "providers": [
+        {
+          "url": "https://api.avax.network/ext/bc/C/rpc"
+        },
+        {
+          "url": "https://avalanche.drpc.org"
+        },
+        {
+          "url": "https://avalanche.public-rpc.com"
+        },
+        {
+          "url": "https://1rpc.io/avax/c"
+        },
+        {
+          "url": "https://rpc.ankr.com/avalanche"
+        }
+      ],
+      "signerEndpoint": "https://api.avax.network/ext/bc/C/rpc",
+      "transactionType": "legacy",
+      "depositContracts": [
+        {
+          "version": 6,
+          "name": "MystikoV2LoopMain",
+          "address": "0xC20f84542eBcB87A8108d960A367741F8fD2d691",
+          "startBlock": 40514115,
+          "bridgeType": "loop",
+          "poolAddress": "0xf5fc0Bd6bBe24a0ff945A8F58aEc2f6EC48EC964",
+          "minAmount": "10000000000000000000",
+          "maxAmount": "100000000000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x8FfA92155bd9cc60198FBE6E1e6fd32A4A82dEA2",
+          "startBlock": 40514128,
+          "bridgeType": "loop",
+          "poolAddress": "0x373DBe18EEf567D5Dd2a393B8c11e90B1A30d967",
+          "minAmount": "100000000000000000000",
+          "maxAmount": "1000000000000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x60ed8556D10c547b667EC610E36f46a2a023245c",
+          "startBlock": 40514138,
+          "bridgeType": "loop",
+          "poolAddress": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
+          "minAmount": "100000000000000000000",
+          "maxAmount": "1000000000000000000000000"
+        }
+      ],
+      "poolContracts": [
+        {
+          "version": 6,
+          "name": "CommitmentPool",
+          "poolName": "beta-20231009",
+          "bridgeType": "loop",
+          "address": "0xf5fc0Bd6bBe24a0ff945A8F58aEc2f6EC48EC964",
+          "startBlock": 40514111,
+          "minRollupFee": "2000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "CommitmentPool",
+          "poolName": "beta-20231009",
+          "bridgeType": "loop",
+          "address": "0x373DBe18EEf567D5Dd2a393B8c11e90B1A30d967",
+          "startBlock": 40514123,
+          "assetAddress": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+          "minRollupFee": "500000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "CommitmentPool",
+          "poolName": "beta-20231009",
+          "bridgeType": "loop",
+          "address": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
+          "startBlock": 40514135,
+          "assetAddress": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "minRollupFee": "500000000000000000"
+        }
+      ],
+      "assets": [
+        {
+          "assetType": "erc20",
+          "assetSymbol": "USDT",
+          "assetDecimals": 18,
+          "recommendedAmounts": [
+            "100000000000000000000",
+            "1000000000000000000000",
+            "10000000000000000000000",
+            "100000000000000000000000"
+          ],
+          "assetAddress": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7"
+        },
+        {
+          "assetType": "erc20",
+          "assetSymbol": "USDC",
+          "assetDecimals": 18,
+          "recommendedAmounts": [
+            "100000000000000000000",
+            "1000000000000000000000",
+            "10000000000000000000000",
+            "100000000000000000000000"
+          ],
+          "assetAddress": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E"
+        }
+      ],
+      "packerGranularities": [
+        10000,
+        20000,
+        40000,
+        80000,
+        160000,
+        320000,
+        640000,
+        1280000,
+        2560000,
+        5120000,
+        10240000
+      ]
     }
   ],
   "bridges": [],
