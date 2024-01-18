@@ -846,7 +846,7 @@
           "bridgeType": "loop",
           "address": "0xf5fc0Bd6bBe24a0ff945A8F58aEc2f6EC48EC964",
           "startBlock": 40514111,
-          "minRollupFee": "2000000000000000"
+          "minRollupFee": "20000000000000000"
         },
         {
           "version": 6,
@@ -873,7 +873,7 @@
         {
           "assetType": "erc20",
           "assetSymbol": "USDT",
-          "assetDecimals": 18,
+          "assetDecimals": 6,
           "recommendedAmounts": [
             "100000000000000000000",
             "1000000000000000000000",
@@ -885,7 +885,7 @@
         {
           "assetType": "erc20",
           "assetSymbol": "USDC",
-          "assetDecimals": 18,
+          "assetDecimals": 6,
           "recommendedAmounts": [
             "100000000000000000000",
             "1000000000000000000000",
