@@ -792,12 +792,6 @@
           "url": "https://api.avax.network/ext/bc/C/rpc"
         },
         {
-          "url": "https://avalanche.drpc.org"
-        },
-        {
-          "url": "https://avalanche.public-rpc.com"
-        },
-        {
           "url": "https://1rpc.io/avax/c"
         },
         {
@@ -805,7 +799,7 @@
         }
       ],
       "signerEndpoint": "https://api.avax.network/ext/bc/C/rpc",
-      "transactionType": "legacy",
+      "transactionType": "eip1559",
       "depositContracts": [
         {
           "version": 6,
