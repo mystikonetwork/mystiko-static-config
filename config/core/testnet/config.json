@@ -2499,7 +2499,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://testnet.snowtrace.io",
-      "explorerApiUrl": "https://api-testnet.snowtrace.io",
+      "explorerApiUrl": "https://api.routescan.io/v2/network/testnet/evm/43113/etherscan",
       "eventDelayBlocks": 60,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
