@@ -3,7 +3,7 @@
   "gitRevision": "__GIT_REVISION__",
   "chains": [
     {
-      "name": "Ethereum Mainnet",
+      "name": "Ethereum",
       "chainId": 1,
       "assetSymbol": "ETH",
       "assetDecimals": 18,
@@ -48,7 +48,7 @@
       }
     },
     {
-      "name": "BNB mainnet",
+      "name": "BNB Chain",
       "chainId": 56,
       "assetSymbol": "BNB",
       "assetDecimals": 18,
@@ -99,7 +99,7 @@
       }
     },
     {
-      "name": "Polygon mainnet",
+      "name": "Polygon",
       "chainId": 137,
       "assetSymbol": "MATIC",
       "assetDecimals": 18,
@@ -147,6 +147,51 @@
         },
         "erc20GasCost": {
           "transaction1x0": 528479,
+          "transaction1x1": 629858,
+          "transaction1x2": 705322,
+          "transaction2x0": 610366,
+          "transaction2x1": 726257,
+          "transaction2x2": 803121
+        }
+      }
+    },
+    {
+      "name": "Avalanche",
+      "chainId": 43114,
+      "assetSymbol": "AVAX",
+      "assetDecimals": 18,
+      "relayerContractAddress": "0x0BEd41b9a9AE2e58Ce39cD699A56b4c9b484A69B",
+      "contracts": [
+        {
+          "assetType": "main",
+          "assetSymbol": "AVAX",
+          "assetDecimals": 18,
+          "relayerFeeOfTenThousandth": 50
+        },
+        {
+          "assetType": "erc20",
+          "assetSymbol": "USDT",
+          "assetDecimals": 6,
+          "relayerFeeOfTenThousandth": 50
+        },
+        {
+          "assetType": "erc20",
+          "assetSymbol": "USDC",
+          "assetDecimals": 6,
+          "relayerFeeOfTenThousandth": 50
+        }
+      ],
+      "transactionInfo": {
+        "mainGasCost": {
+          "transaction1x0": 514668,
+          "transaction1x1": 617520,
+          "transaction1x2": 706652,
+          "transaction2x0": 595025,
+          "transaction2x1": 705148,
+          "transaction2x2": 795438
+        },
+        "erc20GasCost": {
+          "transaction1x0": 554562,
           "transaction1x1": 629858,
           "transaction1x2": 705322,
           "transaction2x0": 610366,
