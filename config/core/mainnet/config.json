@@ -818,8 +818,8 @@
           "startBlock": 40514128,
           "bridgeType": "loop",
           "poolAddress": "0x373DBe18EEf567D5Dd2a393B8c11e90B1A30d967",
-          "minAmount": "100000000000000000000",
-          "maxAmount": "1000000000000000000000000"
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000"
         },
         {
           "version": 6,
@@ -828,8 +828,8 @@
           "startBlock": 40514138,
           "bridgeType": "loop",
           "poolAddress": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
-          "minAmount": "100000000000000000000",
-          "maxAmount": "1000000000000000000000000"
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000"
         }
       ],
       "poolContracts": [
@@ -850,7 +850,7 @@
           "address": "0x373DBe18EEf567D5Dd2a393B8c11e90B1A30d967",
           "startBlock": 40514123,
           "assetAddress": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
-          "minRollupFee": "500000000000000000"
+          "minRollupFee": "500000"
         },
         {
           "version": 6,
@@ -860,7 +860,7 @@
           "address": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
           "startBlock": 40514135,
           "assetAddress": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
-          "minRollupFee": "500000000000000000"
+          "minRollupFee": "500000"
         }
       ],
       "assets": [
