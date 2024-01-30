@@ -417,7 +417,7 @@
           "url": "https://polygon.llamarpc.com"
         },
         {
-          "url": "https://polygon-mainnet.g.alchemy.com/v2/MTiziebRglgFZFSiLIwHWDTN5J25Oyoo"
+          "url": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de"
         }
       ],
       "signerEndpoint": "https://polygon-rpc.com",
