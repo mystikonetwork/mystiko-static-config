@@ -412,12 +412,6 @@
         },
         {
           "url": "https://polygon-rpc.com"
-        },
-        {
-          "url": "https://polygon.llamarpc.com"
-        },
-        {
-          "url": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de"
         }
       ],
       "signerEndpoint": "https://polygon-rpc.com",
