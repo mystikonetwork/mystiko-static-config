@@ -4209,10 +4209,7 @@
           "url": "https://rpc.ankr.com/base_goerli"
         },
         {
-          "url": "https://base-goerli.drpc.org"
-        },
-        {
-          "url": "https://goerli.base.org"
+          "url": "https://base-goerli.blockpi.network/v1/rpc/public"
         }
       ],
       "signerEndpoint": "https://goerli.base.org",
