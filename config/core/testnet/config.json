@@ -4206,10 +4206,7 @@
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://rpc.ankr.com/base_goerli"
-        },
-        {
-          "url": "https://base-goerli.blockpi.network/v1/rpc/public"
+          "url": "https://gateway.tenderly.co/public/base-goerli"
         }
       ],
       "signerEndpoint": "https://goerli.base.org",
