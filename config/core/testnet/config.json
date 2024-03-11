@@ -3214,9 +3214,6 @@
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://endpoints.omniatech.io/v1/fantom/testnet/public"
-        },
-        {
           "url": "https://rpc.testnet.fantom.network"
         },
         {
