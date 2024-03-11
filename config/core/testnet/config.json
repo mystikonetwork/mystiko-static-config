@@ -3212,6 +3212,7 @@
       "eventDelayBlocks": 50,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
+      "providerQuorumPercentage": 60,
       "providers": [
         {
           "url": "https://rpc.testnet.fantom.network"
