@@ -3212,10 +3212,8 @@
       "eventDelayBlocks": 50,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
+      "providerQuorumPercentage": 60,
       "providers": [
-        {
-          "url": "https://endpoints.omniatech.io/v1/fantom/testnet/public"
-        },
         {
           "url": "https://rpc.testnet.fantom.network"
         },
