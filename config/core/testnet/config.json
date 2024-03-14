@@ -20,12 +20,6 @@
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://ethereum-sepolia.blockpi.network/v1/rpc/public"
-        },
-        {
-          "url": "https://1rpc.io/sepolia"
-        },
-        {
           "url": "https://rpc.sepolia.org"
         }
       ],
