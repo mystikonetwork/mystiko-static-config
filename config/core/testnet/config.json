@@ -20,10 +20,10 @@
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://sepolia.gateway.tenderly.co"
+          "url": "https://ethereum-sepolia.blockpi.network/v1/rpc/public"
         },
         {
-          "url": "https://eth-sepolia.api.onfinality.io/public"
+          "url": "https://1rpc.io/sepolia"
         },
         {
           "url": "https://rpc.sepolia.org"
