@@ -23,7 +23,7 @@
           "url": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
         },
         {
-          "url": "https://eth.llamarpc.com"
+          "url": "https://rpc.mevblocker.io"
         },
         {
           "url": "https://rpc.flashbots.net"
@@ -665,10 +665,10 @@
           "url": "https://base.gateway.tenderly.co"
         },
         {
-          "url": "https://base.blockpi.network/v1/rpc/public"
+          "url": "https://base.meowrpc.com"
         },
         {
-          "url": "https://base.api.onfinality.io/rpc?apikey=acd87efd-1fe1-4c92-894e-7cb0133571b0"
+          "url": "https://rpc.notadegen.com/base"
         }
       ],
       "signerEndpoint": "https://mainnet.base.org",
