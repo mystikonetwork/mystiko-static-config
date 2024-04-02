@@ -199,6 +199,45 @@
           "transaction2x2": 823121
         }
       }
+    },
+    {
+      "name": "Base",
+      "chainId": 8453,
+      "assetSymbol": "ETH",
+      "assetDecimals": 18,
+      "relayerContractAddress": "0x0BEd41b9a9AE2e58Ce39cD699A56b4c9b484A69B",
+      "contracts": [
+        {
+          "assetType": "main",
+          "assetSymbol": "ETH",
+          "assetDecimals": 18,
+          "relayerFeeOfTenThousandth": 50
+        },
+        {
+          "assetType": "erc20",
+          "assetSymbol": "USDbC",
+          "assetDecimals": 6,
+          "relayerFeeOfTenThousandth": 50
+        }
+      ],
+      "transactionInfo": {
+        "mainGasCost": {
+          "transaction1x0": 500704,
+          "transaction1x1": 619966,
+          "transaction1x2": 705128,
+          "transaction2x0": 598799,
+          "transaction2x1": 708389,
+          "transaction2x2": 803183
+        },
+        "erc20GasCost": {
+          "transaction1x0": 553636,
+          "transaction1x1": 620019,
+          "transaction1x2": 705494,
+          "transaction2x0": 611040,
+          "transaction2x1": 727970,
+          "transaction2x2": 803645
+        }
+      }
     }
   ]
 }
