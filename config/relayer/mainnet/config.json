@@ -13,19 +13,19 @@
           "assetType": "main",
           "assetSymbol": "ETH",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "USDT",
           "assetDecimals": 6,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "USDC",
           "assetDecimals": 6,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         }
       ],
       "transactionInfo": {
@@ -58,25 +58,25 @@
           "assetType": "main",
           "assetSymbol": "BNB",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "USDT",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "USDC",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "BUSD",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         }
       ],
       "transactionInfo": {
@@ -109,31 +109,31 @@
           "assetType": "main",
           "assetSymbol": "MATIC",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "USDT",
           "assetDecimals": 6,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "USDC",
           "assetDecimals": 6,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "BUSD",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "WETH",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         }
       ],
       "transactionInfo": {
@@ -166,19 +166,19 @@
           "assetType": "main",
           "assetSymbol": "AVAX",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "USDT",
           "assetDecimals": 6,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "USDC",
           "assetDecimals": 6,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         }
       ],
       "transactionInfo": {
@@ -211,13 +211,13 @@
           "assetType": "main",
           "assetSymbol": "ETH",
           "assetDecimals": 18,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         },
         {
           "assetType": "erc20",
           "assetSymbol": "USDbC",
           "assetDecimals": 6,
-          "relayerFeeOfTenThousandth": 50
+          "relayerFeeOfTenThousandth": 10
         }
       ],
       "transactionInfo": {
