@@ -656,9 +656,6 @@
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://1rpc.io/base"
-        },
-        {
           "url": "https://mainnet.base.org"
         },
         {
@@ -669,6 +666,9 @@
         },
         {
           "url": "https://rpc.notadegen.com/base"
+        },
+        {
+          "url": "https://base.blockpi.network/v1/rpc/public"
         }
       ],
       "signerEndpoint": "https://mainnet.base.org",
