@@ -414,7 +414,7 @@
           "url": "https://polygon-rpc.com"
         }
       ],
-      "signerEndpoint": "https://polygon-rpc.com",
+      "signerEndpoint": "https://polygon-mainnet.infura.io",
       "transactionType": "eip1559",
       "depositContracts": [
         {
@@ -786,10 +786,10 @@
           "url": "https://api.avax.network/ext/bc/C/rpc"
         },
         {
-          "url": "https://1rpc.io/avax/c"
+          "url": "https://avalanche.public-rpc.com"
         },
         {
-          "url": "https://rpc.ankr.com/avalanche"
+          "url": "https://avalanche.drpc.org"
         }
       ],
       "signerEndpoint": "https://api.avax.network/ext/bc/C/rpc",
