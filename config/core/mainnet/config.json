@@ -414,7 +414,7 @@
           "url": "https://polygon-rpc.com"
         }
       ],
-      "signerEndpoint": "https://polygon-mainnet.infura.io",
+      "signerEndpoint": "https://rpc.ankr.com/polygon",
       "transactionType": "eip1559",
       "depositContracts": [
         {
