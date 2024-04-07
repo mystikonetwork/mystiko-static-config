@@ -789,7 +789,7 @@
           "url": "https://rpc.ankr.com/polygon_mumbai"
         }
       ],
-      "signerEndpoint": "https://rpc-mumbai.maticvigil.com",
+      "signerEndpoint": "https://rpc.ankr.com/polygon_mumbai",
       "transactionType": "eip1559",
       "depositContracts": [
         {
