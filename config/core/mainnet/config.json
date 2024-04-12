@@ -654,21 +654,28 @@
       "eventDelayBlocks": 120,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
+      "providerQuorumPercentage": 40,
       "providers": [
         {
           "url": "https://mainnet.base.org"
         },
         {
+          "url": "https://base.meowrpc.com"
+        },
+        {
           "url": "https://base.gateway.tenderly.co"
         },
         {
-          "url": "https://base.meowrpc.com"
+          "url": "https://base.api.onfinality.io/rpc?apikey=acd87efd-1fe1-4c92-894e-7cb0133571b0"
+        },
+        {
+          "url": "https://lb.nodies.app/v1/02984fdc3b0c498db9bf4b72a4b231f7"
         },
         {
           "url": "https://base.drpc.org"
         },
         {
-          "url": "https://base.api.onfinality.io/rpc?apikey=acd87efd-1fe1-4c92-894e-7cb0133571b0"
+          "url": "https://base-pokt.nodies.app"
         }
       ],
       "signerEndpoint": "https://mainnet.base.org",
