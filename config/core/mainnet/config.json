@@ -654,7 +654,7 @@
       "eventDelayBlocks": 120,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
-      "providerQuorumPercentage": 40,
+      "providerQuorumPercentage": 50,
       "providers": [
         {
           "url": "https://mainnet.base.org"
