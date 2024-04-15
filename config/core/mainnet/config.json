@@ -18,6 +18,7 @@
       "explorerApiUrl": "https://api.etherscan.io",
       "eventFilterSize": 50000,
       "indexerFilterSize": 500000,
+      "safeConfirmations": 5,
       "providers": [
         {
           "url": "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
@@ -189,6 +190,7 @@
       "eventDelayBlocks": 80,
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
+      "safeConfirmations": 15,
       "providers": [
         {
           "url": "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3"
@@ -403,6 +405,7 @@
       "eventDelayBlocks": 100,
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
+      "safeConfirmations": 15,
       "providers": [
         {
           "url": "https://rpc.ankr.com/polygon"
@@ -654,6 +657,7 @@
       "eventDelayBlocks": 120,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
+      "safeConfirmations": 15,
       "providerQuorumPercentage": 50,
       "providers": [
         {
@@ -788,6 +792,7 @@
       "eventDelayBlocks": 100,
       "eventFilterSize": 2000,
       "indexerFilterSize": 50000,
+      "safeConfirmations": 15,
       "providers": [
         {
           "url": "https://api.avax.network/ext/bc/C/rpc"
@@ -920,6 +925,7 @@
       "eventDelayBlocks": 120,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
+      "safeConfirmations": 15,
       "providers": [
         {
           "url": "https://rpc.linea.build"
