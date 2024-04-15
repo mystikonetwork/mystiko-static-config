@@ -2575,6 +2575,64 @@
         2560000,
         10240000
       ]
+    },
+    {
+      "chainId": 59141,
+      "name": "Linea Sepolia",
+      "assetSymbol": "ETH",
+      "assetDecimals": 18,
+      "recommendedAmounts": [
+        "100000000000000000",
+        "1000000000000000000",
+        "10000000000000000000",
+        "100000000000000000000"
+      ],
+      "explorerUrl": "https://sepolia.lineascan.build",
+      "explorerApiUrl": "https://api-sepolia.lineascan.build/api",
+      "eventDelayBlocks": 60,
+      "eventFilterSize": 1024,
+      "indexerFilterSize": 500000,
+      "providers": [
+        {
+          "url": "https://rpc.sepolia.linea.build"
+        },
+        {
+          "url": "https://linea-sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+        }
+      ],
+      "signerEndpoint": "https://rpc.sepolia.linea.build",
+      "transactionType": "eip1559",
+      "depositContracts": [
+        {
+          "version": 6,
+          "name": "MystikoV2LoopMain",
+          "address": "0x5048F3F8D8a6336F248c42B112016682603d4110",
+          "startBlock": 231419,
+          "bridgeType": "loop",
+          "poolAddress": "0xc5F7Fae1A3cB87Aeb463B08cc00f5f341F13986e",
+          "minAmount": "100000000000000000",
+          "maxAmount": "1000000000000000000000"
+        }
+      ],
+      "poolContracts": [
+        {
+          "version": 6,
+          "name": "CommitmentPool",
+          "poolName": "epsilon-20231009",
+          "bridgeType": "loop",
+          "address": "0xc5F7Fae1A3cB87Aeb463B08cc00f5f341F13986e",
+          "startBlock": 231417,
+          "minRollupFee": "10000000000000000"
+        }
+      ],
+      "assets": [],
+      "packerGranularities": [
+        40000,
+        160000,
+        640000,
+        2560000,
+        10240000
+      ]
     }
   ],
   "bridges": [
