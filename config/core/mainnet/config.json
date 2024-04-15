@@ -931,8 +931,8 @@
           "url": "https://1rpc.io/linea"
         }
       ],
-      "signerEndpoint": "https://rpc.linea.build",
-      "transactionType": "eip1559",
+      "signerEndpoint": "https://linea-mainnet.infura.io/v3",
+      "transactionType": "legacy",
       "depositContracts": [
         {
           "version": 6,

@@ -2601,7 +2601,7 @@
         }
       ],
       "signerEndpoint": "https://rpc.sepolia.linea.build",
-      "transactionType": "eip1559",
+      "transactionType": "legacy",
       "depositContracts": [
         {
           "version": 6,
