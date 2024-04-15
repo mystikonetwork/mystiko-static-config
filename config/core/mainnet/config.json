@@ -931,7 +931,7 @@
           "url": "https://1rpc.io/linea"
         }
       ],
-      "signerEndpoint": "https://linea-mainnet.infura.io/v3",
+      "signerEndpoint": "https://linea.drpc.org",
       "transactionType": "legacy",
       "depositContracts": [
         {
