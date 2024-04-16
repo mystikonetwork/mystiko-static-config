@@ -2588,7 +2588,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://sepolia.lineascan.build",
-      "explorerApiUrl": "https://api-sepolia.lineascan.build/api",
+      "explorerApiUrl": "https://api-sepolia.lineascan.build",
       "eventDelayBlocks": 60,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,

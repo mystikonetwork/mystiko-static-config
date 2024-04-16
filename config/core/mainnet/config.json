@@ -921,7 +921,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://lineascan.build",
-      "explorerApiUrl": "https://api.lineascan.build/api",
+      "explorerApiUrl": "https://api.lineascan.build",
       "eventDelayBlocks": 120,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
@@ -944,7 +944,7 @@
           "version": 6,
           "name": "MystikoV2LoopMain",
           "address": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
-          "startBlock": 3707216,
+          "startBlock": 3707169,
           "bridgeType": "loop",
           "poolAddress": "0x8FfA92155bd9cc60198FBE6E1e6fd32A4A82dEA2",
           "minAmount": "100000000000000000",
