@@ -2588,7 +2588,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://sepolia.lineascan.build",
-      "explorerApiUrl": "https://api-sepolia.lineascan.build/api",
+      "explorerApiUrl": "https://api-sepolia.lineascan.build",
       "eventDelayBlocks": 60,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
@@ -2607,7 +2607,7 @@
           "version": 6,
           "name": "MystikoV2LoopMain",
           "address": "0x5048F3F8D8a6336F248c42B112016682603d4110",
-          "startBlock": 231419,
+          "startBlock": 231417,
           "bridgeType": "loop",
           "poolAddress": "0xc5F7Fae1A3cB87Aeb463B08cc00f5f341F13986e",
           "minAmount": "100000000000000000",
