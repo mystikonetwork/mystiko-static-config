@@ -944,7 +944,7 @@
           "version": 6,
           "name": "MystikoV2LoopMain",
           "address": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
-          "startBlock": 3707169,
+          "startBlock": 3707166,
           "bridgeType": "loop",
           "poolAddress": "0x8FfA92155bd9cc60198FBE6E1e6fd32A4A82dEA2",
           "minAmount": "100000000000000000",
@@ -954,7 +954,7 @@
           "version": 6,
           "name": "MystikoV2LoopERC20",
           "address": "0xC20f84542eBcB87A8108d960A367741F8fD2d691",
-          "startBlock": 3707169,
+          "startBlock": 3707166,
           "bridgeType": "loop",
           "poolAddress": "0xf5fc0Bd6bBe24a0ff945A8F58aEc2f6EC48EC964",
           "minAmount": "100000000",
@@ -968,7 +968,7 @@
           "poolName": "beta-20231009",
           "bridgeType": "loop",
           "address": "0x8FfA92155bd9cc60198FBE6E1e6fd32A4A82dEA2",
-          "startBlock": 3707213,
+          "startBlock": 3707166,
           "minRollupFee": "40000000000000"
         },
         {
