@@ -10,8 +10,8 @@ anyhow = { version = "1.0" }
 clap = { version = "4.2.1", features = ["derive"] }
 env_logger = { version = "0.10.0" }
 log = { version = "0.4.17" }
-mystiko_config = { git = "ssh://git@github.com/mystikonetwork/mystiko-rust.git", rev = "d729b78" }
-mystiko_relayer_config = { git = "ssh://git@github.com/mystikonetwork/mystiko-rust.git", rev = "d729b78" }
+mystiko_config = { git = "ssh://git@github.com/mystikonetwork/mystiko-rust.git", rev = "e5bf01a" }
+mystiko_relayer_config = { git = "ssh://git@github.com/mystikonetwork/mystiko-rust.git", rev = "e5bf01a" }
 rusoto_core = { version = "0.48.0" }
 rusoto_s3 = { version = "0.48.0" }
 serde_json = { version = "1.0.91" }

@@ -2900,6 +2900,74 @@
       "verifyingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup64.vkey.gz"
       ]
+    },
+    {
+      "name": "zokrates-1.0-rollup128",
+      "type": "rollup128",
+      "isDefault": true,
+      "programFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup128.program.gz"
+      ],
+      "abiFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup128.abi.json"
+      ],
+      "provingKeyFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup128.pkey.gz"
+      ],
+      "verifyingKeyFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup128.vkey.gz"
+      ]
+    },
+    {
+      "name": "zokrates-1.0-rollup256",
+      "type": "rollup256",
+      "isDefault": true,
+      "programFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup256.program.gz"
+      ],
+      "abiFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup256.abi.json"
+      ],
+      "provingKeyFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup256.pkey.gz"
+      ],
+      "verifyingKeyFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup256.vkey.gz"
+      ]
+    },
+    {
+      "name": "zokrates-1.0-rollup512",
+      "type": "rollup512",
+      "isDefault": true,
+      "programFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup512.program.gz"
+      ],
+      "abiFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup512.abi.json"
+      ],
+      "provingKeyFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup512.pkey.gz"
+      ],
+      "verifyingKeyFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup512.vkey.gz"
+      ]
+    },
+    {
+      "name": "zokrates-1.0-rollup1024",
+      "type": "rollup1024",
+      "isDefault": true,
+      "programFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup1024.program.gz"
+      ],
+      "abiFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup1024.abi.json"
+      ],
+      "provingKeyFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup1024.pkey.gz"
+      ],
+      "verifyingKeyFile": [
+        "https://static.mystiko.network/circuits/zokrates/development/016c948/Rollup1024.vkey.gz"
+      ]
     }
   ],
   "indexer": {
