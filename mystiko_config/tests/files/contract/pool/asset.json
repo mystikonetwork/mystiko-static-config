@@ -1,0 +1,10 @@
+{
+  "assetType": "erc20",
+  "assetSymbol": "MTT",
+  "assetDecimals": 18,
+  "assetAddress": "__ADDRESS__",
+  "recommendedAmounts": [
+    "1000000000000000000",
+    "10000000000000000000"
+  ]
+}
