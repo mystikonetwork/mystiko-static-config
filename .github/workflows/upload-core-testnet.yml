@@ -4,7 +4,7 @@ on:
   push:
     branches: [ 'master' ]
     paths:
-      - 'config/core/testnet/**'
+      - 'mystiko_config/config/testnet/**'
   workflow_dispatch:
     inputs:
       production:

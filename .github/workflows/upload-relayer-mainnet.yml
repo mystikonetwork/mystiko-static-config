@@ -4,7 +4,7 @@ on:
   push:
     branches: [ 'master' ]
     paths:
-      - 'config/relayer/mainnet/**'
+      - 'mystiko_relayer_config/config/mainnet/**'
   workflow_dispatch:
     inputs:
       production:
