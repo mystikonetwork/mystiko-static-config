@@ -10,7 +10,8 @@ extern crate tokio;
 
 use anyhow::Result;
 use clap::{arg, Args, Parser, Subcommand, ValueEnum};
-use mystiko_config::MystikoConfig;
+use mystiko_config::{create_raw_from_json, MystikoConfig, RawMystikoConfig};
+use mystiko_relayer_config::raw::relayer::RawRelayerConfig;
 use mystiko_relayer_config::wrapper::relayer::RelayerConfig;
 use rusoto_core::Region;
 use rusoto_s3::{HeadObjectRequest, PutObjectRequest, S3Client, S3};
@@ -20,7 +21,6 @@ use tokio::fs::read_to_string;
 
 const DEFAULT_BUCKET: &str = "static.mystiko.network";
 const DEFAULT_REGION: &str = "us-east-1";
-const GIT_REVISION_MARKER: &str = "\"__GIT_REVISION__\"";
 
 #[derive(ValueEnum, Clone)]
 enum ConfigType {
@@ -65,45 +65,50 @@ enum Commands {
     Upload(UploadArgs),
 }
 
-async fn read_config_string(path: &str, git_revision: Option<String>) -> Result<String> {
-    let config_string = read_to_string(PathBuf::from(path)).await?;
-    let replaced_config_string = config_string.replace(
-        GIT_REVISION_MARKER,
-        &git_revision
-            .as_ref()
-            .map(|v| format!("\"{}\"", v))
-            .unwrap_or(String::from("null")),
-    );
-    let value: serde_json::Value = serde_json::from_str(&replaced_config_string)?;
-    Ok(serde_json::to_string(&value)?)
-}
-
-async fn validate_config_string(config_string: &str, config_type: &ConfigType) -> Result<()> {
-    match config_type {
+async fn validate_config_string(
+    config_string: &str,
+    config_type: &ConfigType,
+    git_revision: Option<String>,
+) -> Result<String> {
+    let config_str = match config_type {
         ConfigType::Core => {
-            MystikoConfig::from_json_str(config_string)?;
+            let mut config = create_raw_from_json::<RawMystikoConfig>(config_string)?;
+            config.git_revision = git_revision;
+            MystikoConfig::from_raw(config.clone())?;
+            serde_json::to_string(&config)?
         }
         ConfigType::Relayer => {
-            RelayerConfig::from_json_str(config_string)?;
+            let mut config = create_raw_from_json::<RawRelayerConfig>(config_string)?;
+            config.git_revision = git_revision;
+            RelayerConfig::from_raw(config.clone())?;
+            serde_json::to_string(&config)?
         }
-    }
+    };
     log::info!("Config is valid");
-    Ok(())
+    Ok(config_str)
 }
 
-async fn validate_config(path: &str, config_type: &ConfigType) -> Result<()> {
-    let config_str = read_config_string(path, None).await?;
-    validate_config_string(&config_str, config_type).await
+async fn validate_config(
+    path: &str,
+    config_type: &ConfigType,
+    git_revision: Option<String>,
+) -> Result<String> {
+    let config_str = read_to_string(PathBuf::from(path)).await?;
+    validate_config_string(&config_str, config_type, git_revision).await
 }
 
-async fn upload_config(args: &UploadArgs) -> Result<()> {
-    let config_str = read_config_string(&args.path, Some(args.git_revision.clone())).await?;
-    validate_config_string(&config_str, &args.config_type).await?;
+async fn upload_config(args: &UploadArgs) -> Result<String> {
+    let config_str = validate_config(
+        &args.path,
+        &args.config_type,
+        Some(args.git_revision.clone()),
+    )
+    .await?;
     let region = Region::from_str(&args.region)?;
     let s3_client = S3Client::new(region);
     let content_type = Some(String::from("application/json"));
     let acl = Some(String::from("public-read"));
-    let config_content: Vec<u8> = config_str.into();
+    let config_content: Vec<u8> = config_str.clone().into();
     let config_key = format!(
         "{}/{}/{}/{}/config.json",
         match args.config_type {
@@ -178,7 +183,7 @@ async fn upload_config(args: &UploadArgs) -> Result<()> {
     } else {
         log::warn!("Config already exists, skipping upload");
     }
-    Ok(())
+    Ok(config_str)
 }
 
 #[tokio::main]
@@ -188,7 +193,9 @@ async fn main() -> Result<()> {
         .init();
     let cli = Cli::parse();
     match &cli.command {
-        Commands::Validate { path, config_type } => validate_config(path, config_type).await?,
+        Commands::Validate { path, config_type } => {
+            validate_config(path, config_type, None).await?
+        }
         Commands::Upload(args) => upload_config(args).await?,
     };
     Ok(())

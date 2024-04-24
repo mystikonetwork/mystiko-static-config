@@ -8,6 +8,17 @@ use std::sync::Arc;
 use typed_builder::TypedBuilder;
 use validator::Validate;
 
+static DEFAULT_MAINNET_CONFIG: &str = include_str!(concat!(
+    env!("CARGO_MANIFEST_DIR"),
+    "/config/mainnet/config.json"
+));
+static DEFAULT_TESTNET_CONFIG: &str = include_str!(concat!(
+    env!("CARGO_MANIFEST_DIR"),
+    "/config/testnet/config.json"
+));
+
+static DEFAULT_REMOTE_TIMEOUT_MS: u64 = 10000;
+
 #[derive(Clone, Debug)]
 pub struct RelayerConfig {
     raw: RawRelayerConfig,
@@ -16,15 +27,13 @@ pub struct RelayerConfig {
 }
 
 #[derive(TypedBuilder, Clone, Debug)]
+#[builder(field_defaults(default, setter(into)))]
 pub struct RemoteOptions {
-    #[builder(default, setter(strip_option))]
     pub base_url: Option<String>,
-    #[builder(default, setter(strip_option))]
     pub git_revision: Option<String>,
-    #[builder(default = false)]
     pub is_testnet: bool,
-    #[builder(default = false)]
     pub is_staging: bool,
+    pub timeout_ms: Option<u64>,
 }
 
 const DEFAULT_REMOTE_BASE_URL: &str = "https://static.mystiko.network/relayer_config";
@@ -80,7 +89,12 @@ impl RelayerConfig {
         } else {
             format!("{}/{}/{}/latest.json", base_url, environment, network)
         };
-        let response = reqwest::get(&url).await?;
+        let client = reqwest::Client::builder()
+            .timeout(std::time::Duration::from_millis(
+                options.timeout_ms.unwrap_or(DEFAULT_REMOTE_TIMEOUT_MS),
+            ))
+            .build()?;
+        let response = client.get(&url).send().await?;
         if response.status().is_success() {
             let content = response.text().await?;
             RelayerConfig::from_json_str(&content)
@@ -99,6 +113,40 @@ impl RelayerConfig {
 
     pub async fn from_remote_default_testnet() -> Result<Self> {
         RelayerConfig::from_remote(&RemoteOptions::builder().is_testnet(true).build()).await
+    }
+
+    pub fn from_local_default_mainnet() -> Result<Self> {
+        RelayerConfig::from_json_str(DEFAULT_MAINNET_CONFIG)
+    }
+
+    pub fn from_local_default_testnet() -> Result<Self> {
+        RelayerConfig::from_json_str(DEFAULT_TESTNET_CONFIG)
+    }
+
+    pub async fn from_default_mainnet() -> Result<Self> {
+        match RelayerConfig::from_remote_default_mainnet().await {
+            Ok(config) => Ok(config),
+            Err(err) => {
+                log::warn!(
+                    "Failed to build default mainnet relayer config from remote: {}",
+                    err
+                );
+                RelayerConfig::from_local_default_mainnet()
+            }
+        }
+    }
+
+    pub async fn from_default_testnet() -> Result<Self> {
+        match RelayerConfig::from_remote_default_testnet().await {
+            Ok(config) => Ok(config),
+            Err(err) => {
+                log::warn!(
+                    "Failed to build default testnet relayer config from remote: {}",
+                    err
+                );
+                RelayerConfig::from_local_default_testnet()
+            }
+        }
     }
 
     pub fn version(&self) -> &str {

@@ -12,6 +12,7 @@ fs = ["dep:tokio"]
 [dependencies]
 anyhow = { version = "1.0" }
 lazy_static = { version = "1.4.0" }
+log = { version = "0.4.17" }
 mystiko_types = { version = "0.1.0", path = "../mystiko_types" }
 mystiko_validator = { version = "0.1.0", path = "../mystiko_validator" }
 num-bigint = { version = "0.4.3" }

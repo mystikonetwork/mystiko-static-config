@@ -42,18 +42,6 @@ jobs:
       - name: Run Test
         run: cargo llvm-cov test --no-report
 
-      - name: Check core mainnet config
-        run: target/debug/mystiko_config_uploader validate config/core/mainnet/config.json
-
-      - name: Check core testnet config
-        run: target/debug/mystiko_config_uploader validate config/core/testnet/config.json
-
-      - name: Check relayer mainnet config
-        run: target/debug/mystiko_config_uploader validate config/relayer/mainnet/config.json --type relayer
-
-      - name: Check relayer testnet config
-        run: target/debug/mystiko_config_uploader validate config/relayer/testnet/config.json --type relayer
-
       - name: Check Dirty Files
         run: git diff --quiet || (echo "some generated files are not included in repo" && exit 1)
 

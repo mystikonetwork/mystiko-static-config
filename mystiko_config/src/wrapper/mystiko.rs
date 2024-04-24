@@ -8,8 +8,20 @@ use mystiko_types::{BridgeType, CircuitType};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::sync::Arc;
+use std::time::Duration;
 use typed_builder::TypedBuilder;
 use validator::Validate;
+
+static DEFAULT_MAINNET_CONFIG: &str = include_str!(concat!(
+    env!("CARGO_MANIFEST_DIR"),
+    "/config/mainnet/config.json"
+));
+static DEFAULT_TESTNET_CONFIG: &str = include_str!(concat!(
+    env!("CARGO_MANIFEST_DIR"),
+    "/config/testnet/config.json"
+));
+
+static DEFAULT_REMOTE_TIMEOUT_MS: u64 = 10000;
 
 #[derive(Clone, Debug)]
 pub struct MystikoConfig {
@@ -31,6 +43,7 @@ pub struct MystikoConfigOptions {
     pub is_staging: Option<bool>,
     pub remote_base_url: Option<String>,
     pub git_revision: Option<String>,
+    pub timeout_ms: Option<u64>,
 }
 
 const DEFAULT_REMOTE_BASE_URL: &str = "https://static.mystiko.network/config";
@@ -88,7 +101,12 @@ impl MystikoConfig {
 
     pub async fn from_remote(options: &MystikoConfigOptions) -> Result<Self> {
         let url = Self::remote_url(options);
-        let response = reqwest::get(&url).await?;
+        let client = reqwest::Client::builder()
+            .timeout(Duration::from_millis(
+                options.timeout_ms.unwrap_or(DEFAULT_REMOTE_TIMEOUT_MS),
+            ))
+            .build()?;
+        let response = client.get(&url).send().await?;
         if response.status().is_success() {
             let content = response.text().await?;
             MystikoConfig::from_json_str(&content)
@@ -107,6 +125,40 @@ impl MystikoConfig {
 
     pub async fn from_remote_default_testnet() -> Result<Self> {
         MystikoConfig::from_remote(&MystikoConfigOptions::builder().is_testnet(true).build()).await
+    }
+
+    pub fn from_local_default_mainnet() -> Result<Self> {
+        MystikoConfig::from_json_str(DEFAULT_MAINNET_CONFIG)
+    }
+
+    pub fn from_local_default_testnet() -> Result<Self> {
+        MystikoConfig::from_json_str(DEFAULT_TESTNET_CONFIG)
+    }
+
+    pub async fn from_default_mainnet() -> Result<Self> {
+        match MystikoConfig::from_remote_default_mainnet().await {
+            Ok(config) => Ok(config),
+            Err(err) => {
+                log::warn!(
+                    "Failed to build default mainnet config from remote: {}",
+                    err
+                );
+                MystikoConfig::from_local_default_mainnet()
+            }
+        }
+    }
+
+    pub async fn from_default_testnet() -> Result<Self> {
+        match MystikoConfig::from_remote_default_testnet().await {
+            Ok(config) => Ok(config),
+            Err(err) => {
+                log::warn!(
+                    "Failed to build default testnet config from remote: {}",
+                    err
+                );
+                MystikoConfig::from_local_default_testnet()
+            }
+        }
     }
 
     pub async fn from_options<O>(options: O) -> Result<Self>

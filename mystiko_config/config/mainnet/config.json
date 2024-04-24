@@ -1,6 +1,5 @@
 {
   "version": "0.2.0",
-  "gitRevision": "__GIT_REVISION__",
   "chains": [
     {
       "chainId": 1,

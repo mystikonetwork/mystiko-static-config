@@ -1,7 +1,9 @@
+use std::sync::Arc;
+
 use mockito::Server;
+
 use mystiko_config::{create_raw_from_file, MystikoConfig, MystikoConfigOptions, RawMystikoConfig};
 use mystiko_types::{BridgeType, CircuitType};
-use std::sync::Arc;
 
 const VALID_CONFIG_FILE: &str = "tests/files/mystiko/valid.json";
 const FULL_CONFIG_FILE: &str = "tests/files/mystiko/full.json";
@@ -35,9 +37,15 @@ async fn test_create() {
         circuit_names,
         vec![
             "zokrates-1.0-rollup1",
+            "zokrates-1.0-rollup1024",
+            "zokrates-1.0-rollup128",
             "zokrates-1.0-rollup16",
             "zokrates-1.0-rollup2",
+            "zokrates-1.0-rollup256",
+            "zokrates-1.0-rollup32",
             "zokrates-1.0-rollup4",
+            "zokrates-1.0-rollup512",
+            "zokrates-1.0-rollup64",
             "zokrates-1.0-rollup8",
             "zokrates-1.0-transaction1x0",
             "zokrates-1.0-transaction1x1",
@@ -431,6 +439,12 @@ async fn test_create_from_remote_error() {
     assert!(MystikoConfig::from_remote(&options).await.is_err());
 }
 
+#[test]
+fn test_from_local_defaults() {
+    MystikoConfig::from_local_default_testnet().unwrap();
+    MystikoConfig::from_local_default_mainnet().unwrap();
+}
+
 #[tokio::test]
 async fn test_duplicate_default_circuit_type() {
     let mut raw_config = create_raw_config(false).await;
@@ -576,6 +590,7 @@ async fn validate_missing_peer_chain_config() {
         at 0x961f315a836542e603a3df2e0dd9d4ecd06ebc67 chain_id 5"
     );
 }
+
 async fn create_raw_config(full_config: bool) -> RawMystikoConfig {
     if full_config {
         create_raw_from_file::<RawMystikoConfig>(FULL_CONFIG_FILE)

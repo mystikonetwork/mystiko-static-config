@@ -190,3 +190,9 @@ async fn test_create_from_remote_error() {
         .build();
     assert!(RelayerConfig::from_remote(&options).await.is_err());
 }
+
+#[test]
+fn test_create_from_local_defaults() {
+    RelayerConfig::from_local_default_testnet().unwrap();
+    RelayerConfig::from_local_default_mainnet().unwrap();
+}

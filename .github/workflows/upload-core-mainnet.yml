@@ -43,7 +43,7 @@ jobs:
           else
             PRODUCTION_FLAG=""
           fi
-          target/release/mystiko_config_uploader upload config/core/mainnet/config.json $(git rev-parse --short HEAD) --latest $PRODUCTION_FLAG
+          target/release/mystiko_config_uploader upload mystiko_config/config/mainnet/config.json $(git rev-parse --short HEAD) --latest $PRODUCTION_FLAG
 
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master

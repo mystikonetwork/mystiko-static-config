@@ -11,6 +11,7 @@ fs = ["dep:tokio"]
 
 [dependencies]
 anyhow = { version = "1.0" }
+log = { version = "0.4.17" }
 mystiko_relayer_abi = { version = "0.1.0", path = "../mystiko_relayer_abi" }
 mystiko_types = { version = "0.1.0", path = "../mystiko_types" }
 mystiko_validator = { version = "0.1.0", path = "../mystiko_validator" }
