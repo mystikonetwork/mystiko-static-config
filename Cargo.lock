@@ -2142,6 +2142,7 @@ name = "mystiko_config"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "env_logger",
  "lazy_static",
  "log",
  "mockito",
@@ -2192,6 +2193,7 @@ name = "mystiko_relayer_config"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "env_logger",
  "log",
  "mockito",
  "mystiko_relayer_abi",

@@ -191,6 +191,35 @@ async fn test_create_from_remote_error() {
     assert!(RelayerConfig::from_remote(&options).await.is_err());
 }
 
+#[tokio::test]
+async fn test_create_from_options() {
+    let mut server = Server::new_async().await;
+    let path = server
+        .mock("GET", "/relayer_config/production/mainnet/latest.json")
+        .with_body("{\"version\": \"0.2.0\"}")
+        .create_async()
+        .await;
+    let base_url = format!("{}/relayer_config", server.url());
+    let options = RemoteOptions::builder().base_url(base_url.clone()).build();
+    let config = RelayerConfig::from_options(options).await.unwrap();
+    path.assert_async().await;
+    assert_eq!(config.version(), "0.2.0");
+}
+
+#[tokio::test]
+async fn test_create_from_options_with_remote_error() {
+    let _ = env_logger::builder()
+        .filter_module("mystiko_relayer_config", log::LevelFilter::Info)
+        .try_init();
+    let server = Server::new_async().await;
+    let mut options = RemoteOptions::builder()
+        .base_url(format!("{}/relayer_config", server.url()))
+        .build();
+    RelayerConfig::from_options(options.clone()).await.unwrap();
+    options.is_testnet = true;
+    RelayerConfig::from_options(options.clone()).await.unwrap();
+}
+
 #[test]
 fn test_create_from_local_defaults() {
     RelayerConfig::from_local_default_testnet().unwrap();

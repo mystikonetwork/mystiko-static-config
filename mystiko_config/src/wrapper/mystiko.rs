@@ -39,8 +39,8 @@ pub struct MystikoConfig {
 #[builder(field_defaults(default, setter(into)))]
 pub struct MystikoConfigOptions {
     pub file_path: Option<String>,
-    pub is_testnet: Option<bool>,
-    pub is_staging: Option<bool>,
+    pub is_testnet: bool,
+    pub is_staging: bool,
     pub remote_base_url: Option<String>,
     pub git_revision: Option<String>,
     pub timeout_ms: Option<u64>,
@@ -135,44 +135,33 @@ impl MystikoConfig {
         MystikoConfig::from_json_str(DEFAULT_TESTNET_CONFIG)
     }
 
-    pub async fn from_default_mainnet() -> Result<Self> {
-        match MystikoConfig::from_remote_default_mainnet().await {
-            Ok(config) => Ok(config),
-            Err(err) => {
-                log::warn!(
-                    "Failed to build default mainnet config from remote: {}",
-                    err
-                );
-                MystikoConfig::from_local_default_mainnet()
-            }
-        }
-    }
-
-    pub async fn from_default_testnet() -> Result<Self> {
-        match MystikoConfig::from_remote_default_testnet().await {
-            Ok(config) => Ok(config),
-            Err(err) => {
-                log::warn!(
-                    "Failed to build default testnet config from remote: {}",
-                    err
-                );
-                MystikoConfig::from_local_default_testnet()
-            }
-        }
-    }
-
     pub async fn from_options<O>(options: O) -> Result<Self>
     where
         O: Into<MystikoConfigOptions>,
     {
         let options: MystikoConfigOptions = options.into();
         #[cfg(feature = "fs")]
-        match &options.file_path {
+        let result = match &options.file_path {
             Some(path) => MystikoConfig::from_json_file(path).await,
             None => MystikoConfig::from_remote(&options).await,
-        }
+        };
         #[cfg(not(feature = "fs"))]
-        MystikoConfig::from_remote(&options).await
+        let result = MystikoConfig::from_remote(&options).await;
+        match result {
+            Ok(config) => Ok(config),
+            Err(err) => {
+                log::warn!(
+                    "failed to build mystiko config from options {:?}: {}",
+                    options,
+                    err
+                );
+                if options.is_testnet {
+                    MystikoConfig::from_local_default_testnet()
+                } else {
+                    MystikoConfig::from_local_default_mainnet()
+                }
+            }
+        }
     }
 
     pub fn remote_url(options: &MystikoConfigOptions) -> String {
@@ -180,13 +169,16 @@ impl MystikoConfig {
             .remote_base_url
             .clone()
             .unwrap_or_else(|| DEFAULT_REMOTE_BASE_URL.to_string());
-        let environment =
-            options
-                .is_staging
-                .map_or("production", |s| if s { "staging" } else { "production" });
-        let network = options
-            .is_testnet
-            .map_or("mainnet", |s| if s { "testnet" } else { "mainnet" });
+        let environment = if options.is_staging {
+            "staging"
+        } else {
+            "production"
+        };
+        let network = if options.is_testnet {
+            "testnet"
+        } else {
+            "mainnet"
+        };
 
         if let Some(git_revision) = &options.git_revision {
             format!(

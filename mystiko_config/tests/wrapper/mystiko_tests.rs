@@ -406,6 +406,15 @@ async fn test_create_from_remote() {
 }
 
 #[tokio::test]
+async fn test_create_from_remote_error() {
+    let server = Server::new_async().await;
+    let options = MystikoConfigOptions::builder()
+        .remote_base_url(format!("{}/config", server.url()))
+        .build();
+    assert!(MystikoConfig::from_remote(&options).await.is_err());
+}
+
+#[tokio::test]
 async fn test_create_from_options() {
     let mut server = Server::new_async().await;
     let path1 = server
@@ -431,12 +440,17 @@ async fn test_create_from_options() {
 }
 
 #[tokio::test]
-async fn test_create_from_remote_error() {
+async fn test_create_from_options_with_remote_error() {
+    let _ = env_logger::builder()
+        .filter_module("mystiko_config", log::LevelFilter::Info)
+        .try_init();
     let server = Server::new_async().await;
-    let options = MystikoConfigOptions::builder()
+    let mut options = MystikoConfigOptions::builder()
         .remote_base_url(format!("{}/config", server.url()))
         .build();
-    assert!(MystikoConfig::from_remote(&options).await.is_err());
+    MystikoConfig::from_options(options.clone()).await.unwrap();
+    options.is_testnet = true;
+    MystikoConfig::from_options(options).await.unwrap();
 }
 
 #[test]

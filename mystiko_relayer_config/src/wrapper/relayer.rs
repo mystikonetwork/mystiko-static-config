@@ -123,28 +123,24 @@ impl RelayerConfig {
         RelayerConfig::from_json_str(DEFAULT_TESTNET_CONFIG)
     }
 
-    pub async fn from_default_mainnet() -> Result<Self> {
-        match RelayerConfig::from_remote_default_mainnet().await {
+    pub async fn from_options<O>(options: O) -> Result<Self>
+    where
+        O: Into<RemoteOptions>,
+    {
+        let options = options.into();
+        match RelayerConfig::from_remote(&options).await {
             Ok(config) => Ok(config),
             Err(err) => {
                 log::warn!(
-                    "Failed to build default mainnet relayer config from remote: {}",
+                    "failed to build relayer config from options {:?}: {}",
+                    options,
                     err
                 );
-                RelayerConfig::from_local_default_mainnet()
-            }
-        }
-    }
-
-    pub async fn from_default_testnet() -> Result<Self> {
-        match RelayerConfig::from_remote_default_testnet().await {
-            Ok(config) => Ok(config),
-            Err(err) => {
-                log::warn!(
-                    "Failed to build default testnet relayer config from remote: {}",
-                    err
-                );
-                RelayerConfig::from_local_default_testnet()
+                if options.is_testnet {
+                    RelayerConfig::from_local_default_testnet()
+                } else {
+                    RelayerConfig::from_local_default_mainnet()
+                }
             }
         }
     }

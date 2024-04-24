@@ -27,6 +27,7 @@ typed-builder = { version = "0.15.2" }
 validator = { version = "0.16.0", features = ["derive"] }
 
 [dev-dependencies]
+env_logger = { version = "0.10.0" }
 mockito = { version = "1.1.0" }
 mystiko_config = { version = "*", path = ".", features = ["fs"] }
 tokio = { version = "1.27.0", features = ["macros", "rt", "test-util"] }
