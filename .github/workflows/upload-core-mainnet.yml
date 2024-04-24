@@ -2,7 +2,7 @@ name: Upload Core Mainnet Config
 
 on:
   push:
-    branches: ['master']
+    branches: [ 'master' ]
     paths:
       - 'config/core/mainnet/**'
   workflow_dispatch:
@@ -19,28 +19,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: |
-            ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_RUST }}
-            ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_CIRCUITS }}
-            ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_PROTOS }}
+
       - name: Toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
-      - name: Cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/bin/
-            ~/.cargo/registry/index/
-            ~/.cargo/registry/cache/
-            ~/.cargo/git/db/
-            target/
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
       - name: Build
         run: cargo build --release
+
       - name: Upload
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -56,7 +43,8 @@ jobs:
           else
             PRODUCTION_FLAG=""
           fi
-          target/release/mystiko_static_config upload config/core/mainnet/config.json $(git rev-parse --short HEAD) --latest $PRODUCTION_FLAG
+          target/release/mystiko_config_uploader upload config/core/mainnet/config.json $(git rev-parse --short HEAD) --latest $PRODUCTION_FLAG
+
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master
         if: failure()

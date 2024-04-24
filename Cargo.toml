@@ -1,18 +1,12 @@
-[package]
-name = "mystiko_static_config"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+members = [
+    "mystiko_config",
+    "mystiko_config_uploader",
+    "mystiko_relayer_abi",
+    "mystiko_relayer_config",
+    "mystiko_types",
+    "mystiko_validator",
+]
+resolver = "2"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-anyhow = { version = "1.0" }
-clap = { version = "4.2.1", features = ["derive"] }
-env_logger = { version = "0.10.0" }
-log = { version = "0.4.17" }
-mystiko_config = { git = "ssh://git@github.com/mystikonetwork/mystiko-rust.git", rev = "e5bf01a" }
-mystiko_relayer_config = { git = "ssh://git@github.com/mystikonetwork/mystiko-rust.git", rev = "e5bf01a" }
-rusoto_core = { version = "0.48.0" }
-rusoto_s3 = { version = "0.48.0" }
-serde_json = { version = "1.0.91" }
-tokio = { version = "1.26.0", features = ["full"] }
+exclude = []

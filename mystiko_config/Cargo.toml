@@ -1,0 +1,31 @@
+[package]
+name = "mystiko_config"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = []
+fs = ["dep:tokio"]
+
+[dependencies]
+anyhow = { version = "1.0" }
+lazy_static = { version = "1.4.0" }
+mystiko_types = { version = "0.1.0", path = "../mystiko_types" }
+mystiko_validator = { version = "0.1.0", path = "../mystiko_validator" }
+num-bigint = { version = "0.4.3" }
+num-traits = { version = "0.2.15" }
+reqwest = { version = "0.11.14", features = ["rustls-tls"], default-features = false }
+regex = { version = "1.7.1" }
+rust_decimal = { version = "1.29.0" }
+serde = { version = "1.0.152", features = ["derive", "rc"] }
+serde_json = { version = "1.0.91" }
+tokio = { version = "1.27.0", features = ["fs"], optional = true }
+typed-builder = { version = "0.15.2" }
+validator = { version = "0.16.0", features = ["derive"] }
+
+[dev-dependencies]
+mockito = { version = "1.1.0" }
+mystiko_config = { version = "*", path = ".", features = ["fs"] }
+tokio = { version = "1.27.0", features = ["macros", "rt", "test-util"] }

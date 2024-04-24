@@ -1,0 +1,9 @@
+{
+  "assetType": "main",
+  "assetSymbol": "ETH",
+  "assetDecimals": 18,
+  "assetAddress": "0x0000000000000000000000000000000000000000",
+  "recommendedAmounts": [
+    "1000000000000000000"
+  ]
+}

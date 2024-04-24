@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: ['master']
+    branches: [ 'master' ]
   pull_request:
-    branches: ['*']
+    branches: [ '*' ]
 
 jobs:
   build:
@@ -12,43 +12,60 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: |
-            ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_RUST }}
-            ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_CIRCUITS }}
-            ${{ secrets.SSH_PRIVATE_KEY_MYSTIKO_PROTOS }}
+
       - name: Toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
           components: rustfmt, clippy
-      - name: Cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/bin/
-            ~/.cargo/registry/index/
-            ~/.cargo/registry/cache/
-            ~/.cargo/git/db/
-            target/
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Install cargo-llvm-cov
+        uses: taiki-e/install-action@cargo-llvm-cov
+
       - name: Build
-        run: RUSTFLAGS="-D warnings" cargo build
-      - name: Check format
+        env:
+          RUSTFLAGS: "-D warnings"
+        run: cargo build
+
+      - name: Build All Features
+        env:
+          RUSTFLAGS: "-D warnings"
+        run: cargo build --all-features
+
+      - name: Check Format
         run: cargo fmt --all -- --check
-      - name: Run clippy
+
+      - name: Run Clippy
         timeout-minutes: 60
-        run: cargo clippy --all-targets -j 4 -- -D warnings
+        run: cargo clippy --all-targets --all-features -j 4 -- -D warnings
+
+      - name: Run Test
+        run: cargo llvm-cov test --no-report
+
       - name: Check core mainnet config
-        run: target/debug/mystiko_static_config validate config/core/mainnet/config.json
+        run: target/debug/mystiko_config_uploader validate config/core/mainnet/config.json
+
       - name: Check core testnet config
-        run: target/debug/mystiko_static_config validate config/core/testnet/config.json
+        run: target/debug/mystiko_config_uploader validate config/core/testnet/config.json
+
       - name: Check relayer mainnet config
-        run: target/debug/mystiko_static_config validate config/relayer/mainnet/config.json --type relayer
+        run: target/debug/mystiko_config_uploader validate config/relayer/mainnet/config.json --type relayer
+
       - name: Check relayer testnet config
-        run: target/debug/mystiko_static_config validate config/relayer/testnet/config.json --type relayer
-      - run: git diff --quiet || (echo "some generated files are not included in repo" && exit 1)
+        run: target/debug/mystiko_config_uploader validate config/relayer/testnet/config.json --type relayer
+
+      - name: Check Dirty Files
+        run: git diff --quiet || (echo "some generated files are not included in repo" && exit 1)
+
+      - name: Generate Coverage
+        run: cargo llvm-cov report --lcov --output-path=lcov.info --ignore-filename-regex="mystiko_(relayer_abi|config_uploader)"
+
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+
       - name: Telegram Failure Notification
         uses: appleboy/telegram-action@master
         if: failure()
