@@ -11,12 +11,12 @@ pub use poly::*;
 pub use tbridge::*;
 
 use mystiko_types::BridgeType;
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize, Serialize, Serializer};
 use std::hash::{Hash, Hasher};
 use std::sync::Arc;
 use validator::{Validate, ValidationErrors};
 
-#[derive(Serialize, Deserialize, Debug, Clone, Eq, PartialEq)]
+#[derive(Deserialize, Debug, Clone, Eq, PartialEq)]
 #[serde(tag = "type")]
 #[serde(rename_all = "camelCase")]
 pub enum RawBridgeConfig {
@@ -59,6 +59,21 @@ impl Hash for RawBridgeConfig {
             RawBridgeConfig::LayerZero(conf) => conf.hash(state),
             RawBridgeConfig::Poly(conf) => conf.hash(state),
             RawBridgeConfig::Tbridge(conf) => conf.hash(state),
+        }
+    }
+}
+
+impl Serialize for RawBridgeConfig {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: Serializer,
+    {
+        match self {
+            RawBridgeConfig::Axelar(conf) => conf.serialize(serializer),
+            RawBridgeConfig::Celer(conf) => conf.serialize(serializer),
+            RawBridgeConfig::LayerZero(conf) => conf.serialize(serializer),
+            RawBridgeConfig::Poly(conf) => conf.serialize(serializer),
+            RawBridgeConfig::Tbridge(conf) => conf.serialize(serializer),
         }
     }
 }
