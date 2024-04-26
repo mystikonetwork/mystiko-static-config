@@ -10,8 +10,7 @@ extern crate tokio;
 
 use anyhow::Result;
 use clap::{arg, Args, Parser, Subcommand, ValueEnum};
-use mystiko_config::{create_raw_from_json, MystikoConfig, RawMystikoConfig};
-use mystiko_relayer_config::raw::relayer::RawRelayerConfig;
+use mystiko_config::MystikoConfig;
 use mystiko_relayer_config::wrapper::relayer::RelayerConfig;
 use rusoto_core::Region;
 use rusoto_s3::{HeadObjectRequest, PutObjectRequest, S3Client, S3};
@@ -72,18 +71,23 @@ async fn validate_config_string(
 ) -> Result<String> {
     let config_str = match config_type {
         ConfigType::Core => {
-            let mut config = create_raw_from_json::<RawMystikoConfig>(config_string)?;
-            config.git_revision = git_revision;
-            MystikoConfig::from_raw(config.clone())?;
-            serde_json::to_string(&config)?
+            let mut config_value: serde_json::Value = serde_json::from_str(config_string)?;
+            if let Some(git_revision) = git_revision {
+                config_value["gitRevision"] = serde_json::Value::String(git_revision);
+            }
+            MystikoConfig::from_raw(serde_json::from_value(config_value.clone())?)?;
+            serde_json::to_string(&config_value)?
         }
         ConfigType::Relayer => {
-            let mut config = create_raw_from_json::<RawRelayerConfig>(config_string)?;
-            config.git_revision = git_revision;
-            RelayerConfig::from_raw(config.clone())?;
-            serde_json::to_string(&config)?
+            let mut config_value: serde_json::Value = serde_json::from_str(config_string)?;
+            if let Some(git_revision) = git_revision {
+                config_value["gitRevision"] = serde_json::Value::String(git_revision);
+            }
+            RelayerConfig::from_raw(serde_json::from_value(config_value.clone())?)?;
+            serde_json::to_string(&config_value)?
         }
     };
+    println!("{}", config_str);
     log::info!("Config is valid");
     Ok(config_str)
 }
