@@ -87,7 +87,6 @@ async fn validate_config_string(
             serde_json::to_string(&config_value)?
         }
     };
-    println!("{}", config_str);
     log::info!("Config is valid");
     Ok(config_str)
 }
