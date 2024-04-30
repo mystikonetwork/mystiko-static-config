@@ -22,10 +22,10 @@
           "url": "https://sepolia.gateway.tenderly.co"
         },
         {
-          "url": "https://gateway.tenderly.co/public/sepolia"
+          "url": "https://eth-sepolia.api.onfinality.io/public"
         },
         {
-          "url": "https://eth-sepolia.api.onfinality.io/public"
+          "url": "https://sepolia.drpc.org"
         }
       ],
       "signerEndpoint": "https://rpc.sepolia.org",
