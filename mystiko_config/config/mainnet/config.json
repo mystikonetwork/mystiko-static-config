@@ -459,7 +459,8 @@
           "bridgeType": "loop",
           "poolAddress": "0xcfc951490b111267260e58d0515e1dAB71Dde2ff",
           "minAmount": "100000000000000000000",
-          "maxAmount": "1000000000000000000000000"
+          "maxAmount": "1000000000000000000000000",
+          "disabledAt": 56789427
         },
         {
           "version": 6,
@@ -564,7 +565,8 @@
           "address": "0xcfc951490b111267260e58d0515e1dAB71Dde2ff",
           "startBlock": 48512390,
           "assetAddress": "0x9C9e5fD8bbc25984B178FdCE6117Defa39d2db39",
-          "minRollupFee": "100000000000000000"
+          "minRollupFee": "100000000000000000",
+          "disabledAt": 56789472
         },
         {
           "version": 6,
