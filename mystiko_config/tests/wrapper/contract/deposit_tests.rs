@@ -386,7 +386,7 @@ async fn setup(
         asset_config.clone()
     };
     if let Some(pool_contract_address) = &options.pool_contract_address {
-        raw_config.pool_address = pool_contract_address.clone();
+        raw_config.pool_address.clone_from(pool_contract_address);
     }
     if let Some(bridge_type) = &options.bridge_type {
         raw_config.bridge_type = bridge_type.clone();
