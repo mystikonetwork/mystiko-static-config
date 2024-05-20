@@ -11,9 +11,13 @@ fn default_config() -> RawCircuitConfig {
             .circuit_type(CircuitType::Rollup1)
             .is_default(true)
             .program_file(vec![String::from("./Rollup1.program.gz")])
+            .program_file_checksum(Some("ff".to_string()))
             .abi_file(vec![String::from("./Rollup1.abi.json")])
+            .abi_file_checksum(Some("ee".to_string()))
             .proving_key_file(vec![String::from("./Rollup1.pkey.gz")])
+            .proving_key_file_checksum(Some("dd".to_string()))
             .verifying_key_file(vec![String::from("./Rollup1.vkey.gz")])
+            .verifying_key_file_checksum(Some("cc".to_string()))
             .build(),
     )
     .unwrap()

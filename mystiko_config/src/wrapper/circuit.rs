@@ -30,16 +30,32 @@ impl CircuitConfig {
         &self.raw.program_file
     }
 
+    pub fn program_file_checksum(&self) -> &Option<String> {
+        &self.raw.program_file_checksum
+    }
+
     pub fn abi_file(&self) -> &Vec<String> {
         &self.raw.abi_file
+    }
+
+    pub fn abi_file_checksum(&self) -> &Option<String> {
+        &self.raw.abi_file_checksum
     }
 
     pub fn proving_key_file(&self) -> &Vec<String> {
         &self.raw.proving_key_file
     }
 
+    pub fn proving_key_file_checksum(&self) -> &Option<String> {
+        &self.raw.proving_key_file_checksum
+    }
+
     pub fn verifying_key_file(&self) -> &Vec<String> {
         &self.raw.verifying_key_file
+    }
+
+    pub fn verifying_key_file_checksum(&self) -> &Option<String> {
+        &self.raw.verifying_key_file_checksum
     }
 
     pub fn validate(&self) -> Result<()> {

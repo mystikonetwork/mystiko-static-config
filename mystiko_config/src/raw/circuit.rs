@@ -20,14 +20,30 @@ pub struct RawCircuitConfig {
     #[validate(custom = "string_vec_each_not_empty")]
     pub program_file: Vec<String>,
 
+    #[builder(default)]
+    #[serde(default)]
+    pub program_file_checksum: Option<String>,
+
     #[validate(custom = "string_vec_each_not_empty")]
     pub abi_file: Vec<String>,
+
+    #[builder(default)]
+    #[serde(default)]
+    pub abi_file_checksum: Option<String>,
 
     #[validate(custom = "string_vec_each_not_empty")]
     pub proving_key_file: Vec<String>,
 
+    #[builder(default)]
+    #[serde(default)]
+    pub proving_key_file_checksum: Option<String>,
+
     #[validate(custom = "string_vec_each_not_empty")]
     pub verifying_key_file: Vec<String>,
+
+    #[builder(default)]
+    #[serde(default)]
+    pub verifying_key_file_checksum: Option<String>,
 }
 
 impl Hash for RawCircuitConfig {

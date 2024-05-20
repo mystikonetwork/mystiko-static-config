@@ -1024,18 +1024,22 @@
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x0.program.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x0.program.gz"
       ],
+      "programFileChecksum": "c45aed48ec60e6867dc9eb42e1cc06049f1ed86148022fa38c008ab685a434372b279d9f1c3a99cc52676ce5171772fe60efae0f6994cfb12fc79135256d80c1",
       "abiFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x0.abi.json",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x0.abi.json"
       ],
+      "abiFileChecksum": "13c258996658631e46298754315fd4501d593ccfa271ae8992fbeb1bf7c3172b37ae072501a6fe66878ad175b5586290c668bbff7156b9fd6c5f4a54c3baa0f3",
       "provingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x0.pkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x0.pkey.gz"
       ],
+      "provingKeyFileChecksum": "0b2fc96bb06dee3e3a02d3fbc7407ac1372a95004797d6c4a2764a8176443cceb4026cf7330d601717bfb726280b712296a74fe3f1ff5c5fe839c1238ab24559",
       "verifyingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x0.vkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x0.vkey.gz"
-      ]
+      ],
+      "verifyingKeyFileChecksum": "7b4fd732d62b33da272afaad1d8242bad8910677fa61a3b74f48e6a14c8f0c7f7db4110ddf65c26af7114a44f43a254f5cfc55824b34933ed574497b8541183e"
     },
     {
       "name": "zokrates-1.0-transaction1x1",
@@ -1045,18 +1049,22 @@
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x1.program.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x1.program.gz"
       ],
+      "programFileChecksum": "95111e448ccd3f0a112c194205fde7360a3a47e17c4adba5c6e594e7f3d1e5f7dfe684635bc72a303b0de472efb238fc499a6c05a530543d7048b9785f4cd4bd",
       "abiFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x1.abi.json",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x1.abi.json"
       ],
+      "abiFileChecksum": "a3462b251f6e2ef1aae502f0a0818752a289ed64f00e4e07b273e484bef0a6c0d87b3d686c6ecc1ed838f5ab20d27af4781a84048c10a6aac56c2e9259dd7b84",
       "provingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x1.pkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x1.pkey.gz"
       ],
+      "provingKeyFileChecksum": "e3f861f249ffa066b78ede88fd3b7f409d25a143e42852eb8b7628cb5da70667fecdb3bd8a937b8bff417751f7c82f6c9de49e1f63d646e0de772a15b732b3d6",
       "verifyingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x1.vkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x1.vkey.gz"
-      ]
+      ],
+      "verifyingKeyFileChecksum": "87b3a4d8ee423fc081d651cf81c1139866e0be461ba784e3dcb5c1048a843b74ceb79c20d654f4496442479bb68d12b0fdc39af4247a79b3b62586e67108613e"
     },
     {
       "name": "zokrates-1.0-transaction1x2",
@@ -1066,18 +1074,22 @@
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x2.program.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x2.program.gz"
       ],
+      "programFileChecksum": "8888f6c9302192f747a61510745ca1a9964ff89fe99280a98b72e65104bd20013b052773065c400f0d5236c81c08240cc20af7e46c285fd5911cb47ca9929ba2",
       "abiFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x2.abi.json",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x2.abi.json"
       ],
+      "abiFileChecksum": "12438dfda8d4b5257426e5b6a13d623b2d0946f93e6969dce3147d4c28c880a6e15359901586734c1faf22d6d520d5b5f4be23daab033cc722e7682f0ee2e28e",
       "provingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x2.pkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x2.pkey.gz"
       ],
+      "provingKeyFileChecksum": "a6a75e2c86321912c2a470a7cbfbe631f68f9e48c7f0c5739e38ad99e352503b8c3b04e8d26fc3ccaa8052a50826883a164cbfe9ac0a3f93fab96b74d0767318",
       "verifyingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction1x2.vkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction1x2.vkey.gz"
-      ]
+      ],
+      "verifyingKeyFileChecksum": "10609695f46c0286bfafd4a5e275fd162cef22a4f293956f72154ab177f6b7bb1021d55d90d0ee0a12e7ce461ae7c7aad728175d83a9bb24e0b94c36d03f3769"
     },
     {
       "name": "zokrates-1.0-transaction2x0",
@@ -1087,18 +1099,22 @@
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x0.program.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x0.program.gz"
       ],
+      "programFileChecksum": "a54f495e520dc362c628733fa9fad72a33a86bd4ba928a50ec471de7280239936090c7c2153d4dc5ebff7e4233eebf3884aae1d8612439ed82b8c113394c763a",
       "abiFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x0.abi.json",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x0.abi.json"
       ],
+      "abiFileChecksum": "cbce63dee0abb83093de82a90e1108ec5293e9a50561173717df5b6f6e32bba1d1ef8801cbed3be2113d0a9d30a157be68e8f5fec8fef48f894284fbef8a7549",
       "provingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x0.pkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x0.pkey.gz"
       ],
+      "provingKeyFileChecksum": "1666eecbde7832365083d85d38ee57a2181583da6ca9bccce1c0cb9ad933bfd210e8a0c146d0113215d5d264604dda8d31db1e73cf46aef8d3f0b7bade5eeedb",
       "verifyingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x0.vkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x0.vkey.gz"
-      ]
+      ],
+      "verifyingKeyFileChecksum": "3a51a0e3c133d2e62675b862d9c12a385151cbcec03936a7849d91110a1b693f46682b5d522bb917ddbe63cf0ceb5e52e49d2f8c435e1e7f32c10d496e8de1fa"
     },
     {
       "name": "zokrates-1.0-transaction2x1",
@@ -1108,18 +1124,22 @@
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x1.program.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x1.program.gz"
       ],
+      "programFileChecksum": "32ac4605305e6f959989026c23459d18c77b1df3f0d8702f46a71a0d4e49ee6fcbf9c0623f311d4fb455366e2dd96ef623bc0b1ec5480309bc8c8b4ef5ca2dae",
       "abiFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x1.abi.json",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x1.abi.json"
       ],
+      "abiFileChecksum": "165a34c3bb911a351205befe35547ee18b8eed1b1c7ecbb487816f68bccb674d19dc2dee1265324d79d69fd737e0013dad393c00f6cb4ddd4de6cc9dbc57f23f",
       "provingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x1.pkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x1.pkey.gz"
       ],
+      "provingKeyFileChecksum": "513d6000e20901780eb0bda9c233259ff92cd946f97d29bcdec48b60f8e98de4af6010f301016f08ede91b9518a1cc4e48b9305efb6e968a582583a15a804711",
       "verifyingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x1.vkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x1.vkey.gz"
-      ]
+      ],
+      "verifyingKeyFileChecksum": "2a5462993d5ab38223502aceb8dd0597a908e7d6d92df347c1797d76575149999d1cddc9919d459ab47a53f8b8ae7f3fcfddb416c4ff35e5a767456bee5347f0"
     },
     {
       "name": "zokrates-1.0-transaction2x2",
@@ -1129,18 +1149,22 @@
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x2.program.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x2.program.gz"
       ],
+      "programFileChecksum": "d064fcbf777870e46c8796b71e07f716290291b79a9e102ac570c53bf41d0466252455d03c6a8bcd522cc7e84e046fef3bd735089de04e542893c45e6b6da0ae",
       "abiFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x2.abi.json",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x2.abi.json"
       ],
+      "abiFileChecksum": "48a9c41a998f259e6d4230c4ee48666c3023e1d07ea5be96a7c3f0162c452d6661cedce248f95342c5130ba60d4149977adef61ab3080ed1e7a4cbb9dd10e35f",
       "provingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x2.pkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x2.pkey.gz"
       ],
+      "provingKeyFileChecksum": "fa57215b0f6cd5d412f28c666ce69ee6e3ea35cac0ee6e32351bbc2044de6c999c3dc08fd061d47538b1c68bdecfc398388e8efb10c94831e74671b49d26825d",
       "verifyingKeyFile": [
         "https://static.mystiko.network/circuits/zokrates/production/016c948/Transaction2x2.vkey.gz",
         "https://raw.githubusercontent.com/mystikonetwork/mystiko-static/016c9481c44e656feb1f29f1eadd0f0ea683f1dc/circuits/zokrates/production/Transaction2x2.vkey.gz"
-      ]
+      ],
+      "verifyingKeyFileChecksum": "44294079956f8db92a3ab92601ee33a7f461a9b08c9cd76b464a02f2e104e8d72dfd768270a02736be5d0da851864d59157d0abcadf4629457fb68133978091a"
     },
     {
       "name": "zokrates-1.0-rollup1",
