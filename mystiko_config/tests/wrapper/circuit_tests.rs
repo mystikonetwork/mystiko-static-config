@@ -18,13 +18,23 @@ async fn test_create() {
         config.program_file(),
         &vec![String::from("./Rollup1.program.gz")]
     );
+    assert_eq!(config.program_file_checksum(), &Some(String::from("ff")));
     assert_eq!(config.abi_file(), &vec![String::from("./Rollup1.abi.json")]);
+    assert_eq!(config.abi_file_checksum(), &Some(String::from("ee")));
     assert_eq!(
         config.proving_key_file(),
         &vec![String::from("./Rollup1.pkey.gz")]
     );
     assert_eq!(
+        config.proving_key_file_checksum(),
+        &Some(String::from("dd"))
+    );
+    assert_eq!(
         config.verifying_key_file(),
         &vec![String::from("./Rollup1.vkey.gz")]
+    );
+    assert_eq!(
+        config.verifying_key_file_checksum(),
+        &Some(String::from("cc"))
     );
 }
