@@ -109,7 +109,7 @@
           "bridgeType": "loop",
           "address": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
           "startBlock": 18312990,
-          "minRollupFee": "10000000000000000"
+          "minRollupFee": "3000000000000000"
         },
         {
           "version": 6,
@@ -119,7 +119,7 @@
           "address": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
           "startBlock": 18312992,
           "assetAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-          "minRollupFee": "15000000"
+          "minRollupFee": "10000000"
         },
         {
           "version": 6,
@@ -129,7 +129,7 @@
           "address": "0x58b92DB0b3A7924a383062FD441a7c7218aD1703",
           "startBlock": 18312994,
           "assetAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-          "minRollupFee": "15000000"
+          "minRollupFee": "10000000"
         }
       ],
       "assets": [
