@@ -6,7 +6,7 @@
       "chainId": 11155111,
       "assetSymbol": "ETH",
       "assetDecimals": 18,
-      "relayerContractAddress": "0x1D9Dd7A034b48DB1438d9e90cC2d139cC2DA86eE",
+      "relayerContractAddress": "0xE3E5a17f1b7a3CE6E13D4A9cABceA14c7D60184b",
       "contracts": [
         {
           "assetType": "main",
@@ -57,7 +57,7 @@
       "chainId": 97,
       "assetSymbol": "BNB",
       "assetDecimals": 18,
-      "relayerContractAddress": "0xE3E5a17f1b7a3CE6E13D4A9cABceA14c7D60184b",
+      "relayerContractAddress": "0xfC21Aa6a04f09565bC6eeDC182063Fd4E466670A",
       "contracts": [
         {
           "assetType": "erc20",
