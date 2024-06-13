@@ -2,11 +2,11 @@
   "version": "0.0.1",
   "chains": [
     {
-      "name": "Ethereum Goerli",
-      "chainId": 5,
+      "name": "Ethereum Sepolia",
+      "chainId": 11155111,
       "assetSymbol": "ETH",
       "assetDecimals": 18,
-      "relayerContractAddress": "0x45B22A8CefDfF00989882CAE48Ad06D57938Efcc",
+      "relayerContractAddress": "0x1D9Dd7A034b48DB1438d9e90cC2d139cC2DA86eE",
       "contracts": [
         {
           "assetType": "main",
@@ -24,6 +24,12 @@
           "assetType": "erc20",
           "assetSymbol": "mUSD",
           "assetDecimals": 6,
+          "relayerFeeOfTenThousandth": 25
+        },
+        {
+          "assetType": "erc20",
+          "assetSymbol": "XZK",
+          "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 25
         }
       ],
