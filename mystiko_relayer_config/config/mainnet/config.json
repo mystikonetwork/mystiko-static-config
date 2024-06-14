@@ -6,7 +6,7 @@
       "chainId": 1,
       "assetSymbol": "ETH",
       "assetDecimals": 18,
-      "relayerContractAddress": "0xfeecaab7006A7f81acD36128c011395ab1D5FCe0",
+      "relayerContractAddress": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
       "contracts": [
         {
           "assetType": "main",
