@@ -29,20 +29,20 @@
       ],
       "transactionInfo": {
         "mainGasCost": {
-          "transaction1x0": 570704,
-          "transaction1x1": 649966,
-          "transaction1x2": 735128,
-          "transaction2x0": 658799,
-          "transaction2x1": 738389,
-          "transaction2x2": 833183
+          "transaction1x0": 580704,
+          "transaction1x1": 659966,
+          "transaction1x2": 745128,
+          "transaction2x0": 668799,
+          "transaction2x1": 748389,
+          "transaction2x2": 843183
         },
         "erc20GasCost": {
-          "transaction1x0": 583636,
-          "transaction1x1": 650019,
-          "transaction1x2": 735494,
-          "transaction2x0": 641040,
-          "transaction2x1": 757970,
-          "transaction2x2": 833645
+          "transaction1x0": 603636,
+          "transaction1x1": 660019,
+          "transaction1x2": 745494,
+          "transaction2x0": 671040,
+          "transaction2x1": 767970,
+          "transaction2x2": 853645
         }
       }
     },
