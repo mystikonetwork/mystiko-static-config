@@ -39,6 +39,39 @@
       "transactionType": "eip1559",
       "depositContracts": [
         {
+          "version": 6,
+          "name": "MystikoV2LoopMain",
+          "address": "0x7F88F2A3Cf18E96844E14CaE59EC97B908734C01",
+          "startBlock": 16690440,
+          "bridgeType": "loop",
+          "poolAddress": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
+          "minAmount": "100000000000000000",
+          "maxAmount": "1000000000000000000000",
+          "disabledAt": 20108891
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x01BC19b166986431F3f2A348497C4634defb4C29",
+          "startBlock": 16690443,
+          "bridgeType": "loop",
+          "poolAddress": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000",
+          "disabledAt": 20108887
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x53DFAB04453EF45bc637c2687020990c7C8C16bc",
+          "startBlock": 16690446,
+          "bridgeType": "loop",
+          "poolAddress": "0x58b92DB0b3A7924a383062FD441a7c7218aD1703",
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000",
+          "disabledAt": 20108886
+        },
+        {
           "version": 7,
           "name": "MystikoV2LoopMain",
           "address": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
