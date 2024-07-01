@@ -1747,8 +1747,7 @@
           "address": "0xBd9BB6b7680202b0a48b4C34Bcae5C226975abaB",
           "startBlock": 26574083,
           "assetAddress": "0xc905017B7218Cab43B60f4aBA2F3189f7F00E5CB",
-          "minRollupFee": "10000000000000000",
-          "disabledAt": 34587795
+          "minRollupFee": "10000000000000000"
         }
       ],
       "assets": [
