@@ -474,6 +474,9 @@
       "safeConfirmations": 15,
       "providers": [
         {
+          "url": "https://rpc.ankr.com/polygon"
+        },
+        {
           "url": "https://polygon-rpc.com"
         },
         {
@@ -483,10 +486,7 @@
           "url": "https://gateway.tenderly.co/public/polygon"
         },
         {
-          "url": "https://polygon-mainnet.g.alchemy.com/v2/MTiziebRglgFZFSiLIwHWDTN5J25Oyoo"
-        },
-        {
-          "url": "https://polygon.drpc.org"
+          "url": "https://polygon.llamarpc.com"
         }
       ],
       "signerEndpoint": "https://rpc.ankr.com/polygon",
