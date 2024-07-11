@@ -744,16 +744,10 @@
           "url": "https://base.api.onfinality.io/rpc?apikey=acd87efd-1fe1-4c92-894e-7cb0133571b0"
         },
         {
-          "url": "https://base-pokt.nodies.app"
-        },
-        {
-          "url": "https://lb.nodies.app/v1/02984fdc3b0c498db9bf4b72a4b231f7"
-        },
-        {
           "url": "https://base.drpc.org"
         },
         {
-          "url": "https://base-pokt.nodies.app"
+          "url": "https://lb.nodies.app/v1/02984fdc3b0c498db9bf4b72a4b231f7"
         }
       ],
       "signerEndpoint": "https://mainnet.base.org",
