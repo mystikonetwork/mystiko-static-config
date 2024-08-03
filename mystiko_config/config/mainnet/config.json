@@ -741,7 +741,7 @@
           "url": "https://base.gateway.tenderly.co"
         },
         {
-          "url": "https://base.blockpi.network/v1/rpc/public"
+          "url": "https://base.drpc.org"
         }
       ],
       "signerEndpoint": "https://mainnet.base.org",
