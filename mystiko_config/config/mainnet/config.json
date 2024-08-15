@@ -1426,6 +1426,11 @@
     "host": "sequencer.mystiko.network",
     "isSsl": true
   },
+  "screening": {
+    "url": "https://screening.mystiko.network",
+    "version": 1,
+    "timeoutMs": 20000
+  },
   "countryBlacklist": [
     "AF",
     "DZ",

@@ -706,5 +706,8 @@
   "countryBlacklist": [
     "US",
     "CN"
-  ]
+  ],
+  "screening": {
+    "version": 1
+  }
 }

@@ -3057,5 +3057,10 @@
     "url": "https://static.mystiko.network/packer/v1",
     "version": 1,
     "clientTimeoutMs": 60000
+  },
+  "screening": {
+    "url": "https://screening.mystiko.network",
+    "version": 1,
+    "timeoutMs": 20000
   }
 }
