@@ -39,4 +39,3 @@ fn default_version() -> u32 {
 fn default_client_timeout_ms() -> u64 {
     20000
 }
-

@@ -77,7 +77,10 @@ async fn test_create() {
     assert!(config.transaction_url(234243, "xxx").is_none());
     assert_eq!(config.country_blacklist(), vec!["US", "CN"]);
 
-    assert_eq!(config.screening().unwrap().url(), "https://screening.mystiko.network");
+    assert_eq!(
+        config.screening().unwrap().url(),
+        "https://screening.mystiko.network"
+    );
     assert_eq!(config.screening().unwrap().version(), 1);
 }
 
@@ -611,7 +614,10 @@ async fn validate_missing_peer_chain_config() {
 #[tokio::test]
 async fn test_screening_miss_url_config() {
     let config = MystikoConfig::from_raw(create_raw_config(true).await).unwrap();
-    assert_eq!(config.screening().unwrap().url(), "https://screening.mystiko.network");
+    assert_eq!(
+        config.screening().unwrap().url(),
+        "https://screening.mystiko.network"
+    );
 }
 
 async fn create_raw_config(full_config: bool) -> RawMystikoConfig {

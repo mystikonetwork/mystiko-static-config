@@ -1,4 +1,8 @@
-use crate::{create_raw_from_json, BridgeConfig, ChainConfig, CircuitConfig, ContractConfig, DepositContractConfig, PackerConfig, PoolContractConfig, RawChainConfig, RawMystikoConfig, ScreeningConfig, SequencerConfig, RawScreeningConfig};
+use crate::{
+    create_raw_from_json, BridgeConfig, ChainConfig, CircuitConfig, ContractConfig,
+    DepositContractConfig, PackerConfig, PoolContractConfig, RawChainConfig, RawMystikoConfig,
+    RawScreeningConfig, ScreeningConfig, SequencerConfig,
+};
 use anyhow::{Error, Result};
 use mystiko_types::{BridgeType, CircuitType};
 use serde::{Deserialize, Serialize};
@@ -63,7 +67,9 @@ impl MystikoConfig {
             .as_ref()
             .map(|r| SequencerConfig::new(r.clone()));
         let screening_config = Some(ScreeningConfig::new(
-            raw.screening.clone().unwrap_or(Arc::new(RawScreeningConfig::default()))
+            raw.screening
+                .clone()
+                .unwrap_or(Arc::new(RawScreeningConfig::default())),
         ));
         let default_circuit_configs = initialize_default_circuit_configs(&circuit_configs)?;
         let circuit_configs_by_name = initialize_circuit_configs_by_name(&circuit_configs)?;
