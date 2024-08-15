@@ -2,12 +2,7 @@ use mystiko_config::{create_raw, create_raw_from_file, RawScreeningConfig};
 use validator::Validate;
 
 fn default_config() -> RawScreeningConfig {
-    create_raw::<RawScreeningConfig>(
-        RawScreeningConfig::builder()
-            .url("https://screening.mystiko.network")
-            .build(),
-    )
-    .unwrap()
+    RawScreeningConfig::default()
 }
 
 fn full_config() -> RawScreeningConfig {
@@ -45,7 +40,7 @@ fn test_invalid_version() {
 #[tokio::test]
 async fn test_import_valid_json_file() {
     let file_config =
-        create_raw_from_file::<RawScreeningConfig>("tests/files/Screening/valid.json")
+        create_raw_from_file::<RawScreeningConfig>("tests/files/screening/valid.json")
             .await
             .unwrap();
     assert_eq!(file_config, default_config());
@@ -53,7 +48,7 @@ async fn test_import_valid_json_file() {
 
 #[tokio::test]
 async fn test_import_full_json_file() {
-    let file_config = create_raw_from_file::<RawScreeningConfig>("tests/files/Screening/full.json")
+    let file_config = create_raw_from_file::<RawScreeningConfig>("tests/files/screening/full.json")
         .await
         .unwrap();
     assert_eq!(file_config, full_config());
@@ -62,6 +57,6 @@ async fn test_import_full_json_file() {
 #[tokio::test]
 async fn test_import_invalid_json_file() {
     let file_config =
-        create_raw_from_file::<RawScreeningConfig>("tests/files/Screening/invalid.json").await;
+        create_raw_from_file::<RawScreeningConfig>("tests/files/screening/invalid.json").await;
     assert!(file_config.is_err());
 }
