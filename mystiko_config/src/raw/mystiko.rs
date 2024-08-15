@@ -1,6 +1,7 @@
 use crate::RawChainConfig;
 use crate::RawCircuitConfig;
 use crate::RawPackerConfig;
+use crate::RawScreeningConfig;
 use crate::{RawBridgeConfig, RawSequencerConfig};
 use mystiko_validator::validate::{
     array_unique, is_git_revision, is_sem_ver, string_vec_each_not_empty, validate_nested_vec,
@@ -47,6 +48,10 @@ pub struct RawMystikoConfig {
     #[validate]
     #[serde(default)]
     pub packer: Option<Arc<RawPackerConfig>>,
+
+    #[validate]
+    #[serde(default)]
+    pub screening: Option<Arc<RawScreeningConfig>>,
 
     #[validate(
         custom(function = "array_unique"),

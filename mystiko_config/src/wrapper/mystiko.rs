@@ -1,7 +1,7 @@
 use crate::{
     create_raw_from_json, BridgeConfig, ChainConfig, CircuitConfig, ContractConfig,
     DepositContractConfig, PackerConfig, PoolContractConfig, RawChainConfig, RawMystikoConfig,
-    SequencerConfig,
+    ScreeningConfig, SequencerConfig,
 };
 use anyhow::{Error, Result};
 use mystiko_types::{BridgeType, CircuitType};
@@ -31,6 +31,7 @@ pub struct MystikoConfig {
     bridge_configs: Vec<Arc<BridgeConfig>>,
     sequencer_config: Option<SequencerConfig>,
     packer_config: Option<PackerConfig>,
+    screening_config: Option<ScreeningConfig>,
     default_circuit_configs: HashMap<CircuitType, Arc<CircuitConfig>>,
     circuit_configs_by_name: HashMap<String, Arc<CircuitConfig>>,
 }
@@ -65,6 +66,10 @@ impl MystikoConfig {
             .sequencer
             .as_ref()
             .map(|r| SequencerConfig::new(r.clone()));
+        let screening_config = raw
+            .screening
+            .as_ref()
+            .map(|r| ScreeningConfig::new(r.clone()));
         let default_circuit_configs = initialize_default_circuit_configs(&circuit_configs)?;
         let circuit_configs_by_name = initialize_circuit_configs_by_name(&circuit_configs)?;
         let chain_configs = initialize_chain_configs(
@@ -79,6 +84,7 @@ impl MystikoConfig {
             circuit_configs,
             packer_config,
             sequencer_config,
+            screening_config,
             default_circuit_configs,
             circuit_configs_by_name,
         })
@@ -216,6 +222,10 @@ impl MystikoConfig {
 
     pub fn packer(&self) -> Option<&PackerConfig> {
         self.packer_config.as_ref()
+    }
+
+    pub fn screening(&self) -> Option<&ScreeningConfig> {
+        self.screening_config.as_ref()
     }
 
     pub fn country_blacklist(&self) -> Vec<&str> {
