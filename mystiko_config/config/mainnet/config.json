@@ -985,7 +985,7 @@
       "explorerUrl": "https://lineascan.build",
       "explorerApiUrl": "https://api.lineascan.build",
       "eventDelayBlocks": 120,
-      "eventFilterSize": 1024,
+      "eventFilterSize": 1000,
       "indexerFilterSize": 500000,
       "safeConfirmations": 15,
       "providers": [
@@ -993,7 +993,7 @@
           "url": "https://rpc.linea.build"
         },
         {
-          "url": "https://linea.drpc.org"
+          "url": "https://linea.rpc.thirdweb.com"
         },
         {
           "url": "https://1rpc.io/linea"
