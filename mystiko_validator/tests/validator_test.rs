@@ -1,6 +1,6 @@
 use mystiko_validator::validate::{
     array_unique, is_api_version, is_ethereum_address, is_number_string, is_number_string_vec,
-    is_numeric, is_sem_ver, string_vec_each_not_empty,
+    is_numeric, is_sem_ver, is_url_or_empty, string_vec_each_not_empty,
 };
 use std::collections::HashMap;
 
@@ -86,4 +86,14 @@ fn test_is_api_version() {
     assert!(is_api_version(&map).is_ok());
     map.insert(2, "v1.0".to_string());
     assert!(is_api_version(&map).is_err());
+}
+
+#[test]
+fn test_is_url_or_empty() {
+    let mut url = "https://example.com";
+    assert!(is_url_or_empty(url).is_ok());
+    url = "";
+    assert!(is_url_or_empty(url).is_ok());
+    url = "example.com";
+    assert!(is_url_or_empty(url).is_err());
 }

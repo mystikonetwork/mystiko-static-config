@@ -102,3 +102,13 @@ pub fn is_api_version(map: &HashMap<u16, String>) -> Result<(), ValidationError>
     }
     Ok(())
 }
+
+pub fn is_url_or_empty(s: &str) -> Result<(), ValidationError> {
+    if s.is_empty() {
+        return Ok(());
+    }
+    if url::Url::parse(s).is_ok() {
+        return Ok(());
+    }
+    Err(ValidationError::new("url is invalid"))
+}

@@ -3,7 +3,9 @@ use crate::RawDepositContractConfig;
 use crate::RawPoolContractConfig;
 use crate::RawProviderConfig;
 use mystiko_types::{ProviderType, TransactionType};
-use mystiko_validator::validate::{array_unique, is_number_string_vec, validate_nested_vec};
+use mystiko_validator::validate::{
+    array_unique, is_number_string_vec, is_url_or_empty, validate_nested_vec,
+};
 use serde::{Deserialize, Serialize};
 use std::hash::{Hash, Hasher};
 use std::sync::Arc;
@@ -35,13 +37,13 @@ pub struct RawChainConfig {
         custom(function = "is_number_string_vec::<true>")
     )]
     #[serde(default)]
-    #[builder(default = vec ! [])]
+    #[builder(default = vec![])]
     pub recommended_amounts: Vec<String>,
 
     #[validate(url)]
     pub explorer_url: String,
 
-    #[validate(url)]
+    #[validate(custom(function = "is_url_or_empty"))]
     pub explorer_api_url: String,
 
     #[validate(contains = "%tx%")]
@@ -87,19 +89,19 @@ pub struct RawChainConfig {
     #[validate(custom(function = "array_unique"))]
     #[validate(custom = "validate_nested_vec")]
     #[serde(default)]
-    #[builder(default = vec ! [])]
+    #[builder(default = vec![])]
     pub deposit_contracts: Vec<Arc<RawDepositContractConfig>>,
 
     #[validate(custom(function = "array_unique"))]
     #[validate(custom = "validate_nested_vec")]
     #[serde(default)]
-    #[builder(default = vec ! [])]
+    #[builder(default = vec![])]
     pub pool_contracts: Vec<Arc<RawPoolContractConfig>>,
 
     #[validate(custom(function = "array_unique"))]
     #[validate(custom = "validate_nested_vec")]
     #[serde(default)]
-    #[builder(default = vec ! [])]
+    #[builder(default = vec![])]
     pub assets: Vec<Arc<RawAssetConfig>>,
 
     #[validate(length(min = 1), custom(function = "array_unique"))]

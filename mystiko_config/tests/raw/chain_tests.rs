@@ -216,8 +216,9 @@ fn test_invalid_explore_url_1() {
 #[test]
 fn test_invalid_explore_api_url_0() {
     let mut config = default_config();
+    assert!(config.validate().is_ok());
     config.explorer_api_url = String::from("");
-    assert!(config.validate().is_err());
+    assert!(config.validate().is_ok());
 }
 
 #[test]
