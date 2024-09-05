@@ -748,22 +748,22 @@
       "transactionType": "eip1559",
       "depositContracts": [
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopMain",
-          "address": "0x62121886c954d7e23077f52217b51c26ad26bE9e",
-          "startBlock": 3336566,
+          "address": "0xd63B923A26821B108D9838f5Fbc3a1784A79e03F",
+          "startBlock": 19280277,
           "bridgeType": "loop",
-          "poolAddress": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
+          "poolAddress": "0xa51EE11d40c39A67a0343Ac8706dd271829eA40F",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000"
         },
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0x4333Ab5682Cd4589330BD9CFcedd5E054A0e9d8D",
-          "startBlock": 3336594,
+          "address": "0xD9e0C941dfdf7eB268531b9770A728F33Cb4939a",
+          "startBlock": 19280284,
           "bridgeType": "loop",
-          "poolAddress": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
+          "poolAddress": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
           "minAmount": "100000000",
           "maxAmount": "1000000000000"
         }
@@ -806,6 +806,25 @@
           "bridgeType": "loop",
           "address": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
           "startBlock": 5032941,
+          "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+          "minRollupFee": "20000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0xa51EE11d40c39A67a0343Ac8706dd271829eA40F",
+          "startBlock": 19279684,
+          "minRollupFee": "10000000000000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
+          "startBlock": 19279691,
           "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
           "minRollupFee": "20000"
         }
