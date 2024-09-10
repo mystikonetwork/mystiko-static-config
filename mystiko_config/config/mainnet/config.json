@@ -797,7 +797,8 @@
           "bridgeType": "loop",
           "address": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
           "startBlock": 5032931,
-          "minRollupFee": "10000000000000"
+          "minRollupFee": "10000000000000",
+          "disabledAt": 19574838
         },
         {
           "version": 6,
@@ -807,7 +808,8 @@
           "address": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
           "startBlock": 5032941,
           "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
-          "minRollupFee": "20000"
+          "minRollupFee": "20000",
+	  "disabledAt": 19574873
         },
         {
           "version": 7,
