@@ -809,7 +809,7 @@
           "startBlock": 5032941,
           "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
           "minRollupFee": "20000",
-	  "disabledAt": 19574873
+	      "disabledAt": 19574873
         },
         {
           "version": 7,
@@ -817,7 +817,7 @@
           "poolName": "gamma-20240613",
           "bridgeType": "loop",
           "address": "0xa51EE11d40c39A67a0343Ac8706dd271829eA40F",
-          "startBlock": 19279684,
+          "startBlock": 19279691,
           "minRollupFee": "10000000000000"
         },
         {
