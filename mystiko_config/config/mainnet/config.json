@@ -751,7 +751,7 @@
           "version": 7,
           "name": "MystikoV2LoopMain",
           "address": "0xd63B923A26821B108D9838f5Fbc3a1784A79e03F",
-          "startBlock": 19280277,
+          "startBlock": 3336563,
           "bridgeType": "loop",
           "poolAddress": "0xa51EE11d40c39A67a0343Ac8706dd271829eA40F",
           "minAmount": "100000000000000000",
@@ -761,7 +761,7 @@
           "version": 7,
           "name": "MystikoV2LoopERC20",
           "address": "0xD9e0C941dfdf7eB268531b9770A728F33Cb4939a",
-          "startBlock": 19280284,
+          "startBlock": 3336563,
           "bridgeType": "loop",
           "poolAddress": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
           "minAmount": "100000000",
@@ -785,7 +785,7 @@
           "poolName": "alpha-20230223",
           "bridgeType": "loop",
           "address": "0x01BC19b166986431F3f2A348497C4634defb4C29",
-          "startBlock": 3336590,
+          "startBlock": 3336563,
           "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
           "minRollupFee": "300000",
           "disabledAt": 5037459
@@ -796,7 +796,7 @@
           "poolName": "beta-20231009",
           "bridgeType": "loop",
           "address": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
-          "startBlock": 5032931,
+          "startBlock": 3336563,
           "minRollupFee": "10000000000000",
           "disabledAt": 19574838
         },
@@ -806,10 +806,10 @@
           "poolName": "beta-20231009",
           "bridgeType": "loop",
           "address": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
-          "startBlock": 5032941,
+          "startBlock": 3336563,
           "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
           "minRollupFee": "20000",
-	  "disabledAt": 19574873
+	      "disabledAt": 19574873
         },
         {
           "version": 7,
@@ -817,7 +817,7 @@
           "poolName": "gamma-20240613",
           "bridgeType": "loop",
           "address": "0xa51EE11d40c39A67a0343Ac8706dd271829eA40F",
-          "startBlock": 19279684,
+          "startBlock": 3336563,
           "minRollupFee": "10000000000000"
         },
         {
@@ -826,7 +826,7 @@
           "poolName": "gamma-20240613",
           "bridgeType": "loop",
           "address": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
-          "startBlock": 19279691,
+          "startBlock": 3336563,
           "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
           "minRollupFee": "20000"
         }
