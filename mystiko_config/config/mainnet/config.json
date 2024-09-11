@@ -745,7 +745,7 @@
         }
       ],
       "signerEndpoint": "https://mainnet.base.org",
-      "transactionType": "eip1559",
+      "transactionType": "legacy",
       "depositContracts": [
         {
           "version": 7,
