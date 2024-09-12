@@ -276,45 +276,34 @@
       "transactionType": "legacy",
       "depositContracts": [
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopMain",
-          "address": "0x7F88F2A3Cf18E96844E14CaE59EC97B908734C01",
-          "startBlock": 26910632,
+          "address": "0xEF94b1Ad81E7f4b19882829313D84E05A8965b25",
+          "startBlock": 42178813,
           "bridgeType": "loop",
-          "poolAddress": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
+          "poolAddress": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
           "minAmount": "1000000000000000000",
           "maxAmount": "10000000000000000000000"
         },
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0x01BC19b166986431F3f2A348497C4634defb4C29",
-          "startBlock": 26910639,
+          "address": "0xa51EE11d40c39A67a0343Ac8706dd271829eA40F",
+          "startBlock": 42178818,
           "bridgeType": "loop",
-          "poolAddress": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
+          "poolAddress": "0x0d75ec7Dc77bd0f74A8a7642327f6249353A0748",
           "minAmount": "100000000000000000000",
           "maxAmount": "1000000000000000000000000"
         },
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0x53DFAB04453EF45bc637c2687020990c7C8C16bc",
-          "startBlock": 26910646,
+          "address": "0x3F0D5259F101cfef825EC3186Ea32abd22Bc235d",
+          "startBlock": 42178824,
           "bridgeType": "loop",
-          "poolAddress": "0x58b92DB0b3A7924a383062FD441a7c7218aD1703",
+          "poolAddress": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
           "minAmount": "100000000000000000000",
           "maxAmount": "1000000000000000000000000"
-        },
-        {
-          "version": 6,
-          "name": "MystikoV2LoopERC20",
-          "address": "0x4a6caE179dCb4423F548c2D1F48589374FbC6c67",
-          "startBlock": 26910653,
-          "bridgeType": "loop",
-          "poolAddress": "0xcfc951490b111267260e58d0515e1dAB71Dde2ff",
-          "minAmount": "100000000000000000000",
-          "maxAmount": "1000000000000000000000000",
-          "disabledAt": 38589023
         }
       ],
       "poolContracts": [
@@ -400,6 +389,35 @@
           "assetAddress": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
           "minRollupFee": "1000000000000000000",
           "disabledAt": 38589041
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
+          "startBlock": 42178811,
+          "minRollupFee": "4000000000000000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x0d75ec7Dc77bd0f74A8a7642327f6249353A0748",
+          "startBlock": 42178816,
+          "assetAddress": "0x55d398326f99059ff775485246999027b3197955",
+          "minRollupFee": "1000000000000000000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
+          "startBlock": 42178822,
+          "assetAddress": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+          "minRollupFee": "1000000000000000000"
         }
       ],
       "assets": [
@@ -493,53 +511,42 @@
       "transactionType": "eip1559",
       "depositContracts": [
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopMain",
-          "address": "0xFC13449Eb0327482aeD64c648fA9b44aBE3bC939",
-          "startBlock": 43129124,
+          "address": "0xEF94b1Ad81E7f4b19882829313D84E05A8965b25",
+          "startBlock": 61719825,
           "bridgeType": "loop",
-          "poolAddress": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
+          "poolAddress": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
           "minAmount": "100000000000000000000",
           "maxAmount": "1000000000000000000000000"
         },
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0xd1F34693Dd4163DF2e610C83E4BE79A4E175062F",
-          "startBlock": 43129135,
+          "address": "0xa51EE11d40c39A67a0343Ac8706dd271829eA40F",
+          "startBlock": 61720031,
           "bridgeType": "loop",
-          "poolAddress": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
+          "poolAddress": "0x0d75ec7Dc77bd0f74A8a7642327f6249353A0748",
           "minAmount": "100000000",
           "maxAmount": "1000000000000"
         },
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0xc220B8aeee7b1bB5a296aB6C183930a8fC1B3d92",
-          "startBlock": 43129147,
+          "address": "0x3F0D5259F101cfef825EC3186Ea32abd22Bc235d",
+          "startBlock": 61720041,
           "bridgeType": "loop",
-          "poolAddress": "0x58b92DB0b3A7924a383062FD441a7c7218aD1703",
+          "poolAddress": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
           "minAmount": "100000000",
           "maxAmount": "1000000000000"
         },
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0x13Bc9031d85F4632ec37CF12Ca621E24b4b0F72f",
-          "startBlock": 43129161,
+          "address": "0x4AE06d975d3900173CF616e7C4bA8A2340585cE3",
+          "startBlock": 61720054,
           "bridgeType": "loop",
-          "poolAddress": "0xcfc951490b111267260e58d0515e1dAB71Dde2ff",
-          "minAmount": "100000000000000000000",
-          "maxAmount": "1000000000000000000000000",
-          "disabledAt": 56789427
-        },
-        {
-          "version": 6,
-          "name": "MystikoV2LoopERC20",
-          "address": "0x03A6D2f3990C26827279Bae13bbFb6e0B5f13185",
-          "startBlock": 43129176,
-          "bridgeType": "loop",
-          "poolAddress": "0x6eCeFEB74c4891c02F533c934E9D139779b55357",
+          "poolAddress": "0x421F845e7d46eA2238d19d40CeB65385DC73F9d1",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000"
         }
@@ -648,6 +655,45 @@
           "startBlock": 48512397,
           "assetAddress": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
           "minRollupFee": "50000000000000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
+          "startBlock": 61719822,
+          "minRollupFee": "100000000000000000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x0d75ec7Dc77bd0f74A8a7642327f6249353A0748",
+          "startBlock": 61720027,
+          "assetAddress": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+          "minRollupFee": "100000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
+          "startBlock": 61720036,
+          "assetAddress": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "minRollupFee": "100000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x421F845e7d46eA2238d19d40CeB65385DC73F9d1",
+          "startBlock": 61720050,
+          "assetAddress": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+          "minRollupFee": "50000000000000"
         }
       ],
       "assets": [
@@ -662,6 +708,18 @@
             "100000000000"
           ],
           "assetAddress": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F"
+        },
+        {
+          "assetType": "erc20",
+          "assetSymbol": "USDC",
+          "assetDecimals": 6,
+          "recommendedAmounts": [
+            "100000000",
+            "1000000000",
+            "10000000000",
+            "100000000000"
+          ],
+          "assetAddress": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
         },
         {
           "assetType": "erc20",
@@ -809,7 +867,7 @@
           "startBlock": 5032941,
           "assetAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
           "minRollupFee": "20000",
-	   "disabledAt": 19574873
+          "disabledAt": 19574873
         },
         {
           "version": 7,
@@ -891,32 +949,32 @@
       "transactionType": "eip1559",
       "depositContracts": [
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopMain",
-          "address": "0xC20f84542eBcB87A8108d960A367741F8fD2d691",
-          "startBlock": 40514115,
+          "address": "0xEF94b1Ad81E7f4b19882829313D84E05A8965b25",
+          "startBlock": 50425444,
           "bridgeType": "loop",
-          "poolAddress": "0xf5fc0Bd6bBe24a0ff945A8F58aEc2f6EC48EC964",
+          "poolAddress": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
           "minAmount": "10000000000000000000",
           "maxAmount": "100000000000000000000000"
         },
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0x8FfA92155bd9cc60198FBE6E1e6fd32A4A82dEA2",
-          "startBlock": 40514128,
+          "address": "0xa51EE11d40c39A67a0343Ac8706dd271829eA40F",
+          "startBlock": 50425456,
           "bridgeType": "loop",
-          "poolAddress": "0x373DBe18EEf567D5Dd2a393B8c11e90B1A30d967",
+          "poolAddress": "0x0d75ec7Dc77bd0f74A8a7642327f6249353A0748",
           "minAmount": "100000000",
           "maxAmount": "1000000000000"
         },
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0x60ed8556D10c547b667EC610E36f46a2a023245c",
-          "startBlock": 40514138,
+          "address": "0x3F0D5259F101cfef825EC3186Ea32abd22Bc235d",
+          "startBlock": 50425464,
           "bridgeType": "loop",
-          "poolAddress": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
+          "poolAddress": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
           "minAmount": "100000000",
           "maxAmount": "1000000000000"
         }
@@ -948,6 +1006,35 @@
           "bridgeType": "loop",
           "address": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
           "startBlock": 40514135,
+          "assetAddress": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "minRollupFee": "500000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
+          "startBlock": 50425440,
+          "minRollupFee": "20000000000000000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x0d75ec7Dc77bd0f74A8a7642327f6249353A0748",
+          "startBlock": 50425452,
+          "assetAddress": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+          "minRollupFee": "500000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
+          "startBlock": 50425460,
           "assetAddress": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
           "minRollupFee": "500000"
         }
@@ -1024,22 +1111,22 @@
       "transactionType": "legacy",
       "depositContracts": [
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopMain",
-          "address": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
-          "startBlock": 3707166,
+          "address": "0xEF94b1Ad81E7f4b19882829313D84E05A8965b25",
+          "startBlock": 9349146,
           "bridgeType": "loop",
-          "poolAddress": "0x8FfA92155bd9cc60198FBE6E1e6fd32A4A82dEA2",
+          "poolAddress": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000"
         },
         {
-          "version": 6,
+          "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0xC20f84542eBcB87A8108d960A367741F8fD2d691",
-          "startBlock": 3707166,
+          "address": "0xa51EE11d40c39A67a0343Ac8706dd271829eA40F",
+          "startBlock": 9349153,
           "bridgeType": "loop",
-          "poolAddress": "0xf5fc0Bd6bBe24a0ff945A8F58aEc2f6EC48EC964",
+          "poolAddress": "0x0d75ec7Dc77bd0f74A8a7642327f6249353A0748",
           "minAmount": "100000000",
           "maxAmount": "1000000000000"
         }
@@ -1061,6 +1148,25 @@
           "bridgeType": "loop",
           "address": "0xf5fc0Bd6bBe24a0ff945A8F58aEc2f6EC48EC964",
           "startBlock": 3707166,
+          "assetAddress": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+          "minRollupFee": "100000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
+          "startBlock": 9349143,
+          "minRollupFee": "40000000000000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "gamma-20240613",
+          "bridgeType": "loop",
+          "address": "0x0d75ec7Dc77bd0f74A8a7642327f6249353A0748",
+          "startBlock": 9349151,
           "assetAddress": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
           "minRollupFee": "100000"
         }
