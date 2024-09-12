@@ -396,7 +396,7 @@
           "poolName": "gamma-20240613",
           "bridgeType": "loop",
           "address": "0x29ED7DE21ccc80dc5921A8d9d8650247653C1188",
-          "startBlock": 42178811,
+          "startBlock": 42182600,
           "minRollupFee": "4000000000000000"
         },
         {
@@ -405,7 +405,7 @@
           "poolName": "gamma-20240613",
           "bridgeType": "loop",
           "address": "0x0d75ec7Dc77bd0f74A8a7642327f6249353A0748",
-          "startBlock": 42178816,
+          "startBlock": 42182600,
           "assetAddress": "0x55d398326f99059ff775485246999027b3197955",
           "minRollupFee": "1000000000000000000"
         },
@@ -415,7 +415,7 @@
           "poolName": "gamma-20240613",
           "bridgeType": "loop",
           "address": "0x16C1Cb42D59A4fe1facbe6F0F42956Db103bb6A9",
-          "startBlock": 42178822,
+          "startBlock": 42182600,
           "assetAddress": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
           "minRollupFee": "1000000000000000000"
         }
