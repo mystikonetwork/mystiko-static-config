@@ -276,6 +276,47 @@
       "transactionType": "legacy",
       "depositContracts": [
         {
+          "version": 6,
+          "name": "MystikoV2LoopMain",
+          "address": "0x7F88F2A3Cf18E96844E14CaE59EC97B908734C01",
+          "startBlock": 26910632,
+          "bridgeType": "loop",
+          "poolAddress": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
+          "minAmount": "1000000000000000000",
+          "maxAmount": "10000000000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x01BC19b166986431F3f2A348497C4634defb4C29",
+          "startBlock": 26910639,
+          "bridgeType": "loop",
+          "poolAddress": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
+          "minAmount": "100000000000000000000",
+          "maxAmount": "1000000000000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x53DFAB04453EF45bc637c2687020990c7C8C16bc",
+          "startBlock": 26910646,
+          "bridgeType": "loop",
+          "poolAddress": "0x58b92DB0b3A7924a383062FD441a7c7218aD1703",
+          "minAmount": "100000000000000000000",
+          "maxAmount": "1000000000000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x4a6caE179dCb4423F548c2D1F48589374FbC6c67",
+          "startBlock": 26910653,
+          "bridgeType": "loop",
+          "poolAddress": "0xcfc951490b111267260e58d0515e1dAB71Dde2ff",
+          "minAmount": "100000000000000000000",
+          "maxAmount": "1000000000000000000000000",
+          "disabledAt": 38589023
+        },
+	{
           "version": 7,
           "name": "MystikoV2LoopMain",
           "address": "0xEF94b1Ad81E7f4b19882829313D84E05A8965b25",
@@ -510,6 +551,57 @@
       "signerEndpoint": "https://rpc.ankr.com/polygon",
       "transactionType": "eip1559",
       "depositContracts": [
+        {
+          "version": 6,
+          "name": "MystikoV2LoopMain",
+          "address": "0xFC13449Eb0327482aeD64c648fA9b44aBE3bC939",
+          "startBlock": 43129124,
+          "bridgeType": "loop",
+          "poolAddress": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
+          "minAmount": "100000000000000000000",
+          "maxAmount": "1000000000000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0xd1F34693Dd4163DF2e610C83E4BE79A4E175062F",
+          "startBlock": 43129135,
+          "bridgeType": "loop",
+          "poolAddress": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0xc220B8aeee7b1bB5a296aB6C183930a8fC1B3d92",
+          "startBlock": 43129147,
+          "bridgeType": "loop",
+          "poolAddress": "0x58b92DB0b3A7924a383062FD441a7c7218aD1703",
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x13Bc9031d85F4632ec37CF12Ca621E24b4b0F72f",
+          "startBlock": 43129161,
+          "bridgeType": "loop",
+          "poolAddress": "0xcfc951490b111267260e58d0515e1dAB71Dde2ff",
+          "minAmount": "100000000000000000000",
+          "maxAmount": "1000000000000000000000000",
+          "disabledAt": 56789427
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x03A6D2f3990C26827279Bae13bbFb6e0B5f13185",
+          "startBlock": 43129176,
+          "bridgeType": "loop",
+          "poolAddress": "0x6eCeFEB74c4891c02F533c934E9D139779b55357",
+          "minAmount": "100000000000000000",
+          "maxAmount": "1000000000000000000000"
+        },
         {
           "version": 7,
           "name": "MystikoV2LoopMain",
@@ -806,6 +898,28 @@
       "transactionType": "legacy",
       "depositContracts": [
         {
+          "version": 6,
+          "name": "MystikoV2LoopMain",
+          "address": "0x62121886c954d7e23077f52217b51c26ad26bE9e",
+          "startBlock": 3336566,
+          "bridgeType": "loop",
+          "poolAddress": "0xA9d3173fa17D14FC147c993667A97C6889f5D486",
+          "minAmount": "100000000000000000",
+          "maxAmount": "1000000000000000000000",
+          "disabledAt": 19574804
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x4333Ab5682Cd4589330BD9CFcedd5E054A0e9d8D",
+          "startBlock": 3336594,
+          "bridgeType": "loop",
+          "poolAddress": "0xA288b938FE6d6bC70aDb5C545A99985993e398F5",
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000",
+          "disabledAt": 19574812
+        },
+        {
           "version": 7,
           "name": "MystikoV2LoopMain",
           "address": "0xd63B923A26821B108D9838f5Fbc3a1784A79e03F",
@@ -948,6 +1062,36 @@
       "signerEndpoint": "https://api.avax.network/ext/bc/C/rpc",
       "transactionType": "eip1559",
       "depositContracts": [
+        {
+          "version": 6,
+          "name": "MystikoV2LoopMain",
+          "address": "0xC20f84542eBcB87A8108d960A367741F8fD2d691",
+          "startBlock": 40514115,
+          "bridgeType": "loop",
+          "poolAddress": "0xf5fc0Bd6bBe24a0ff945A8F58aEc2f6EC48EC964",
+          "minAmount": "10000000000000000000",
+          "maxAmount": "100000000000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x8FfA92155bd9cc60198FBE6E1e6fd32A4A82dEA2",
+          "startBlock": 40514128,
+          "bridgeType": "loop",
+          "poolAddress": "0x373DBe18EEf567D5Dd2a393B8c11e90B1A30d967",
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0x60ed8556D10c547b667EC610E36f46a2a023245c",
+          "startBlock": 40514138,
+          "bridgeType": "loop",
+          "poolAddress": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000"
+        },
         {
           "version": 7,
           "name": "MystikoV2LoopMain",
@@ -1110,6 +1254,26 @@
       "signerEndpoint": "https://linea.drpc.org",
       "transactionType": "legacy",
       "depositContracts": [
+        {
+          "version": 6,
+          "name": "MystikoV2LoopMain",
+          "address": "0xaEa40007De57E3C13acAFbb7EE0EE5725f3F67fE",
+          "startBlock": 3707216,
+          "bridgeType": "loop",
+          "poolAddress": "0x8FfA92155bd9cc60198FBE6E1e6fd32A4A82dEA2",
+          "minAmount": "100000000000000000",
+          "maxAmount": "1000000000000000000000"
+        },
+        {
+          "version": 6,
+          "name": "MystikoV2LoopERC20",
+          "address": "0xC20f84542eBcB87A8108d960A367741F8fD2d691",
+          "startBlock": 3707166,
+          "bridgeType": "loop",
+          "poolAddress": "0xf5fc0Bd6bBe24a0ff945A8F58aEc2f6EC48EC964",
+          "minAmount": "100000000",
+          "maxAmount": "1000000000000"
+        },
         {
           "version": 7,
           "name": "MystikoV2LoopMain",
