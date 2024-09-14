@@ -806,7 +806,7 @@
     {
       "chainId": 80001,
       "name": "Polygon Mumbai",
-      "assetSymbol": "MATIC",
+      "assetSymbol": "POL",
       "assetDecimals": 18,
       "recommendedAmounts": [
         "100000000000000000",
