@@ -100,13 +100,13 @@
     {
       "name": "Polygon",
       "chainId": 137,
-      "assetSymbol": "MATIC",
+      "assetSymbol": "POL",
       "assetDecimals": 18,
       "relayerContractAddress": "0x3bd8962c6976054bBa73B6c19232570704c8b69D",
       "contracts": [
         {
           "assetType": "main",
-          "assetSymbol": "MATIC",
+          "assetSymbol": "POL",
           "assetDecimals": 18,
           "relayerFeeOfTenThousandth": 10
         },
