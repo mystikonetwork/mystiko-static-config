@@ -232,6 +232,20 @@ async fn test_event_filter_size() {
 }
 
 #[tokio::test]
+async fn test_validate_asset_symbol_alias() {
+    let mut raw = create_raw_from_file::<RawChainConfig>(FULL_CONFIG_FILE)
+        .await
+        .unwrap();
+    raw.asset_symbol_alias = vec!["ETH".to_string()];
+    let chain_config = ChainConfig::new(Arc::new(raw), &HashMap::new(), &HashMap::new()).unwrap();
+    let validate = chain_config.validate();
+    assert_eq!(
+        validate.err().unwrap().to_string(),
+        "Asset symbol alias cannot be the same as the asset symbol"
+    );
+}
+
+#[tokio::test]
 async fn test_validate_duplicate_pool_contract_version() {
     let (_, _, _, config) = setup(SetupOptions {
         duplicate_pool_contract_version: true,

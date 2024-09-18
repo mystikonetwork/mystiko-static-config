@@ -67,6 +67,7 @@ fn init_assets_config() -> RawAssetConfig {
         RawAssetConfig::builder()
             .asset_type(AssetType::Erc20)
             .asset_symbol("MTT".to_string())
+            .asset_symbol_alias(vec![])
             .asset_decimals(16)
             .asset_address("0xEC1d5CfB0bf18925aB722EeeBCB53Dc636834e8a".to_string())
             .build(),
@@ -83,6 +84,7 @@ fn default_config() -> RawChainConfig {
         .chain_id(5)
         .name("Ethereum Goerli".to_string())
         .asset_symbol("ETH".to_string())
+        .asset_symbol_alias(vec![])
         .asset_decimals(18)
         .recommended_amounts(vec![
             "1000000000000000000".to_string(),
@@ -122,6 +124,7 @@ fn test_default_values() {
         .chain_id(5)
         .name("Ethereum Goerli".to_string())
         .asset_symbol("ETH".to_string())
+        .asset_symbol_alias(vec![])
         .asset_decimals(18)
         .recommended_amounts(vec![
             "1000000000000000000".to_string(),

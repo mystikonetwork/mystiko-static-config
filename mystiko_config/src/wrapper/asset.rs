@@ -1,5 +1,5 @@
 use crate::{decimal_to_number, RawAssetConfig};
-use anyhow::Result;
+use anyhow::{Error, Result};
 use mystiko_types::AssetType;
 use num_bigint::BigUint;
 use num_traits::{NumCast, Zero};
@@ -31,6 +31,10 @@ impl AssetConfig {
         &self.raw.asset_symbol
     }
 
+    pub fn asset_symbol_alias(&self) -> Vec<String> {
+        self.raw.asset_symbol_alias.clone()
+    }
+
     pub fn asset_decimals(&self) -> u32 {
         self.raw.asset_decimals
     }
@@ -58,6 +62,14 @@ impl AssetConfig {
     }
 
     pub fn validate(&self) -> Result<()> {
+        for symbol in &self.raw.asset_symbol_alias {
+            if symbol == &self.raw.asset_symbol {
+                return Err(Error::msg(
+                    "Asset symbol alias cannot be the same as the asset symbol",
+                ));
+            }
+        }
+
         Ok(self.raw.validate()?)
     }
 }

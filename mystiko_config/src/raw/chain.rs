@@ -25,6 +25,11 @@ pub struct RawChainConfig {
     #[validate(length(min = 1))]
     pub asset_symbol: String,
 
+    #[validate(custom(function = "array_unique"))]
+    #[serde(default)]
+    #[builder(default = vec ! [])]
+    pub asset_symbol_alias: Vec<String>,
+
     #[validate(range(min = 1))]
     #[serde(default = "default_asset_decimals")]
     #[builder(default = default_asset_decimals())]
