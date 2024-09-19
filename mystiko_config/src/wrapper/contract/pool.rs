@@ -92,6 +92,10 @@ impl PoolContractConfig {
         self.asset().asset_symbol()
     }
 
+    pub fn asset_symbol_alias(&self) -> Vec<String> {
+        self.asset().asset_symbol_alias()
+    }
+
     pub fn asset_decimals(&self) -> u32 {
         self.asset().asset_decimals()
     }
@@ -131,6 +135,14 @@ impl PoolContractConfig {
         self.circuits()
             .into_iter()
             .find(|c| c.circuit_type() == circuit_type)
+    }
+
+    pub fn is_pool_asset(&self, asset_symbol: &str) -> bool {
+        self.asset_symbol() == asset_symbol
+            || self
+                .asset_symbol_alias()
+                .iter()
+                .any(|alias| alias == asset_symbol)
     }
 
     pub fn circuit_by_name(&self, circuit_name: &str) -> Option<&CircuitConfig> {

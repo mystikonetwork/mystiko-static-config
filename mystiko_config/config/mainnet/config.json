@@ -480,6 +480,7 @@
       "chainId": 137,
       "name": "Polygon",
       "assetSymbol": "POL",
+      "assetSymbolAlias": ["MATIC"],
       "assetDecimals": 18,
       "recommendedAmounts": [
         "100000000000000000000",

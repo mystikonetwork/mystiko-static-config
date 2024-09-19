@@ -7,6 +7,7 @@ fn default_config() -> RawAssetConfig {
         RawAssetConfig::builder()
             .asset_type(AssetType::Erc20)
             .asset_symbol("MTT".to_string())
+            .asset_symbol_alias(vec![])
             .asset_decimals(16)
             .asset_address("0xEC1d5CfB0bf18925aB722EeeBCB53Dc636834e8a".to_string())
             .recommended_amounts(vec![
@@ -22,6 +23,13 @@ fn default_config() -> RawAssetConfig {
 fn test_invalid_asset_symbol() {
     let mut config = default_config();
     config.asset_symbol = "".to_string();
+    assert!(config.validate().is_err());
+}
+
+#[test]
+fn test_invalid_asset_symbol_alias() {
+    let mut config = default_config();
+    config.asset_symbol_alias = vec!["MTT".to_string(), "MTT".to_string()];
     assert!(config.validate().is_err());
 }
 

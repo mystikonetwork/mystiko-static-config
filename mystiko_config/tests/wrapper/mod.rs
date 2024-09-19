@@ -1,5 +1,6 @@
 mod asset_tests;
 mod bridge;
+mod chain_alias_tests;
 mod chain_tests;
 mod circuit_tests;
 mod contract;

@@ -15,6 +15,7 @@ async fn test_create() {
     config.validate().unwrap();
     assert_eq!(config.asset_type(), &AssetType::Erc20);
     assert_eq!(config.asset_symbol(), "MTT");
+    assert_eq!(config.asset_symbol_alias().len(), 0);
     assert_eq!(config.asset_decimals(), 16);
     assert_eq!(
         config.asset_address(),

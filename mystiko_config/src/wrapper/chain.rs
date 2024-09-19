@@ -31,6 +31,7 @@ impl ChainConfig {
         let main_asset_config = Arc::new(AssetConfig::new(Arc::new(RawAssetConfig {
             asset_type: AssetType::Main,
             asset_symbol: raw.asset_symbol.to_string(),
+            asset_symbol_alias: raw.asset_symbol_alias.clone(),
             asset_decimals: raw.asset_decimals,
             asset_address: MAIN_ASSET_ADDRESS.to_string(),
             recommended_amounts: raw.recommended_amounts.clone(),
@@ -292,7 +293,7 @@ impl ChainConfig {
         version: u32,
     ) -> Option<&PoolContractConfig> {
         self.pool_contracts().into_iter().find(|r| {
-            r.asset_symbol() == asset_symbol
+            r.is_pool_asset(asset_symbol)
                 && r.bridge_type() == bridge_type
                 && r.version() == version
         })
@@ -305,7 +306,7 @@ impl ChainConfig {
     ) -> Vec<&PoolContractConfig> {
         self.pool_contracts()
             .into_iter()
-            .filter(|r| r.asset_symbol() == asset_symbol && r.bridge_type() == bridge_type)
+            .filter(|r| r.is_pool_asset(asset_symbol) && r.bridge_type() == bridge_type)
             .collect()
     }
 
