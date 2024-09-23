@@ -2697,13 +2697,13 @@
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://zetachain-testnet.public.blastapi.io"
-        },
-        {
           "url": "https://zeta-chain-testnet.drpc.org"
         },
         {
-          "url": "https://zetachain-athens.g.allthatnode.com/archive/evm\n"
+          "url": "https://zetachain-athens-evm.blockpi.network/v1/rpc/public"
+        },
+        {
+          "url": "https://zetachain-athens.g.allthatnode.com/archive/evm"
         }
       ],
       "signerEndpoint": "https://zetachain-testnet.public.blastapi.io",
@@ -2713,7 +2713,7 @@
           "version": 7,
           "name": "MystikoV2LoopMain",
           "address": "0x9BE21DD9f30297D5222802B47E5C915CA24C9e02",
-          "startBlock": 6509920,
+          "startBlock": 6509924,
           "bridgeType": "loop",
           "poolAddress": "0xb42e5BDb9c5B170B5aBA8a1CC85F0eFC19287467",
           "minAmount": "100000000000000000",
@@ -2737,7 +2737,7 @@
           "poolName": "zeta-20240611",
           "bridgeType": "loop",
           "address": "0xb42e5BDb9c5B170B5aBA8a1CC85F0eFC19287467",
-          "startBlock": 6509918,
+          "startBlock": 6509924,
           "minRollupFee": "10000000000000000"
         },
         {
@@ -2746,7 +2746,7 @@
           "poolName": "zeta-20240611",
           "bridgeType": "loop",
           "address": "0xe0357BE4cbE57D8E67088C4FEcd53Ab931353671",
-          "startBlock": 6509922,
+          "startBlock": 6509924,
           "assetAddress": "0x62F686F657aae4E8D0e38F7Fa606dE2F02381d2e",
           "minRollupFee": "10000000000000000"
         }
