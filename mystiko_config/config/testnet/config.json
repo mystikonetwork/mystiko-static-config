@@ -2678,6 +2678,100 @@
         2560000,
         10240000
       ]
+    },
+    {
+      "chainId": 7001,
+      "name": "Zeta Testnet",
+      "assetSymbol": "ZETA",
+      "assetDecimals": 18,
+      "recommendedAmounts": [
+        "100000000000000000",
+        "1000000000000000000",
+        "10000000000000000000",
+        "100000000000000000000"
+      ],
+      "explorerUrl": "https://athens.explorer.zetachain.com",
+      "explorerApiUrl": "https://invalid.explorer.zetachain.com",
+      "eventDelayBlocks": 30,
+      "eventFilterSize": 1024,
+      "indexerFilterSize": 500000,
+      "providers": [
+        {
+          "url": "https://zetachain-testnet.public.blastapi.io"
+        },
+        {
+          "url": "https://zeta-chain-testnet.drpc.org"
+        },
+        {
+          "url": "https://zetachain-athens.g.allthatnode.com/archive/evm\n"
+        }
+      ],
+      "signerEndpoint": "https://zetachain-testnet.public.blastapi.io",
+      "transactionType": "eip1559",
+      "depositContracts": [
+        {
+          "version": 7,
+          "name": "MystikoV2LoopMain",
+          "address": "0x9BE21DD9f30297D5222802B47E5C915CA24C9e02",
+          "startBlock": 6509920,
+          "bridgeType": "loop",
+          "poolAddress": "0xb42e5BDb9c5B170B5aBA8a1CC85F0eFC19287467",
+          "minAmount": "100000000000000000",
+          "maxAmount": "1000000000000000000000"
+        },
+        {
+          "version": 7,
+          "name": "MystikoV2LoopERC20",
+          "address": "0xfD9d2c480e6c721d7cB6dF4DdeE630dcC0D54490",
+          "startBlock": 6509924,
+          "bridgeType": "loop",
+          "poolAddress": "0xe0357BE4cbE57D8E67088C4FEcd53Ab931353671",
+          "minAmount": "100000000000000000",
+          "maxAmount": "1000000000000000000000"
+        }
+      ],
+      "poolContracts": [
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "zeta-20240611",
+          "bridgeType": "loop",
+          "address": "0xb42e5BDb9c5B170B5aBA8a1CC85F0eFC19287467",
+          "startBlock": 6509918,
+          "minRollupFee": "10000000000000000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "zeta-20240611",
+          "bridgeType": "loop",
+          "address": "0xe0357BE4cbE57D8E67088C4FEcd53Ab931353671",
+          "startBlock": 6509922,
+          "assetAddress": "0x62F686F657aae4E8D0e38F7Fa606dE2F02381d2e",
+          "minRollupFee": "10000000000000000"
+        }
+      ],
+      "assets": [
+        {
+          "assetType": "erc20",
+          "assetSymbol": "MTT",
+          "assetDecimals": 18,
+          "recommendedAmounts": [
+            "1000000000000000000",
+            "10000000000000000000",
+            "100000000000000000000",
+            "1000000000000000000000"
+          ],
+          "assetAddress": "0x62F686F657aae4E8D0e38F7Fa606dE2F02381d2e"
+        }
+      ],
+      "packerGranularities": [
+        12000,
+        48000,
+        192000,
+        768000,
+        3072000
+      ]
     }
   ],
   "bridges": [
