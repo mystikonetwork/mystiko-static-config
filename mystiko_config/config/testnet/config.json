@@ -2712,20 +2712,20 @@
         {
           "version": 7,
           "name": "MystikoV2LoopMain",
-          "address": "0x9BE21DD9f30297D5222802B47E5C915CA24C9e02",
-          "startBlock": 6509924,
+          "address": "0x595382A9cc56B007F64ea3857617519a23D1b8e5",
+          "startBlock": 6905664,
           "bridgeType": "loop",
-          "poolAddress": "0xb42e5BDb9c5B170B5aBA8a1CC85F0eFC19287467",
+          "poolAddress": "0xa93D37bc8862280C68799f3B5289d298D0d6d8e7",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000"
         },
         {
           "version": 7,
           "name": "MystikoV2LoopERC20",
-          "address": "0xfD9d2c480e6c721d7cB6dF4DdeE630dcC0D54490",
-          "startBlock": 6509924,
+          "address": "0x3Df8021381101f4817d092369714554D3FA94bAF",
+          "startBlock": 6905664,
           "bridgeType": "loop",
-          "poolAddress": "0xe0357BE4cbE57D8E67088C4FEcd53Ab931353671",
+          "poolAddress": "0x09caD274331021f68d2531b7755AFFfBA060Bc59",
           "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000"
         }
@@ -2736,18 +2736,18 @@
           "name": "CommitmentPool",
           "poolName": "zeta-20240611",
           "bridgeType": "loop",
-          "address": "0xb42e5BDb9c5B170B5aBA8a1CC85F0eFC19287467",
-          "startBlock": 6509924,
-          "minRollupFee": "10000000000000000"
+          "address": "0xa93D37bc8862280C68799f3B5289d298D0d6d8e7",
+          "startBlock": 6905664,
+          "minRollupFee": "10000000000000"
         },
         {
           "version": 7,
           "name": "CommitmentPool",
           "poolName": "zeta-20240611",
           "bridgeType": "loop",
-          "address": "0xe0357BE4cbE57D8E67088C4FEcd53Ab931353671",
-          "startBlock": 6509924,
-          "assetAddress": "0x62F686F657aae4E8D0e38F7Fa606dE2F02381d2e",
+          "address": "0x09caD274331021f68d2531b7755AFFfBA060Bc59",
+          "startBlock": 6905664,
+          "assetAddress": "0xcaCB8A86BC785268AE12E6D44c4106FF1a6Ad24C",
           "minRollupFee": "10000000000000000"
         }
       ],
@@ -2762,7 +2762,7 @@
             "100000000000000000000",
             "1000000000000000000000"
           ],
-          "assetAddress": "0x62F686F657aae4E8D0e38F7Fa606dE2F02381d2e"
+          "assetAddress": "0xcaCB8A86BC785268AE12E6D44c4106FF1a6Ad24C"
         }
       ],
       "packerGranularities": [
