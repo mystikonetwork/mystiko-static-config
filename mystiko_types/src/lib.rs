@@ -10,6 +10,7 @@ pub enum BridgeType {
     Celer,
     LayerZero,
     Axelar,
+    Wormhole,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
