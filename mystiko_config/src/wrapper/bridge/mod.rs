@@ -3,12 +3,14 @@ mod celer;
 mod layer_zero;
 mod poly;
 mod tbridge;
+mod wormhole;
 
 pub use axelar::*;
 pub use celer::*;
 pub use layer_zero::*;
 pub use poly::*;
 pub use tbridge::*;
+pub use wormhole::*;
 
 use crate::RawBridgeConfig;
 use anyhow::Result;
@@ -22,6 +24,7 @@ pub enum BridgeConfig {
     LayerZero(LayerZeroBridgeConfig),
     Poly(PolyBridgeConfig),
     TBridge(TBridgeConfig),
+    Wormhole(WormholeBridgeConfig),
 }
 
 impl BridgeConfig {
@@ -42,6 +45,9 @@ impl BridgeConfig {
             RawBridgeConfig::Tbridge(tbridge_raw) => {
                 BridgeConfig::TBridge(TBridgeConfig::new(tbridge_raw.clone()))
             }
+            RawBridgeConfig::Wormhole(wormhole_raw) => {
+                BridgeConfig::Wormhole(WormholeBridgeConfig::new(wormhole_raw.clone()))
+            }
         }
     }
 
@@ -52,6 +58,7 @@ impl BridgeConfig {
             BridgeConfig::LayerZero(conf) => conf.name(),
             BridgeConfig::Poly(conf) => conf.name(),
             BridgeConfig::TBridge(conf) => conf.name(),
+            BridgeConfig::Wormhole(conf) => conf.name(),
         }
     }
 
@@ -62,6 +69,7 @@ impl BridgeConfig {
             BridgeConfig::LayerZero(conf) => conf.bridge_type(),
             BridgeConfig::Poly(conf) => conf.bridge_type(),
             BridgeConfig::TBridge(conf) => conf.bridge_type(),
+            BridgeConfig::Wormhole(conf) => conf.bridge_type(),
         }
     }
 
@@ -72,6 +80,7 @@ impl BridgeConfig {
             BridgeConfig::LayerZero(conf) => conf.validate(),
             BridgeConfig::Poly(conf) => conf.validate(),
             BridgeConfig::TBridge(conf) => conf.validate(),
+            BridgeConfig::Wormhole(conf) => conf.validate(),
         }
     }
 }

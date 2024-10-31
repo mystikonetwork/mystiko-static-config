@@ -28,7 +28,8 @@ async fn test_create() {
             "Celer Network",
             "LayerZero Bridge",
             "Mystiko Testnet Bridge",
-            "Poly Bridge"
+            "Poly Bridge",
+            "Wormhole Bridge"
         ]
     );
     let mut circuit_names: Vec<&str> = config.circuits().into_iter().map(|c| c.name()).collect();
@@ -122,7 +123,8 @@ async fn test_selectors() {
             &BridgeType::Axelar,
             &BridgeType::Celer,
             &BridgeType::LayerZero,
-            &BridgeType::Tbridge
+            &BridgeType::Tbridge,
+            &BridgeType::Wormhole
         ]
     );
     bridges = config.find_bridges(5, 5, "ETH");
