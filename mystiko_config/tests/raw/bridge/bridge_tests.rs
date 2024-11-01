@@ -1,5 +1,6 @@
 use mystiko_config::{
     RawAxelarBridgeConfig, RawBridgeConfig, RawCelerBridgeConfig, RawLayerZeroBridgeConfig,
+    RawWormholeBridgeConfig,
 };
 use std::sync::Arc;
 
@@ -34,6 +35,17 @@ fn test_compare_raw_bridge_config_type() {
     ));
     let config2 = RawBridgeConfig::LayerZero(Arc::new(
         RawLayerZeroBridgeConfig::builder()
+            .name("test1".to_string())
+            .build(),
+    ));
+    assert_eq!(config1, config2);
+    let config1 = RawBridgeConfig::Wormhole(Arc::new(
+        RawWormholeBridgeConfig::builder()
+            .name("test1".to_string())
+            .build(),
+    ));
+    let config2 = RawBridgeConfig::Wormhole(Arc::new(
+        RawWormholeBridgeConfig::builder()
             .name("test1".to_string())
             .build(),
     ));

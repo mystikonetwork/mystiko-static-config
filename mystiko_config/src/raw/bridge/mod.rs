@@ -3,12 +3,14 @@ mod celer;
 mod layer_zero;
 mod poly;
 mod tbridge;
+mod wormhole;
 
 pub use axelar::*;
 pub use celer::*;
 pub use layer_zero::*;
 pub use poly::*;
 pub use tbridge::*;
+pub use wormhole::*;
 
 use mystiko_types::BridgeType;
 use serde::{Deserialize, Serialize, Serializer};
@@ -25,6 +27,7 @@ pub enum RawBridgeConfig {
     LayerZero(Arc<RawLayerZeroBridgeConfig>),
     Poly(Arc<RawPolyBridgeConfig>),
     Tbridge(Arc<RawTBridgeConfig>),
+    Wormhole(Arc<RawWormholeBridgeConfig>),
 }
 
 impl RawBridgeConfig {
@@ -35,6 +38,7 @@ impl RawBridgeConfig {
             RawBridgeConfig::LayerZero(conf) => &conf.bridge_type,
             RawBridgeConfig::Poly(conf) => &conf.bridge_type,
             RawBridgeConfig::Tbridge(conf) => &conf.bridge_type,
+            RawBridgeConfig::Wormhole(conf) => &conf.bridge_type,
         }
     }
 }
@@ -47,6 +51,7 @@ impl Validate for RawBridgeConfig {
             RawBridgeConfig::LayerZero(conf) => conf.validate(),
             RawBridgeConfig::Poly(conf) => conf.validate(),
             RawBridgeConfig::Tbridge(conf) => conf.validate(),
+            RawBridgeConfig::Wormhole(conf) => conf.validate(),
         }
     }
 }
@@ -59,6 +64,7 @@ impl Hash for RawBridgeConfig {
             RawBridgeConfig::LayerZero(conf) => conf.hash(state),
             RawBridgeConfig::Poly(conf) => conf.hash(state),
             RawBridgeConfig::Tbridge(conf) => conf.hash(state),
+            RawBridgeConfig::Wormhole(conf) => conf.hash(state),
         }
     }
 }
@@ -74,6 +80,7 @@ impl Serialize for RawBridgeConfig {
             RawBridgeConfig::LayerZero(conf) => conf.serialize(serializer),
             RawBridgeConfig::Poly(conf) => conf.serialize(serializer),
             RawBridgeConfig::Tbridge(conf) => conf.serialize(serializer),
+            RawBridgeConfig::Wormhole(conf) => conf.serialize(serializer),
         }
     }
 }
