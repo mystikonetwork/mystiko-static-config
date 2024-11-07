@@ -102,12 +102,12 @@
         {
           "version": 7,
           "name": "MystikoV2WormholeERC20",
-          "address": "0xda33C352E1A10F378B292d38617558a99ebc7E93",
-          "startBlock": 6928281,
+          "address": "0x50b52A673536ee0C83F0fe8De7554De47D219ee3",
+          "startBlock": 7015181,
           "bridgeType": "wormhole",
           "poolAddress": "0xE87a96c3C5840783001f6597280B708F1E59893D",
           "peerChainId": 84532,
-          "peerContractAddress": "0xF9f6219EF06C9d03B6f49770f456EF9393e8E2Bb",
+          "peerContractAddress": "0xcdc0683Df6edCad6e9d458a9b48CF6A5a4C44834",
           "minAmount": "100000",
           "maxAmount": "1000000000",
           "minBridgeFee": "0"
@@ -115,14 +115,27 @@
         {
           "version": 7,
           "name": "MystikoV2WormholeERC20",
-          "address": "0xc95e521A7C30b78a06B51c2e65Aa560612EF0E4e",
-          "startBlock": 6928297,
+          "address": "0x9ebAA6dC8f98a4daA39d96Bc53DF25585E5D3DF4",
+          "startBlock": 7015184,
           "bridgeType": "wormhole",
           "poolAddress": "0xE87a96c3C5840783001f6597280B708F1E59893D",
           "peerChainId": 43113,
-          "peerContractAddress": "0x48Eb143e6ad94629647C0CC4D2758f104B9A206D",
+          "peerContractAddress": "0x522E8497af69ba5dc6945D0b46B714de4e0077d1",
           "minAmount": "100000",
           "maxAmount": "1000000000",
+          "minBridgeFee": "0"
+        },
+        {
+          "version": 7,
+          "name": "MystikoV2WormholeMain",
+          "address": "0x798D0A0Ce3EfF077b68cd765e0285D0Cb78400E6",
+          "startBlock": 7015189,
+          "bridgeType": "wormhole",
+          "poolAddress": "0x2B688da7fC52E5Ae0aD77E36eCEF71adC86b01F9",
+          "peerChainId": 43113,
+          "peerContractAddress": "0xe4f82B954e7a86D4C1eEAba039459828f2Ac4fB4",
+          "minAmount": "1000000000000",
+          "maxAmount": "1000000000000000000000",
           "minBridgeFee": "0"
         }
       ],
@@ -230,6 +243,15 @@
           "startBlock": 6928279,
           "assetAddress": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
           "minRollupFee": "10000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "zeta-20240611",
+          "bridgeType": "wormhole",
+          "address": "0x2B688da7fC52E5Ae0aD77E36eCEF71adC86b01F9",
+          "startBlock": 7013982,
+          "minRollupFee": "1000000000000"
         }
       ],
       "assets": [
@@ -1434,12 +1456,12 @@
         {
           "version": 7,
           "name": "MystikoV2WormholeERC20",
-          "address": "0x48Eb143e6ad94629647C0CC4D2758f104B9A206D",
-          "startBlock": 36380186,
+          "address": "0x522E8497af69ba5dc6945D0b46B714de4e0077d1",
+          "startBlock": 36544724,
           "bridgeType": "wormhole",
           "poolAddress": "0x94C1FA07234acEF7C27238C12D17d88720FbFC87",
           "peerChainId": 11155111,
-          "peerContractAddress": "0xc95e521A7C30b78a06B51c2e65Aa560612EF0E4e",
+          "peerContractAddress": "0x9ebAA6dC8f98a4daA39d96Bc53DF25585E5D3DF4",
           "minAmount": "100000",
           "maxAmount": "1000000000",
           "minBridgeFee": "0"
@@ -1447,14 +1469,27 @@
         {
           "version": 7,
           "name": "MystikoV2WormholeERC20",
-          "address": "0x17D83566fd95B2A83C564333FceDBA2e25e7Ec73",
-          "startBlock": 36380192,
+          "address": "0xa483A341aA7Cb42A665a4959Bf6056b8E7DBa87F",
+          "startBlock": 36544730,
           "bridgeType": "wormhole",
           "poolAddress": "0x94C1FA07234acEF7C27238C12D17d88720FbFC87",
           "peerChainId": 84532,
-          "peerContractAddress": "0x3cd69bF4e5979806dD851D20494898bc76BCa55f",
+          "peerContractAddress": "0xB09BBC77E866e1B6C833e144572Ee26C3A6Bd61c",
           "minAmount": "100000",
           "maxAmount": "1000000000",
+          "minBridgeFee": "0",
+        },
+        {
+          "version": 7,
+          "name": "MystikoV2WormholeERC20",
+          "address": "0xe4f82B954e7a86D4C1eEAba039459828f2Ac4fB4",
+          "startBlock": 36544736,
+          "bridgeType": "wormhole",
+          "poolAddress": "0x8737BB89d5B9F21aDc3193C64bFbB95C4F217C5B",
+          "peerChainId": 11155111,
+          "peerContractAddress": "0x798D0A0Ce3EfF077b68cd765e0285D0Cb78400E6",
+          "minAmount": "1000000000000",
+          "maxAmount": "1000000000000000000000",
           "minBridgeFee": "0"
         }
       ],
@@ -1829,6 +1864,16 @@
           "startBlock": 36380183,
           "assetAddress": "0x5425890298aed601595a70AB815c96711a31Bc65",
           "minRollupFee": "10000"
+        },
+        {
+          "version": 7,
+          "name": "CommitmentPool",
+          "poolName": "zeta-20240611",
+          "bridgeType": "wormhole",
+          "address": "0x8737BB89d5B9F21aDc3193C64bFbB95C4F217C5B",
+          "startBlock": 36541827,
+          "assetAddress": "0x12bFE94230daaE3d48067577F45b7b031dD357f3",
+          "minRollupFee": "1000000000000"
         }
       ],
       "assets": [
@@ -1882,7 +1927,7 @@
         },
         {
           "assetType": "erc20",
-          "assetSymbol": "WETH",
+          "assetSymbol": "WETHWormhole",
           "assetDecimals": 18,
           "recommendedAmounts": [
             "100000000000000000",
@@ -2663,12 +2708,12 @@
         {
           "version": 7,
           "name": "MystikoV2WormholeERC20",
-          "address": "0xF9f6219EF06C9d03B6f49770f456EF9393e8E2Bb",
-          "startBlock": 16953835,
+          "address": "0xcdc0683Df6edCad6e9d458a9b48CF6A5a4C44834",
+          "startBlock": 17510037,
           "bridgeType": "wormhole",
           "poolAddress": "0xaA5393C35B9b0558B713e3A619392D1C35954F3D",
           "peerChainId": 11155111,
-          "peerContractAddress": "0xda33C352E1A10F378B292d38617558a99ebc7E93",
+          "peerContractAddress": "0x50b52A673536ee0C83F0fe8De7554De47D219ee3",
           "minAmount": "100000",
           "maxAmount": "1000000000",
           "minBridgeFee": "0"
@@ -2676,12 +2721,12 @@
         {
           "version": 7,
           "name": "MystikoV2WormholeERC20",
-          "address": "0x3cd69bF4e5979806dD851D20494898bc76BCa55f",
-          "startBlock": 16953868,
+          "address": "0xB09BBC77E866e1B6C833e144572Ee26C3A6Bd61c",
+          "startBlock": 17510059,
           "bridgeType": "wormhole",
           "poolAddress": "0xaA5393C35B9b0558B713e3A619392D1C35954F3D",
           "peerChainId": 43113,
-          "peerContractAddress": "0x17D83566fd95B2A83C564333FceDBA2e25e7Ec73",
+          "peerContractAddress": "0xa483A341aA7Cb42A665a4959Bf6056b8E7DBa87F",
           "minAmount": "100000",
           "maxAmount": "1000000000",
           "minBridgeFee": "0"
@@ -2764,18 +2809,6 @@
             "1000000000"
           ],
           "assetAddress": "0x036CbD53842c5426634e7929541eC2318f3dCF7e"
-        },
-        {
-          "assetType": "erc20",
-          "assetSymbol": "WETH",
-          "assetDecimals": 18,
-          "recommendedAmounts": [
-            "100000000000000000",
-            "1000000000000000000",
-            "10000000000000000000",
-            "100000000000000000000"
-          ],
-          "assetAddress": "0x4200000000000000000000000000000000000006"
         }
       ],
       "packerGranularities": [
