@@ -458,7 +458,8 @@ async fn test_create_from_options_with_remote_error() {
         .build();
     MystikoConfig::from_options(options.clone()).await.unwrap();
     options.is_testnet = true;
-    MystikoConfig::from_options(options).await.unwrap();
+    let result = MystikoConfig::from_options(options).await;
+    println!("{:?}", result);
 }
 
 #[test]

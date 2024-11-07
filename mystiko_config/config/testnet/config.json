@@ -1477,7 +1477,7 @@
           "peerContractAddress": "0xB09BBC77E866e1B6C833e144572Ee26C3A6Bd61c",
           "minAmount": "100000",
           "maxAmount": "1000000000",
-          "minBridgeFee": "0",
+          "minBridgeFee": "0"
         },
         {
           "version": 7,
