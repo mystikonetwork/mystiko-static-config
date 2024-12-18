@@ -330,7 +330,7 @@
       "indexerFilterSize": 500000,
       "providers": [
         {
-          "url": "https://bsc-testnet.blastapi.io/443f931f-a291-450f-956b-62a57fa8f758"
+          "url": "https://bsc-testnet.blastapi.io/a52646e0-2bd1-42a0-80a0-78965ee12a0b"
         }
       ],
       "signerEndpoint": "https://data-seed-prebsc-2-s2.binance.org:8545",
