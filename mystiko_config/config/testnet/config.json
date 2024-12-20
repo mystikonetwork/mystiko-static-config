@@ -28,7 +28,7 @@
           "url": "https://ethereum-sepolia.rpc.subquery.network/public"
         }
       ],
-      "signerEndpoint": "https://rpc.sepolia.org",
+      "signerEndpoint": "https://eth-sepolia.api.onfinality.io/public",
       "transactionType": "eip1559",
       "depositContracts": [
         {
