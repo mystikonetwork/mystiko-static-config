@@ -110,7 +110,7 @@
           "poolAddress": "0x3f60d67412A4eDD7b6995EE983e44FaAb323cE27",
           "peerChainId": 137,
           "peerContractAddress": "0xdc2e1fc2e3aF24C325d0c29e8E8421669501AaD8",
-          "minAmount": "100000",
+          "minAmount": "100000000",
           "maxAmount": "1000000000000",
           "minBridgeFee": "0"
         },
@@ -123,7 +123,7 @@
           "poolAddress": "0x91479C4C5785285f5E92eBd02A4bA2E247cBA84a",
           "peerChainId": 137,
           "peerContractAddress": "0x4FA03c412d5c4eB237EC107Ce4e0CbAC912E7c14",
-          "minAmount": "1000000000000",
+          "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000",
           "minBridgeFee": "0"
         }
@@ -230,7 +230,7 @@
           "address": "0x3f60d67412A4eDD7b6995EE983e44FaAb323cE27",
           "startBlock": 21469657,
           "assetAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-          "minRollupFee": "100000"
+          "minRollupFee": "10000000"
         },
         {
           "version": 8,
@@ -239,7 +239,7 @@
           "bridgeType": "wormhole",
           "address": "0x91479C4C5785285f5E92eBd02A4bA2E247cBA84a",
           "startBlock": 21469657,
-          "minRollupFee": "1000000000000"
+          "minRollupFee": "3000000000000000"
         }
       ],
       "assets": [
@@ -608,7 +608,7 @@
           "poolAddress": "0xB96d25C8cB04BE7a5e3CaFAe2dbde76CF18FBAA9",
           "peerChainId": 1,
           "peerContractAddress": "0xe314C1bF3C00c58815CD69dc109b7D3CB192e30e",
-          "minAmount": "100000",
+          "minAmount": "100000000",
           "maxAmount": "1000000000000",
           "minBridgeFee": "0"
         },
@@ -621,7 +621,7 @@
           "poolAddress": "0xeAF142294522D4C55D1F82f83B94Ee25333B42Ed",
           "peerChainId": 1,
           "peerContractAddress": "0xEF91A352Ec60fa43B5dAa30990A4c170085A947e",
-          "minAmount": "1000000000000",
+          "minAmount": "100000000000000000",
           "maxAmount": "1000000000000000000000",
           "minBridgeFee": "0"
         }
