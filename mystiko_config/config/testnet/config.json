@@ -205,7 +205,8 @@
           "poolName": "zeta-20240611",
           "bridgeType": "loop",
           "address": "0x25BE122423eE316A15a0De95C6A3C7E9113D9e45",
-          "startBlock": 6096516
+          "startBlock": 6096516,
+          "minRollupFee": "10000000000000000"
         },
         {
           "version": 7,
@@ -214,7 +215,8 @@
           "bridgeType": "loop",
           "address": "0x6bcDfE9701d06547B1076d56b3748A56374A51E3",
           "startBlock": 6096520,
-          "assetAddress": "0xAA98418708D26d7e0F308bD67B0224995F11963c"
+          "assetAddress": "0xAA98418708D26d7e0F308bD67B0224995F11963c",
+          "minRollupFee": "10000000000000000"
         },
         {
           "version": 7,
@@ -223,7 +225,8 @@
           "bridgeType": "loop",
           "address": "0xb77E98aa939Fe3d9F5262d05C997AD1F3CCddEB2",
           "startBlock": 6096523,
-          "assetAddress": "0xe66a7488c462F10eA74Be3454Ede07DAf025B9B6"
+          "assetAddress": "0xe66a7488c462F10eA74Be3454Ede07DAf025B9B6",
+          "minRollupFee": "10000"
         },
         {
           "version": 7,
@@ -232,7 +235,8 @@
           "bridgeType": "loop",
           "address": "0x7F1d74B0245748c56ba38Ae207feE80f329dB89F",
           "startBlock": 6096529,
-          "assetAddress": "0x932161e47821c6F5AE69ef329aAC84be1E547e53"
+          "assetAddress": "0x932161e47821c6F5AE69ef329aAC84be1E547e53",
+	  "minRollupFee": "10000000000000000"
         },
         {
           "version": 7,
