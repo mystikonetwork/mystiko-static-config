@@ -1042,18 +1042,12 @@
       "explorerUrl": "https://snowtrace.io",
       "explorerApiUrl": "https://api.routescan.io/v2/network/mainnet/evm/43114/etherscan",
       "eventDelayBlocks": 100,
-      "eventFilterSize": 2000,
+      "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
       "safeConfirmations": 15,
       "providers": [
         {
           "url": "https://api.avax.network/ext/bc/C/rpc"
-        },
-        {
-          "url": "https://avalanche.public-rpc.com"
-        },
-        {
-          "url": "https://rpc.ankr.com/avalanche"
         },
         {
           "url": "https://avalanche.drpc.org"
