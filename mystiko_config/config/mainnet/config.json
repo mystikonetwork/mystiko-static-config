@@ -1050,9 +1050,6 @@
           "url": "https://api.avax.network/ext/bc/C/rpc"
         },
         {
-          "url": "https://avalanche.drpc.org"
-        },
-        {
           "url": "https://avax.meowrpc.com"
         }
       ],
