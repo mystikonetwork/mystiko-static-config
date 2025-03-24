@@ -539,12 +539,6 @@
         },
         {
           "url": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de"
-        },
-        {
-          "url": "https://polygon.gateway.tenderly.co"
-        },
-        {
-          "url": "https://polygon.api.onfinality.io/public"
         }
       ],
       "signerEndpoint": "https://rpc.ankr.com/polygon",
