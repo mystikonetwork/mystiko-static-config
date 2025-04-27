@@ -532,7 +532,7 @@
       "safeConfirmations": 15,
       "providers": [
         {
-          "url": "https://rpc.ankr.com/polygon"
+          "url": "https://gateway.tenderly.co/public/polygon"
         },
         {
           "url": "https://polygon-rpc.com"
@@ -541,7 +541,7 @@
           "url": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de"
         }
       ],
-      "signerEndpoint": "https://rpc.ankr.com/polygon",
+      "signerEndpoint": "https://polygon-rpc.com",
       "transactionType": "eip1559",
       "depositContracts": [
         {
