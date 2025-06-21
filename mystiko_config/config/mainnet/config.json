@@ -516,7 +516,9 @@
       "chainId": 137,
       "name": "Polygon",
       "assetSymbol": "POL",
-      "assetSymbolAlias": ["MATIC"],
+      "assetSymbolAlias": [
+        "MATIC"
+      ],
       "assetDecimals": 18,
       "recommendedAmounts": [
         "100000000000000000000",
@@ -538,7 +540,7 @@
           "url": "https://polygon-rpc.com"
         },
         {
-          "url": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de"
+          "url": "https://1rpc.io/matic"
         }
       ],
       "signerEndpoint": "https://polygon-rpc.com",
