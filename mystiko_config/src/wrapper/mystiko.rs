@@ -188,12 +188,9 @@ impl MystikoConfig {
         };
 
         if let Some(git_revision) = &options.git_revision {
-            format!(
-                "{}/{}/{}/{}/config.json",
-                base_url, environment, network, git_revision
-            )
+            format!("{base_url}/{environment}/{network}/{git_revision}/config.json")
         } else {
-            format!("{}/{}/{}/latest.json", base_url, environment, network)
+            format!("{base_url}/{environment}/{network}/latest.json")
         }
     }
 

@@ -534,7 +534,7 @@
       "safeConfirmations": 15,
       "providers": [
         {
-          "url": "https://gateway.tenderly.co/public/polygon"
+          "url": "https://polygon.drpc.org"
         },
         {
           "url": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de"
@@ -543,7 +543,7 @@
           "url": "https://rpc-mainnet.matic.quiknode.pro"
         }
       ],
-      "signerEndpoint": "https://gateway.tenderly.co/public/polygon",
+      "signerEndpoint": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de",
       "transactionType": "eip1559",
       "depositContracts": [
         {

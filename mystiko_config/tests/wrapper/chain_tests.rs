@@ -125,7 +125,7 @@ async fn test_selectors() {
     assert_eq!(config.find_bridges(5, "ETH"), vec![&BridgeType::Loop]);
     assert!(config.find_bridges(5, "MTT").is_empty());
     let mut bridges = config.find_bridges(97, "MTT");
-    bridges.sort_by_key(|b| format!("{:?}", b));
+    bridges.sort_by_key(|b| format!("{b:?}"));
     assert_eq!(
         bridges,
         vec![

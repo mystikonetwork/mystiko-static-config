@@ -426,8 +426,7 @@ impl ChainConfig {
             if let Some(last_granularity) = last_granularity {
                 if granularity % last_granularity != 0 {
                     return Err(Error::msg(format!(
-                        "Granularities must be multiples of each other: {} is not a multiple of {}",
-                        granularity, last_granularity
+                        "Granularities must be multiples of each other: {granularity} is not a multiple of {last_granularity}"
                     )));
                 }
             }
@@ -515,10 +514,7 @@ fn asset_config_by_address(
     if let Some(asset_config) = asset_configs.iter().find(|c| c.asset_address() == address) {
         Ok(asset_config.clone())
     } else {
-        Err(Error::msg(format!(
-            "failed to find asset config {}",
-            address
-        )))
+        Err(Error::msg(format!("failed to find asset config {address}")))
     }
 }
 
@@ -530,8 +526,7 @@ fn pool_contract_by_address(
         Ok(pool_contract_config.clone())
     } else {
         Err(Error::msg(format!(
-            "failed to find pool contract {}",
-            address
+            "failed to find pool contract {address}"
         )))
     }
 }

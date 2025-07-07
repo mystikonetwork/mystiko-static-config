@@ -116,7 +116,7 @@ async fn test_selectors() {
     assert!(config.find_asset_symbols(97, 97).is_empty());
     assert!(config.find_asset_symbols(5, 2343534).is_empty());
     let mut bridges: Vec<&BridgeType> = config.find_bridges(5, 97, "MTT");
-    bridges.sort_by_key(|b| format!("{:?}", b));
+    bridges.sort_by_key(|b| format!("{b:?}"));
     assert_eq!(
         bridges,
         [
@@ -459,7 +459,7 @@ async fn test_create_from_options_with_remote_error() {
     MystikoConfig::from_options(options.clone()).await.unwrap();
     options.is_testnet = true;
     let result = MystikoConfig::from_options(options).await;
-    println!("{:?}", result);
+    println!("{result:?}");
 }
 
 #[test]

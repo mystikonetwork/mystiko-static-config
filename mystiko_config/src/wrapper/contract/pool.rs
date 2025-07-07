@@ -189,16 +189,14 @@ impl PoolContractConfig {
         for circuit_name in self.circuits_names() {
             if self.circuit_by_name(circuit_name).is_none() {
                 return Err(Error::msg(format!(
-                    "circuit config is missing for circuit_name {}",
-                    circuit_name
+                    "circuit config is missing for circuit_name {circuit_name}"
                 )));
             }
         }
         for circuit_type in &CircuitType::all() {
             if self.circuit_by_type(circuit_type).is_none() {
                 return Err(Error::msg(format!(
-                    "circuit config is missing for circuit_type {:?}",
-                    circuit_type
+                    "circuit config is missing for circuit_type {circuit_type:?}"
                 )));
             }
             if self
@@ -209,8 +207,7 @@ impl PoolContractConfig {
                 > 1
             {
                 return Err(Error::msg(format!(
-                    "multiple circuit configs of circuit_type {:?}",
-                    circuit_type
+                    "multiple circuit configs of circuit_type {circuit_type:?}"
                 )));
             }
         }
