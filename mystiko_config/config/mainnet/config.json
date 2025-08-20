@@ -537,13 +537,13 @@
           "url": "https://polygon.drpc.org"
         },
         {
-          "url": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de"
+          "url": "https://polygon.gateway.tenderly.co"
         },
         {
           "url": "https://rpc-mainnet.matic.quiknode.pro"
         }
       ],
-      "signerEndpoint": "https://polygon.blockpi.network/v1/rpc/676fdc0dca8df28d61455e69ea7ece93355cf8de",
+      "signerEndpoint": "https://polygon.drpc.org",
       "transactionType": "eip1559",
       "depositContracts": [
         {
