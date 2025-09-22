@@ -306,9 +306,6 @@
         },
         {
           "url": "https://bsc.blockpi.network/v1/rpc/ad480fb8dbff1742911e49057b5f94125eb90e97"
-        },
-        {
-          "url": "https://bnb.api.onfinality.io/public"
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
