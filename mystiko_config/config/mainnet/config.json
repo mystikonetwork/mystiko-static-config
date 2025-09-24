@@ -14,7 +14,7 @@
       ],
       "eventDelayBlocks": 20,
       "explorerUrl": "https://etherscan.io",
-      "explorerApiUrl": "https://api.etherscan.io",
+      "explorerApiUrl": "https://api.etherscan.io/v2/api?chainid=1",
       "eventFilterSize": 50000,
       "indexerFilterSize": 500000,
       "safeConfirmations": 5,
@@ -295,7 +295,7 @@
         "1000000000000000000000"
       ],
       "explorerUrl": "https://bscscan.com",
-      "explorerApiUrl": "https://api.bscscan.com",
+      "explorerApiUrl": "https://api.etherscan.io/v2/api?chainid=56",
       "eventDelayBlocks": 80,
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
@@ -527,7 +527,7 @@
         "100000000000000000000000"
       ],
       "explorerUrl": "https://polygonscan.com",
-      "explorerApiUrl": "https://api.polygonscan.com",
+      "explorerApiUrl": "https://api.etherscan.io/v2/api?chainid=137",
       "eventDelayBlocks": 100,
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
@@ -883,7 +883,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://basescan.org",
-      "explorerApiUrl": "https://api.basescan.org",
+      "explorerApiUrl": "https://api.etherscan.io/v2/api?chainid=8453",
       "eventDelayBlocks": 120,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
