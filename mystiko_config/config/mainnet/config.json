@@ -14,7 +14,7 @@
       ],
       "eventDelayBlocks": 20,
       "explorerUrl": "https://etherscan.io",
-      "explorerApiUrl": "https://api.etherscan.io/v2/api?chainid=1",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventFilterSize": 50000,
       "indexerFilterSize": 500000,
       "safeConfirmations": 5,
@@ -295,7 +295,7 @@
         "1000000000000000000000"
       ],
       "explorerUrl": "https://bscscan.com",
-      "explorerApiUrl": "https://api.etherscan.io/v2/api?chainid=56",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 80,
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
@@ -527,7 +527,7 @@
         "100000000000000000000000"
       ],
       "explorerUrl": "https://polygonscan.com",
-      "explorerApiUrl": "https://api.etherscan.io/v2/api?chainid=137",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 100,
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
@@ -883,7 +883,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://basescan.org",
-      "explorerApiUrl": "https://api.etherscan.io/v2/api?chainid=8453",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 120,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
@@ -1027,7 +1027,7 @@
         "10000000000000000000000"
       ],
       "explorerUrl": "https://snowtrace.io",
-      "explorerApiUrl": "https://api.routescan.io/v2/network/mainnet/evm/43114/etherscan",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 100,
       "eventFilterSize": 1024,
       "indexerFilterSize": 50000,
@@ -1189,7 +1189,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://lineascan.build",
-      "explorerApiUrl": "https://api.lineascan.build",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 120,
       "eventFilterSize": 1000,
       "indexerFilterSize": 500000,
