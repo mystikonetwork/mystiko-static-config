@@ -13,7 +13,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://sepolia.etherscan.io",
-      "explorerApiUrl": "https://api-sepolia.etherscan.io",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 10,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
@@ -236,7 +236,7 @@
           "address": "0x7F1d74B0245748c56ba38Ae207feE80f329dB89F",
           "startBlock": 6096529,
           "assetAddress": "0x932161e47821c6F5AE69ef329aAC84be1E547e53",
-	  "minRollupFee": "10000000000000000"
+          "minRollupFee": "10000000000000000"
         },
         {
           "version": 7,
@@ -328,7 +328,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://testnet.bscscan.com",
-      "explorerApiUrl": "https://api-testnet.bscscan.com",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 40,
       "eventFilterSize": 500,
       "indexerFilterSize": 500000,
@@ -886,7 +886,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://mumbai.polygonscan.com",
-      "explorerApiUrl": "https://api-testnet.polygonscan.com",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 50,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
@@ -1359,7 +1359,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://testnet.snowtrace.io",
-      "explorerApiUrl": "https://api.routescan.io/v2/network/testnet/evm/43113/etherscan",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 60,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
@@ -1946,7 +1946,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://moonbase.moonscan.io",
-      "explorerApiUrl": "https://api-moonbase.moonscan.io",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 10,
       "eventFilterSize": 2000,
       "indexerFilterSize": 500000,
@@ -2234,7 +2234,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://sepolia.basescan.org/",
-      "explorerApiUrl": "https://api-sepolia.basescan.org",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 60,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
@@ -2402,7 +2402,7 @@
         "100000000000000000000"
       ],
       "explorerUrl": "https://sepolia.lineascan.build",
-      "explorerApiUrl": "https://api-sepolia.lineascan.build",
+      "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 60,
       "eventFilterSize": 1024,
       "indexerFilterSize": 500000,
