@@ -296,13 +296,19 @@
       ],
       "explorerUrl": "https://bscscan.com",
       "explorerApiUrl": "https://api.etherscan.io/v2",
-      "eventDelayBlocks": 80,
-      "eventFilterSize": 1024,
+      "eventDelayBlocks": 160,
+      "eventFilterSize": 500,
       "indexerFilterSize": 50000,
       "safeConfirmations": 15,
       "providers": [
         {
-          "url": "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3"
+          "url": "https://bsc.blockpi.network/v1/rpc/ad480fb8dbff1742911e49057b5f94125eb90e97"
+        },
+        {
+          "url": "https://binance.llamarpc.com"
+        },
+        {
+          "url": "https://1rpc.io/bnb"
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
