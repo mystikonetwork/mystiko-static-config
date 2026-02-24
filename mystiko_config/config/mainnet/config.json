@@ -305,10 +305,10 @@
           "url": "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3"
         },
         {
-          "url": "https://bnb.api.onfinality.io/public"
+          "url": "https://binance.llamarpc.com"
         },
         {
-          "url": "https://bsc.drpc.org"
+          "url": "https://bsc-mainnet.public.blastapi.io"
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
