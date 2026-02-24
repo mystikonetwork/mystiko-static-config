@@ -9,7 +9,7 @@ extern crate serde_json;
 extern crate tokio;
 
 use anyhow::Result;
-use clap::{arg, Args, Parser, Subcommand, ValueEnum};
+use clap::{Args, Parser, Subcommand, ValueEnum};
 use mystiko_config::MystikoConfig;
 use mystiko_relayer_config::wrapper::relayer::RelayerConfig;
 use rusoto_core::Region;
