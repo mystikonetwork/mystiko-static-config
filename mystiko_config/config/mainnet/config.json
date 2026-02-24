@@ -297,7 +297,7 @@
       "explorerUrl": "https://bscscan.com",
       "explorerApiUrl": "https://api.etherscan.io/v2",
       "eventDelayBlocks": 160,
-      "eventFilterSize": 500,
+      "eventFilterSize": 1000,
       "indexerFilterSize": 50000,
       "safeConfirmations": 15,
       "providers": [
@@ -305,10 +305,10 @@
           "url": "https://bsc-mainnet.nodereal.io/v1/64a9df0874fb4a93b9d0a3849de012d3"
         },
         {
-          "url": "https://binance.llamarpc.com"
+          "url": "https://bnb.api.onfinality.io/public"
         },
         {
-          "url": "https://bsc-mainnet.public.blastapi.io"
+          "url": "https://bsc.drpc.org"
         }
       ],
       "signerEndpoint": "https://bsc-dataseed1.binance.org",
